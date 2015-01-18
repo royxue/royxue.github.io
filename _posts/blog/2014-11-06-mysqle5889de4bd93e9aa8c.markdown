@@ -1,0 +1,112 @@
+---
+author: xljroy
+comments: true
+date: 2014-11-06 09:58:11+00:00
+layout: post
+slug: mysql%e5%88%9d%e4%bd%93%e9%aa%8c
+title: MySQL初体验
+wordpress_id: 513
+categories:
+- blog
+- Dev
+---
+
+### MySQL初体验
+
+
+
+
+
+* * *
+
+
+
+hmmmmm
+
+最近因为研究需要, 开始要用MySQL了. 本来决定下周的Hackathon也用MySQL配合django进行开发. 不过最后还是决定那边先用PostgreSQL.
+
+
+
+#### 1. Mac OSX Installation
+
+
+
+
+    
+    <code>brew install mysql
+    </code>
+
+
+
+一行安装完毕, 然后输入"mysql.server start"启动mysql的服务器.
+"mysql -uroot -p""登入
+使用"show databases" 就可以看到数据库的列表了.
+
+
+
+#### 2. Using Python with MySQL
+
+
+
+下载 [MySQLdb](http://sourceforge.net/projects/mysql-python/)
+
+修改site.cfg配置文件
+
+
+    
+    <code>#mysql_config = /usr/local/bin/mysql_config 将#去掉
+    </code>
+
+
+
+在解压目录下运行 "python setup.py build"
+
+之后 "sudo python setup.py install", 安装MySQLdb
+
+
+
+#### 3. Sequel Pro
+
+
+
+Just use
+
+
+    
+    <code>brew cask install sequel-pro
+    </code>
+
+
+
+Sequel-Pro 是数据库管理的软件, 可以直观快捷地查看数据库内容.
+
+
+
+#### 4. Basic Action
+
+
+
+Using MySQLdb with Python
+
+
+    
+    <code>import MySQLdb
+    
+    conn = MySQLdb.connect(host='localhost', user='root', passwd='', db='bla')
+    
+    t = conn.cursor()
+    
+    # SELECT
+    t.execute('SELECT * FROM bla')
+    t.fetchone() 
+    t.fetchall()
+    
+    # INSERT
+    t.execute('INSERT INTO bla (num) VALUES(2)')
+    </code>
+
+
+
+for more: [MySQLdb](http://www.tutorialspoint.com/python/python_database_access.htm)
+
+先去跑scripts去了 T T

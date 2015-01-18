@@ -1,0 +1,103 @@
+---
+author: xljroy
+comments: true
+date: 2014-06-22 10:41:51+00:00
+layout: post
+slug: midterm-is-cominggsoc2014-theano
+title: Midterm is coming#GSoC2014-Theano
+wordpress_id: 418
+categories:
+- Theano
+tags:
+- GSoC2014/Python
+---
+
+## Midterm is coming
+
+
+
+
+
+* * *
+
+
+
+
+Wow, 5 weeks has already gone, and the midterm is just coming.
+
+
+
+
+It's wonderful to work with Theano, and my mentors during this months, they give me lots of help, and really glad to answer my questions even if it is not about the GSoC.
+
+
+
+
+
+#### What I have done
+
+
+
+
+In my proposal, I have planed to do the "Lower the max memory usage" task.
+
+
+
+
+The first phrase is Extend the Theano memory profiler to print the max memory usage in the current implementation. This is needed for comparison.
+
+
+
+
+PR: [Add a list store executed node order #1854](https://github.com/Theano/Theano/pull/1854) Merged Already
+
+
+
+
+During this phrase, I create the two node orders which Theano uses currently, and modify the old memory calculate process into a new method, then calculate memory usage state with both old and current orders. Then print both of them into profile_memory, which we can use it for comparation. Because I have a school exam this month, it tooks about 4-5 days off, and at first, I planed to write test file at the end of task, but finally I do this part of work when after the phrase 1, so it tooks some time to debug. On the other hand, this phrase is also a good time for me to know better about Theano vm, profiling and memory usage calculating mechanism, this will be a good basis for me to do the next phrase and tasks.
+
+
+
+
+After phrase 1, Fred and I had a dicussion about thr way we communicating, cause we have 12 hours time difference, sometimes I had a question to ask by email, and after half of the day, I can receive the answer, it reduced our efficiency. So we came out a new working pattern, if some questions occurs, I ask him by email and then fo to write test files instead of just waiting answers. This would increase our efficiency, and make it work better.
+
+
+
+
+Also, we pay some attention to the details
+
+
+
+
+The second phrase is Implement a function that find the nodes execution order that minimize the memory usage during compilation. This will also be done in the Theano profiler. So all shapes information are known. This can be done by checking all valid order of execution and keeping the one that have the lower max memory usage.
+
+
+
+
+[Compute minimum peak #1934](https://github.com/Theano/Theano/pull/1934) In Progress
+
+
+
+
+During this phrase, first I wrote pseudo code to simulate the circumtances in order to generate the all valid order. This is mainly based on python generator, and create a new method to check whether a node is valid, the criteria here is that the node has its inputs. Then I applied the pseudo code into Theano in a new method, also , I created node_mem and compute_map to make it could work well. The next step is to find the best order and print it with profile memory. Also, a test file is needed here.
+
+
+
+
+I would finish phrase 2 in recent days, and then submit the files.
+
+
+
+
+
+#### What I plan to do
+
+
+
+
+First, review the whole part 1 tasks and fix bugs as well as pay attention to the details. Make it a perfect PR.
+
+
+
+
+Then move on to the second part of proposal, in this part, I will read more documents to learn it better about the information of ndarray.

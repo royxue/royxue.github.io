@@ -1,0 +1,47 @@
+---
+author: xljroy
+comments: true
+date: 2014-02-11 07:22:48+00:00
+layout: post
+slug: '%e6%a0%a1%e5%9b%ad%e7%89%a9%e8%b5%84%e7%ae%a1%e7%90%86%e5%b9%b3%e5%8f%b00day'
+title: 校园物资管理平台0day
+wordpress_id: 198
+categories:
+- Hacker
+---
+
+"Hacking For Fun"
+
+从通宵paper的睡眠中被吵醒然后睡不着了,于是做了一件好玩的事情.虽然很渣,但是也算是第一个0day,还是写出来吧~目标是额...学院学生会的物资管理平台
+
+这平台一直有个bug,就是你不用输入帐号密码就可以登录(估计是没有内容为空验证加上在数据库有空条目?)总而言之登录进去,随便点击一条申请信息,出现?id= Url之后开始准备入注!第一步引号,ok!
+
+[![hack1](http://royxue.me/wp-content/uploads/2014/02/hack1-300x183.jpg)](http://royxue.me/wp-content/uploads/2014/02/hack1.jpg)
+
+
+
+第二步 and 1=1 和and 1=2 都ok
+
+[![hack](http://royxue.me/wp-content/uploads/2014/02/hack-300x193.jpg)](http://royxue.me/wp-content/uploads/2014/02/hack.jpg)
+
+[![hack112](http://royxue.me/wp-content/uploads/2014/02/hack112-300x150.jpg)](http://royxue.me/wp-content/uploads/2014/02/hack112.jpg)
+
+第三步 order or union 出问题了~union这里跳出了欢乐界面"Plz Go Away" 看来注入是不行了...不过没关系!还没有享受到了去不可以退缩.于是转换社工模式!
+
+社工mode ON:这一次主要通过Url地址进行hack,首先可以清楚的是权限不同界面不同.所示首先尝试了利用http://ee.100steps.net/work/XXXX_apply.php?id=1583 XXXX为替换内容,进行试探,发现不行.于是,自己新建了一次申请,通过"修改"页面找到了入口
+
+[![hack13](http://royxue.me/wp-content/uploads/2014/02/hack13-300x200.jpg)](http://royxue.me/wp-content/uploads/2014/02/hack13.jpg)
+
+
+
+注意这个Url http://ee.100steps.net/work/edit_apply_**user**.php?id=**1588** 这两个部分十分重要 user说明了这个页面的权限问题,id则对应了每条申请.所以通过管理员万年不变的admin称号,重新登入这个Url
+
+[![hack131](http://royxue.me/wp-content/uploads/2014/02/hack131-300x203.jpg)](http://royxue.me/wp-content/uploads/2014/02/hack131.jpg)
+
+
+
+至此,成功hack到admin权限了.可以对各个部门的申请进行修改,或者给自己通过申请的物资活动室.不过呢,总而言之,言而总是还是那句话Hacking for fun,不要做损害他人利益的事情.
+
+菜鸟 Hacker Roy Xue
+
+

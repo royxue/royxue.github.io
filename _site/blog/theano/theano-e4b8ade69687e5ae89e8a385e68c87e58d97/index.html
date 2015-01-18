@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+    <title>Roy Xue is Here :) - Theano 中文安装指南</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <!--<link rel="stylesheet" href="/css/main.css">-->
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/assets/js/modernizr.js"></script>
+</head>
+
+    <body>
+        <!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Roy Xue is Here :)</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <li ><a href="/">HOME</a></li>
+        <li ><a href="/blog/">BLOG</a></li>
+        <!-- <li ><a href="/portfolio/">PORTFOLIO</a></li> -->
+        <!-- <li ><a href="/about/">ABOUT</a></li> -->
+        <!-- <li ><a href="/contact/">CONTACT</a></li> -->
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+            <div id="blue">
+    <div class="container">
+        <div class="row">
+            <h3>Theano 中文安装指南</h3>
+        </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+
+<div class="container mtb">
+    <div class="row">
+        <! -- SINGLE POST -->
+        <div class="col-lg-8">
+            <! -- Blog Post  -->
+            <p><img class="img-responsive" src="/assets/img/blog/"></p>
+            <a href="/blog/theano/theano-e4b8ade69687e5ae89e8a385e68c87e58d97"><h3 class="ctitle">Theano 中文安装指南</h3></a>
+            <p><csmall>Sep 23, 2014. | By: xljroy</csmall></p>
+              
+            <h1 id="theano-">Theano 中文安装指南</h1>
+
+<hr />
+
+<p>Theano Wiki: <a href="https://github.com/Theano/Theano/wiki/Theano-Windows-%E4%B8%AD%E6%96%87%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97(Chinese-Installation-Guidance-)">theano windows installation chinese version</a></p>
+
+<p><strong>安装前准备:</strong></p>
+
+<ol>
+  <li>
+    <p>安装<a href="http://www.mingw.org/wiki/Getting_Started">MinGW</a>并升级gcc, 有可能需要更新gcc到4.7.x 或者以上的版本来避免一些编译错误, 如果需要更新可以打开MinGW后使用下列命令更新.
+% mingw-get update
+% mingw-get upgrade gcc
+# this is also needed or you it will not find cc1plus.exe
+% mingw-get upgrade g++
+# we also need Fortran for building BLAS
+mingw-get install gcc-fortran</p>
+  </li>
+  <li>
+    <p>安装Python Distribution(Python Distribution是集成了诸多依赖包的Python版本), 若不想安装此部分, 请看步骤三:</p>
+  </li>
+</ol>
+
+<pre><code>* 推荐安装[AnacondaCE](http://www.continuum.io/downloads)
+
+
+* 其他选择:[Enthought Python Distribution (EPD)](http://enthought.com/products/epd.php)**/**[Canopy](https://enthought.com/products/canopy/) (如果你拥有一定的支付能力可购买Commercial版本或者凭身份获取免费的Academic版本证书)
+</code></pre>
+
+<ol>
+  <li>如果没有安装以上Distribution, 请安装如下软件:</li>
+</ol>
+
+<pre><code>* 安装[Python](applewebdata://DF5B246A-BB0F-4E13-A039-CD5F3F0EF22C/www.python.org) 2.X 版本
+
+
+* 安装[pip](https://pypi.python.org/pypi/pip), Python的依赖包安装和管理工具.
+
+
+* 使用pip安装Numpy和Scipy pip install numpy pip install scipy
+</code></pre>
+
+<p><strong>安装Theano</strong></p>
+
+<ol>
+  <li>
+    <p>基础发行版本安装:
+pip install theano</p>
+  </li>
+  <li>
+    <p>最新版本安装:(需要<a href="http://git-scm.com/download">git</a>)
+# Use Git Bash Shell
+git clone git://github.com/Theano/Theano.git
+并且将Theano的文件夹目录添加(或编辑)到PYTHONPATH 环境变量中去, 并且重启命令行窗口, 使用如下命令查看是否安装成功:
+Return Theano Directory
+C:\Users\login&gt;echo %PYTHONPATH%</p>
+  </li>
+  <li>
+    <p>然后在你的根目录(e.g., C:\Users<you>), 创建一个叫做.theanorc(或者.theanorc.txt)文件, 并编辑其内容为:
+[blas]
+ldflags =
+# ldflags = -lopenblas # placeholder for openblas support
+如果在运行Theano的时候产生_error: ‘assert’ was not declared in this scope_, 则需要再添加如下内容:
+[gcc]
+cxxflags = -IC:\MinGW\include</you></p>
+  </li>
+</ol>
+
+<p><strong>使用GPU(仅在Visual Studio 下运行):</strong></p>
+
+<ol>
+  <li>安装<a href="https://developer.nvidia.com/cuda-downloads">Cuda</a>:</li>
+</ol>
+
+<pre><code>* CUDA 6.5 (32-bit on 32-bit Windows, 64-bit on 64-bit Windows).
+
+
+* 可选: The CUDA GPU Computing SDK (32-bit/64-bit matches your python ).
+</code></pre>
+
+<ol>
+  <li>
+    <p>安装Visual Studio(或者Visual C++)</p>
+  </li>
+  <li>
+    <p>根据Nvidia 网站的_CUDA Getting Started Guide_, 利用Visual Studio编译Cuda代码. (如果这一步没有成功, Theano将可能不能编译GPU代码).</p>
+  </li>
+  <li>
+    <p>编辑Theano的配置文件, 添加如下内容:(具体内容应当对应你的Python版本和VS版本做适当修改)
+[nvcc]
+flags=-LC:\Python26\libs
+compiler_bindir=C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin</p>
+  </li>
+  <li>
+    <p>使用Visual Studio命令行工具(在“Visual Studio Tools”文件夹下). 在Python中运行<em>“import theano.sandbox.cuda”</em>. 将会编译第一个Cuda文件, 并且没有错误产生.
+简单测试GPU计算: 首先编辑Theano的配置文件:
+[global]
+device = gpu
+floatX = float32
+然后运行theano/misc/check_blas.py测试文件.</p>
+  </li>
+  <li>
+    <p>相关推荐: PyCuda, OpenCL</p>
+  </li>
+</ol>
+
+<p><strong>FAQ:</strong></p>
+
+<p><strong>If any questions about this page, contact: xljroy@gmail.com</strong></p>
+
+
+            <div class="spacing"></div>
+            <!-- <h6>SHARE:</h6>
+            <p class="share">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-tumblr"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>		 		
+            </p> -->
+        </div><! --/col-lg-8 -->
+        
+        <div class="col-lg-4">
+   <!--  <h4>Search</h4>
+    <div class="hline"></div>
+        <p>
+            <br/>
+            <input type="text" class="form-control" placeholder="Search something">
+        </p>
+    <div class="spacing"></div> -->
+    <h4>Subscribe</h4>
+    <div class="hline"></div>
+        <p>
+            <p class="rss-subscribe">Subscribe to this blog <a href="/feed.xml">via RSS</a>.</p>
+        </p>
+    <div class="spacing"></div>
+    <h4>Categories</h4>
+    <div class="hline"></div>
+    
+        <p>
+            <a href="/category/#life"><i class="fa fa-angle-right"></i> Life</a>
+            <span class="badge badge-theme pull-right">53</span>
+        </p>
+    
+        <p>
+            <a href="/category/#having fun"><i class="fa fa-angle-right"></i> Having fun</a>
+            <span class="badge badge-theme pull-right">6</span>
+        </p>
+    
+        <p>
+            <a href="/category/#python"><i class="fa fa-angle-right"></i> Python</a>
+            <span class="badge badge-theme pull-right">9</span>
+        </p>
+    
+        <p>
+            <a href="/category/#hacker"><i class="fa fa-angle-right"></i> Hacker</a>
+            <span class="badge badge-theme pull-right">2</span>
+        </p>
+    
+        <p>
+            <a href="/category/#dev"><i class="fa fa-angle-right"></i> Dev</a>
+            <span class="badge badge-theme pull-right">9</span>
+        </p>
+    
+        <p>
+            <a href="/category/#scrapy"><i class="fa fa-angle-right"></i> Scrapy</a>
+            <span class="badge badge-theme pull-right">3</span>
+        </p>
+    
+        <p>
+            <a href="/category/#theano"><i class="fa fa-angle-right"></i> Theano</a>
+            <span class="badge badge-theme pull-right">14</span>
+        </p>
+    
+        <p>
+            <a href="/category/#machine learning"><i class="fa fa-angle-right"></i> Machine learning</a>
+            <span class="badge badge-theme pull-right">5</span>
+        </p>
+    
+        <p>
+            <a href="/category/#explorer"><i class="fa fa-angle-right"></i> Explorer</a>
+            <span class="badge badge-theme pull-right">2</span>
+        </p>
+    
+
+    <div class="spacing"></div>
+
+    <h4>Recent Posts</h4>
+    <div class="hline"></div>
+        <ul class="popular-posts">
+             
+                <li>
+                    <!-- <a href="/blog/having%20fun/monster-hunter-4g-e78ba9e78c8ee697a5e8aeb0"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
+                    <p><a href="/blog/having%20fun/monster-hunter-4g-e78ba9e78c8ee697a5e8aeb0">Monster Hunter 4G 狩猎日记</a></p>
+                <em>Posted on 06 Jan 2015</em>
+            </li>
+             
+                <li>
+                    <!-- <a href="/blog/life/e38195e38288e381aae38289e38080efbc92efbc90efbc91efbc94"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
+                    <p><a href="/blog/life/e38195e38288e381aae38289e38080efbc92efbc90efbc91efbc94">さよなら　２０１４</a></p>
+                <em>Posted on 01 Jan 2015</em>
+            </li>
+             
+                <li>
+                    <!-- <a href="/blog/app-e28ea1e9b29ce5a3b0e28ea6-e4b88ae7babf"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
+                    <p><a href="/blog/app-e28ea1e9b29ce5a3b0e28ea6-e4b88ae7babf">App ⎡鲜声⎦ 上线</a></p>
+                <em>Posted on 20 Dec 2014</em>
+            </li>
+             
+                <li>
+                    <!-- <a href="/blog/python/tricks-inside-python-loop"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
+                    <p><a href="/blog/python/tricks-inside-python-loop">Tricks inside Python Loop</a></p>
+                <em>Posted on 05 Dec 2014</em>
+            </li>
+             
+        </ul>
+
+    <div class="spacing"></div>
+
+    <!-- <h4>Popular Tags</h4>
+    <div class="hline"></div>
+    <p>
+    
+            <a class="btn btn-theme" href="/category/#life" role="button">Life (53)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#having fun" role="button">Having fun (6)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#python" role="button">Python (9)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#hacker" role="button">Hacker (2)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#dev" role="button">Dev (9)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#scrapy" role="button">Scrapy (3)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#theano" role="button">Theano (14)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#machine learning" role="button">Machine learning (5)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#explorer" role="button">Explorer (2)</a>	         
+        
+    </p> -->
+</div>
+
+    </div><! --/row -->
+</div><! --/container -->
+
+        <div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About</h4>
+                <div class="hline-w"></div>
+                <p>Have no idea now</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    
+                        <a href="" class="btn-social btn-outline"><i class="fa fa-dribbble"></i></a>
+                    
+                        <a href="https://www.facebook.com/roy.xue29" class="btn-social btn-outline"><i class="fa fa-facebook"></i></a>
+                    
+                        <a href="https://twitter.com/xljroy" class="btn-social btn-outline"><i class="fa fa-twitter"></i></a>
+                    
+                        <a href="http://instagram.com/xljroy" class="btn-social btn-outline"><i class="fa fa-instagram"></i></a>
+                    
+                        <a href="" class="btn-social btn-outline"><i class="fa fa-tumblr"></i></a>
+                    
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Contacts</h4>
+                <div class="hline-w"></div>
+                <p>
+                    
+                        FE2341, <br>
+                    
+                        213E2B1, <br>
+                    
+                        Inside Memory. <br>
+                    
+                </p>
+            </div>
+        </div><! --/row -->
+    </div><! --/container -->
+</div><! --/footerwrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/retina-1.1.0.js"></script>
+<script src="/assets/js/jquery.hoverdir.js"></script>
+<script src="/assets/js/jquery.hoverex.min.js"></script>
+<script src="/assets/js/jquery.prettyPhoto.js"></script>
+<script src="/assets/js/jquery.isotope.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+
+<script>
+// Portfolio
+(function($) {
+	"use strict";
+	var $container = $('.portfolio'),
+		$items = $container.find('.portfolio-item'),
+		portfolioLayout = 'fitRows';
+		
+		if( $container.hasClass('portfolio-centered') ) {
+			portfolioLayout = 'masonry';
+		}
+				
+		$container.isotope({
+			filter: '*',
+			animationEngine: 'best-available',
+			layoutMode: portfolioLayout,
+			animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false
+		},
+		masonry: {
+		}
+		}, refreshWaypoints());
+		
+		function refreshWaypoints() {
+			setTimeout(function() {
+			}, 1000);   
+		}
+				
+		$('nav.portfolio-filter ul a').on('click', function() {
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector }, refreshWaypoints());
+				$('nav.portfolio-filter ul a').removeClass('active');
+				$(this).addClass('active');
+				return false;
+		});
+		
+		function getColumnNumber() { 
+			var winWidth = $(window).width(), 
+			columnNumber = 1;
+		
+			if (winWidth > 1200) {
+				columnNumber = 5;
+			} else if (winWidth > 950) {
+				columnNumber = 4;
+			} else if (winWidth > 600) {
+				columnNumber = 3;
+			} else if (winWidth > 400) {
+				columnNumber = 2;
+			} else if (winWidth > 250) {
+				columnNumber = 1;
+			}
+				return columnNumber;
+			}       
+			
+			function setColumns() {
+				var winWidth = $(window).width(), 
+				columnNumber = getColumnNumber(), 
+				itemWidth = Math.floor(winWidth / columnNumber);
+				
+				$container.find('.portfolio-item').each(function() { 
+					$(this).css( { 
+					width : itemWidth + 'px' 
+				});
+			});
+		}
+		
+		function setPortfolio() { 
+			setColumns();
+			$container.isotope('reLayout');
+		}
+			
+		$container.imagesLoaded(function () { 
+			setPortfolio();
+		});
+		
+		$(window).on('resize', function () { 
+		setPortfolio();          
+	});
+})(jQuery);
+</script>
+    </body>
+</html>

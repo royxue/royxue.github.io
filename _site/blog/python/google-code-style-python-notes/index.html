@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+    <title>Roy Xue is Here :) - Google Code Style Python Notes</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <!--<link rel="stylesheet" href="/css/main.css">-->
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/assets/js/modernizr.js"></script>
+</head>
+
+    <body>
+        <!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Roy Xue is Here :)</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <li ><a href="/">HOME</a></li>
+        <li ><a href="/blog/">BLOG</a></li>
+        <!-- <li ><a href="/portfolio/">PORTFOLIO</a></li> -->
+        <!-- <li ><a href="/about/">ABOUT</a></li> -->
+        <!-- <li ><a href="/contact/">CONTACT</a></li> -->
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+            <div id="blue">
+    <div class="container">
+        <div class="row">
+            <h3>Google Code Style Python Notes</h3>
+        </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+
+<div class="container mtb">
+    <div class="row">
+        <! -- SINGLE POST -->
+        <div class="col-lg-8">
+            <! -- Blog Post  -->
+            <p><img class="img-responsive" src="/assets/img/blog/"></p>
+            <a href="/blog/python/google-code-style-python-notes"><h3 class="ctitle">Google Code Style Python Notes</h3></a>
+            <p><csmall>Oct 3, 2014. | By: xljroy</csmall></p>
+              
+            <p>这两天因为Projects需要, 刷了一遍Google Code Style for Python, hmmm怎么说呢, 第一次认真看这样的文档, 感觉确实有很多需要注意的东西, 目的是为了更加让code更加简洁明了, 所以可能相对忽略了一些语言特性, 和简单却复杂的语句</p>
+
+<ol>
+  <li>
+    <p>Pylint tools</p>
+  </li>
+  <li>
+    <p>Import</p>
+  </li>
+</ol>
+
+<pre><code>* import X
+
+
+* from X import Y
+
+
+* from X import Y as Z
+</code></pre>
+
+<ol>
+  <li>
+    <p>注意的是在import时, 使用full package name. 避免混乱的import或者import同一package两次</p>
+  </li>
+  <li>
+    <p>Exceptions</p>
+  </li>
+</ol>
+
+<pre><code>* 允许使用, 但是必须谨慎
+
+
+* Raise Exception使用: raise Exceptions("Errormsg") or raise Exceptions
+
+
+* Module 里的Base Exception 用Error命名 `def Error(Exception)
+
+
+* try/except block里的代码量要尽可能精简, 避免从无用的语句中raise Exception
+
+
+* 不论是后raise expection 使用finally来执行代码
+
+
+* try/except 中使用as来代替逗号 except Error as error
+</code></pre>
+
+<ol>
+  <li>Global Variables</li>
+</ol>
+
+<pre><code>* 尽量避免使用Global Variables
+</code></pre>
+
+<ol>
+  <li>Nested/Local/Inner Function and Classes</li>
+</ol>
+
+<pre><code>* 在某些情况下, 可以使用
+</code></pre>
+
+<ol>
+  <li>List Comprehensions</li>
+</ol>
+
+<pre><code>* 使用简单直观的list构造方法, 尽量避免使用诸如map(), lambda等方法
+</code></pre>
+
+<ol>
+  <li>Default Iterators and Operators</li>
+</ol>
+
+<pre><code>* 对list,dict 等使用默认的迭代器和操作器
+
+
+* 使代码更简单, 避免extra method calls
+</code></pre>
+
+<ol>
+  <li>Generators</li>
+</ol>
+
+<pre><code>* 需要被使用
+</code></pre>
+
+<ol>
+  <li>Lambda Functions</li>
+</ol>
+
+<pre><code>* 一行可以写完的代码允许使用
+
+
+* 可以被用来定义callbacks or operators for higher-order functions
+
+
+* 缺点是比较不易读
+
+
+* 对于 简单地操作避免使用lambda
+</code></pre>
+
+<ol>
+  <li>Conditional Expressions</li>
+</ol>
+
+<pre><code>* 一行内可以用
+</code></pre>
+
+<ol>
+  <li>Default Argument Values</li>
+</ol>
+
+<pre><code>* 大部分情况可用
+</code></pre>
+
+<ol>
+  <li>Properties</li>
+</ol>
+
+<pre><code>* 只读属性使用装饰器@property
+
+
+* __get_property __set_property
+</code></pre>
+
+<ol>
+  <li>True/False evaluations</li>
+</ol>
+
+<pre><code>* 含蓄的否定判断
+
+
+* 不要用 ==/!= 来比较singletons(e.g. None) 用is/is not
+
+
+* 不用is来判断False
+
+
+* 判断比如list为空 if seq instead of if len(seq)
+</code></pre>
+
+<ol>
+  <li>Deprecated Language Features</li>
+</ol>
+
+<pre><code>* 不要随意使用, 不同的python可能不互相支持
+</code></pre>
+
+<ol>
+  <li>Lexical Scoping</li>
+</ol>
+
+<pre><code>* 可用
+</code></pre>
+
+<ol>
+  <li>Function and Method Decorators</li>
+</ol>
+
+<pre><code>* 有明确优势的时候再用装饰器
+
+
+* @classmethod and @staticmethod 把普通的方法转化为class或者static method
+</code></pre>
+
+<ol>
+  <li>Threading</li>
+</ol>
+
+<pre><code>* Using Queue 在线程之间传输数据
+</code></pre>
+
+<ol>
+  <li>Power Features</li>
+</ol>
+
+<pre><code>* 避免使用这些强力特性
+</code></pre>
+
+<p>Python Style rules:</p>
+
+<ol>
+  <li>
+    <p>不要用分号</p>
+  </li>
+  <li>
+    <p>单行最大长度80个字符, 不要用反斜线换行, url需要的可以可以放在一行</p>
+  </li>
+  <li>
+    <p>谨慎使用()</p>
+  </li>
+  <li>
+    <p>4空格缩进</p>
+  </li>
+  <li>
+    <p>Top level definitions(function/class)空两行, method之间空一行</p>
+  </li>
+  <li>
+    <p>Whitespace</p>
+  </li>
+  <li>
+    <p>注释</p>
+  </li>
+</ol>
+
+<pre><code>* Doc string
+</code></pre>
+
+<ol>
+  <li>Class</li>
+</ol>
+
+<pre><code>* class 没有明确的父类时, 继承object
+</code></pre>
+
+<ol>
+  <li>String</li>
+</ol>
+
+<pre><code>* 格式化输出的两种选择 '{}'.format() 或者 % 一类
+</code></pre>
+
+<ol>
+  <li>Files and Sockets</li>
+</ol>
+
+<pre><code>* 使用完files和sockets之后一定要及时关掉sockets
+</code></pre>
+
+<ol>
+  <li>
+    <p>管理文件时使用_with_语句
+with open(“hello.txt”) as hello_file:
+for line in hello_file:
+print line
+类似file的对象使用contextlib来替代with
+import contextlib
+with contextlib.closing(urllib.urlopen(“http://www.python.org/”)) as front_page:</p>
+  </li>
+  <li>
+    <p>TODO 注释, 表示暂时性的解决方法</p>
+  </li>
+  <li>
+    <p>import应该使用单独的行来import</p>
+  </li>
+  <li>
+    <p>Statement 一行一条语句</p>
+  </li>
+  <li>
+    <p>命名规则…check 网页吧</p>
+  </li>
+  <li>
+    <p>main函数, 尽量每个文件都有main函数, 这样可以保证单元测试的时候文件可导入</p>
+  </li>
+</ol>
+
+
+
+            <div class="spacing"></div>
+            <!-- <h6>SHARE:</h6>
+            <p class="share">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-tumblr"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>		 		
+            </p> -->
+        </div><! --/col-lg-8 -->
+        
+        <div class="col-lg-4">
+   <!--  <h4>Search</h4>
+    <div class="hline"></div>
+        <p>
+            <br/>
+            <input type="text" class="form-control" placeholder="Search something">
+        </p>
+    <div class="spacing"></div> -->
+    <h4>Subscribe</h4>
+    <div class="hline"></div>
+        <p>
+            <p class="rss-subscribe">Subscribe to this blog <a href="/feed.xml">via RSS</a>.</p>
+        </p>
+    <div class="spacing"></div>
+    <h4>Categories</h4>
+    <div class="hline"></div>
+    
+        <p>
+            <a href="/category/#life"><i class="fa fa-angle-right"></i> Life</a>
+            <span class="badge badge-theme pull-right">53</span>
+        </p>
+    
+        <p>
+            <a href="/category/#having fun"><i class="fa fa-angle-right"></i> Having fun</a>
+            <span class="badge badge-theme pull-right">6</span>
+        </p>
+    
+        <p>
+            <a href="/category/#python"><i class="fa fa-angle-right"></i> Python</a>
+            <span class="badge badge-theme pull-right">9</span>
+        </p>
+    
+        <p>
+            <a href="/category/#hacker"><i class="fa fa-angle-right"></i> Hacker</a>
+            <span class="badge badge-theme pull-right">2</span>
+        </p>
+    
+        <p>
+            <a href="/category/#dev"><i class="fa fa-angle-right"></i> Dev</a>
+            <span class="badge badge-theme pull-right">9</span>
+        </p>
+    
+        <p>
+            <a href="/category/#scrapy"><i class="fa fa-angle-right"></i> Scrapy</a>
+            <span class="badge badge-theme pull-right">3</span>
+        </p>
+    
+        <p>
+            <a href="/category/#theano"><i class="fa fa-angle-right"></i> Theano</a>
+            <span class="badge badge-theme pull-right">14</span>
+        </p>
+    
+        <p>
+            <a href="/category/#machine learning"><i class="fa fa-angle-right"></i> Machine learning</a>
+            <span class="badge badge-theme pull-right">5</span>
+        </p>
+    
+        <p>
+            <a href="/category/#explorer"><i class="fa fa-angle-right"></i> Explorer</a>
+            <span class="badge badge-theme pull-right">2</span>
+        </p>
+    
+
+    <div class="spacing"></div>
+
+    <h4>Recent Posts</h4>
+    <div class="hline"></div>
+        <ul class="popular-posts">
+             
+                <li>
+                    <!-- <a href="/blog/having%20fun/monster-hunter-4g-e78ba9e78c8ee697a5e8aeb0"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
+                    <p><a href="/blog/having%20fun/monster-hunter-4g-e78ba9e78c8ee697a5e8aeb0">Monster Hunter 4G 狩猎日记</a></p>
+                <em>Posted on 06 Jan 2015</em>
+            </li>
+             
+                <li>
+                    <!-- <a href="/blog/life/e38195e38288e381aae38289e38080efbc92efbc90efbc91efbc94"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
+                    <p><a href="/blog/life/e38195e38288e381aae38289e38080efbc92efbc90efbc91efbc94">さよなら　２０１４</a></p>
+                <em>Posted on 01 Jan 2015</em>
+            </li>
+             
+                <li>
+                    <!-- <a href="/blog/app-e28ea1e9b29ce5a3b0e28ea6-e4b88ae7babf"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
+                    <p><a href="/blog/app-e28ea1e9b29ce5a3b0e28ea6-e4b88ae7babf">App ⎡鲜声⎦ 上线</a></p>
+                <em>Posted on 20 Dec 2014</em>
+            </li>
+             
+                <li>
+                    <!-- <a href="/blog/python/tricks-inside-python-loop"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
+                    <p><a href="/blog/python/tricks-inside-python-loop">Tricks inside Python Loop</a></p>
+                <em>Posted on 05 Dec 2014</em>
+            </li>
+             
+        </ul>
+
+    <div class="spacing"></div>
+
+    <!-- <h4>Popular Tags</h4>
+    <div class="hline"></div>
+    <p>
+    
+            <a class="btn btn-theme" href="/category/#life" role="button">Life (53)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#having fun" role="button">Having fun (6)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#python" role="button">Python (9)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#hacker" role="button">Hacker (2)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#dev" role="button">Dev (9)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#scrapy" role="button">Scrapy (3)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#theano" role="button">Theano (14)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#machine learning" role="button">Machine learning (5)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#explorer" role="button">Explorer (2)</a>	         
+        
+    </p> -->
+</div>
+
+    </div><! --/row -->
+</div><! --/container -->
+
+        <div id="footerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About</h4>
+                <div class="hline-w"></div>
+                <p>Have no idea now</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    
+                        <a href="" class="btn-social btn-outline"><i class="fa fa-dribbble"></i></a>
+                    
+                        <a href="https://www.facebook.com/roy.xue29" class="btn-social btn-outline"><i class="fa fa-facebook"></i></a>
+                    
+                        <a href="https://twitter.com/xljroy" class="btn-social btn-outline"><i class="fa fa-twitter"></i></a>
+                    
+                        <a href="http://instagram.com/xljroy" class="btn-social btn-outline"><i class="fa fa-instagram"></i></a>
+                    
+                        <a href="" class="btn-social btn-outline"><i class="fa fa-tumblr"></i></a>
+                    
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Contacts</h4>
+                <div class="hline-w"></div>
+                <p>
+                    
+                        FE2341, <br>
+                    
+                        213E2B1, <br>
+                    
+                        Inside Memory. <br>
+                    
+                </p>
+            </div>
+        </div><! --/row -->
+    </div><! --/container -->
+</div><! --/footerwrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/retina-1.1.0.js"></script>
+<script src="/assets/js/jquery.hoverdir.js"></script>
+<script src="/assets/js/jquery.hoverex.min.js"></script>
+<script src="/assets/js/jquery.prettyPhoto.js"></script>
+<script src="/assets/js/jquery.isotope.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+
+<script>
+// Portfolio
+(function($) {
+	"use strict";
+	var $container = $('.portfolio'),
+		$items = $container.find('.portfolio-item'),
+		portfolioLayout = 'fitRows';
+		
+		if( $container.hasClass('portfolio-centered') ) {
+			portfolioLayout = 'masonry';
+		}
+				
+		$container.isotope({
+			filter: '*',
+			animationEngine: 'best-available',
+			layoutMode: portfolioLayout,
+			animationOptions: {
+			duration: 750,
+			easing: 'linear',
+			queue: false
+		},
+		masonry: {
+		}
+		}, refreshWaypoints());
+		
+		function refreshWaypoints() {
+			setTimeout(function() {
+			}, 1000);   
+		}
+				
+		$('nav.portfolio-filter ul a').on('click', function() {
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector }, refreshWaypoints());
+				$('nav.portfolio-filter ul a').removeClass('active');
+				$(this).addClass('active');
+				return false;
+		});
+		
+		function getColumnNumber() { 
+			var winWidth = $(window).width(), 
+			columnNumber = 1;
+		
+			if (winWidth > 1200) {
+				columnNumber = 5;
+			} else if (winWidth > 950) {
+				columnNumber = 4;
+			} else if (winWidth > 600) {
+				columnNumber = 3;
+			} else if (winWidth > 400) {
+				columnNumber = 2;
+			} else if (winWidth > 250) {
+				columnNumber = 1;
+			}
+				return columnNumber;
+			}       
+			
+			function setColumns() {
+				var winWidth = $(window).width(), 
+				columnNumber = getColumnNumber(), 
+				itemWidth = Math.floor(winWidth / columnNumber);
+				
+				$container.find('.portfolio-item').each(function() { 
+					$(this).css( { 
+					width : itemWidth + 'px' 
+				});
+			});
+		}
+		
+		function setPortfolio() { 
+			setColumns();
+			$container.isotope('reLayout');
+		}
+			
+		$container.imagesLoaded(function () { 
+			setPortfolio();
+		});
+		
+		$(window).on('resize', function () { 
+		setPortfolio();          
+	});
+})(jQuery);
+</script>
+    </body>
+</html>
