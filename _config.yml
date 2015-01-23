@@ -3,7 +3,7 @@
 # Site settings
 title: Roy Xue is Here :)
 description: "Lazy Guy"
-analytics: #Google analytics code in the format XX-nnnnnnnn-n
+analytics: UA-58877422-1∂ 
 baseurl: "" #important: start with /
 url: "http://royxue.me"
 
@@ -51,7 +51,7 @@ tel: uknown
     
 
 # Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
-about: "Have no idea now"
+about: "Kinda lazy guy, lol"
 
 # Testimonial content. Shown on Home and About page. 
 testimonial:
