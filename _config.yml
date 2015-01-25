@@ -32,6 +32,14 @@ social:
     url: "https://twitter.com/xljroy"
   - title: instagram
     url: "http://instagram.com/xljroy"
+  - title: google-plus
+    url: "https://plus.google.com/+RoyXue"
+  - title: linkedin
+    url: "https://cn.linkedin.com/in/royxue"
+  - title: github
+    url: "https://github.com/royxue"
+  - title: camera-retro
+    url: "https://500px.com/xljroy"
     
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:
