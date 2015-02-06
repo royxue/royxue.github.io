@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/assets/ico/favicon.ico">
 
-    <title>Roy Xue is Here :) - 机器学习之Logistic Regression</title>
+    <title>Roy Xue is Here :) - Thai Trip</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
@@ -62,7 +62,7 @@
             <div id="blue">
     <div class="container">
         <div class="row">
-            <h3>机器学习之Logistic Regression</h3>
+            <h3>Thai Trip</h3>
         </div><!-- /row -->
     </div> <!-- /container -->
 </div><!-- /blue -->
@@ -73,50 +73,20 @@
         <div class="col-lg-8">
             <! -- Blog Post  -->
             <p><img class="img-responsive" src="/assets/img/blog/"></p>
-            <a href="/machine%20learning/e69cbae599a8e5ada6e4b9a0e4b98blogistic-regression"><h3 class="ctitle">机器学习之Logistic Regression</h3></a>
-            <p><csmall>Apr 28, 2014. | By: xljroy</csmall></p>
+            <a href="/blog/explorer/thai-trip"><h3 class="ctitle">Thai Trip</h3></a>
+            <p><csmall>Feb 5, 2015. | By: xljroy</csmall></p>
               
-            <h2 id="logistic-regression-">Logistic Regression 逻辑回归笔记整理</h2>
+            <p>回到家的第一件事就是连着睡了十几个小时的觉.</p>
 
-<p>主要参考 Cousera - Machine Learning by Andrew Ng
-啊…发现果然不整理笔记不行啊…不然过段时间就忘记了…</p>
+<p>本来是打算要去台湾, 结果因为时间来不及办理通行证只能临时更改目的地去泰国. 不知道这算不算是完成了2014年未完成的旅行心愿. 不过从学校回家的时候没有带那本Thailand Lonely Planet还是很遗憾. </p>
 
-<p>最简单的线性回归其实就是我们小学做的画图或者计算题,求出一条最接近的拟合曲线. 但是回归是连续性模型,一般应用在Precision(预测)问题上,如果要应用在分类问题,就要用到了Logistic Regression,也就是传说中的逻辑回归</p>
+<p>因为是要陪老妈一起去玩, 她又执意不愿意自由行, 无奈只能报旅游团. 不过还是选了一个有一天自由活动的团. </p>
 
-<p>逻辑回归的本质还是线性回归,但是相较于h(x) =<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201103/201103052209264391.png"><img src="http://images.cnblogs.com/cnblogs_com/jerrylead/201103/201103052209276833.png" alt="clip_image025" /></a> 而言,多加了一层函数的映射,</p>
+<p>泰国和想象中的有些不一样. 大概也是因为旅游团去的地方都是大景点, 放眼望去, 看不尽的中国人. 自由行的最后一天, 趁着曼谷大堵车, 和出租车司机聊了一下所谓的泰国旅游. 最悲哀的事情就是中国人出了国还要被自己的同胞坑, 说着一口普通话的华人/华裔导游其实并非是正规导游, 一般旅游团都会有两个导游, 一个中国人, 一个泰国人, 泰国人持有导游证, 负责卖票, 应付旅游警察, 全程不会说什么话. 中国导游只负责骗人, 告诉你所谓的皇家XX中心是国王开的. 青草药膏, 虎牌膏药, 各种动物皮包, 蛇药等等当地人根本不用, 泰国的土豪也是买奢侈品的. 所以说, 中国人的出国旅游简直就是一部交国际智商税的血泪史…</p>
 
-<p>即Sigmoid(Logistic Function) g(z)=1/(1+e^(-z)), 我们可以从下面这个图里面看到</p>
+<p>hmmm, 说些好的, 泰国还是一个很不错的国家. 曼谷看起来很庄严, 大概是因为有很多政府机关, 和很多的寺庙. Siam Center大概是最繁华的中心, 难以想象的是在购物商场的楼下竟然有一个超级棒的水族馆, 五星推荐! 芭堤雅是个很不一样的城市, 大概也是因为太开放了, 在大街上就已经是男男女女分不清楚了, 也真的有很多欧美大叔来租妻. 到了晚上, 红灯区的街上, 沙滩上到处是拉客的, 漂亮的还不少是人妖…唯一遗憾的是没有来得及去看信不信由你博物馆.</p>
 
-<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Logistic-curve.svg/320px-Logistic-curve.svg.png" alt="" /></p>
-
-<p>所以新的hθ(x) = g(<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201103/201103052209264391.png"><img src="http://images.cnblogs.com/cnblogs_com/jerrylead/201103/201103052209276833.png" alt="clip_image025" /></a> ), 为了实现分类问题,假设两类概率满足伯努利分布</p>
-
-<p><a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201103/201103052209294999.png"><img src="http://images.cnblogs.com/cnblogs_com/jerrylead/201103/201103052209305423.png" alt="clip_image027" /></a></p>
-
-<p>Decision Boundary :我们一般设置这个值为0.5 ,并且作为0和1 两类的分类标准. hθ(x) &gt; 0.5 =&gt; hθ(x) = 1 =&gt; x &gt; 0 的关系.</p>
-
-<p>每个机器学习的算法都逃不开Cost Function(代价函数)的宿命</p>
-
-<p>用于线性回归的代价函数,在这里将不再适用,因为在此处通过梯度下降不一定可以求得最优解.</p>
-
-<p><img src="http://img1.guokr.com/image/ftVruqJWGU8Q2yW-EHVPDz2ZPrJ7yJSp6ypBUOKGKYA-AwAAlAAAAFBO.png" alt="" /></p>
-
-<p>所以逻辑回归的代价函数为</p>
-
-<p><img src="http://img1.guokr.com/image/VqgQ-aIy2KvAJ6y-qToF9oVLcJAxVqvTs_fRK122NPD8AgAAxwAAAFBO.png" alt="" /></p>
-
-<p><img src="http://img1.guokr.com/image/dH__tbwcW0JoQbzh3agqynH-Tc3sPB-V_PL2wDtLa37xAQAAUQAAAFBO.png" alt="" /></p>
-
-<p>对于新的代价函数,由于是根据y的取值来确定的,那么我们可以对他进行简化</p>
-
-<p><a href="https://www.evernote.com/shard/s131/sh/afdae339-2b73-4555-b1af-b98dd6129aea/70d29a4811e6c41f3d3c49fc55f2526b">[<img src="http://royxue.me/wp-content/uploads/2014/04/Evernote-2-300x185.png" alt="Evernote 2" />](http://royxue.me/wp-content/uploads/2014/04/Evernote-2.png)
-</a></p>
-
-<p>对_J<em>(_θ</em>)求导后，梯度下降算法如下：</p>
-
-<p><a href="http://royxue.me/wp-content/uploads/2014/04/Evernote.png"><img src="http://royxue.me/wp-content/uploads/2014/04/Evernote-300x101.png" alt="Evernote" /></a></p>
-
-<p>注意，这个算法和线性回归里的梯度下降算法几乎是一致的，除了_h__θ<em>(_x</em>)的表示不同。</p>
+<p>哎, 最写不动的就是游记了, 想说的东西太多, 可是要写下来的时候却懒得打字了. Whatever, memory is the most valuable thing :)</p>
 
 
 

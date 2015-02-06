@@ -5,9 +5,37 @@
     <description>Lazy Guy</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 25 Jan 2015 19:25:08 +0800</pubDate>
-    <lastBuildDate>Sun, 25 Jan 2015 19:25:08 +0800</lastBuildDate>
+    <pubDate>Fri, 06 Feb 2015 23:40:27 +0800</pubDate>
+    <lastBuildDate>Fri, 06 Feb 2015 23:40:27 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Blog: Thai Trip</title>
+        <description>&lt;p&gt;回到家的第一件事就是连着睡了十几个小时的觉.&lt;/p&gt;
+
+&lt;p&gt;本来是打算要去台湾, 结果因为时间来不及办理通行证只能临时更改目的地去泰国. 不知道这算不算是完成了2014年未完成的旅行心愿. 不过从学校回家的时候没有带那本Thailand Lonely Planet还是很遗憾. &lt;/p&gt;
+
+&lt;p&gt;因为是要陪老妈一起去玩, 她又执意不愿意自由行, 无奈只能报旅游团. 不过还是选了一个有一天自由活动的团. &lt;/p&gt;
+
+&lt;p&gt;泰国和想象中的有些不一样. 大概也是因为旅游团去的地方都是大景点, 放眼望去, 看不尽的中国人. 自由行的最后一天, 趁着曼谷大堵车, 和出租车司机聊了一下所谓的泰国旅游. 最悲哀的事情就是中国人出了国还要被自己的同胞坑, 说着一口普通话的华人/华裔导游其实并非是正规导游, 一般旅游团都会有两个导游, 一个中国人, 一个泰国人, 泰国人持有导游证, 负责卖票, 应付旅游警察, 全程不会说什么话. 中国导游只负责骗人, 告诉你所谓的皇家XX中心是国王开的. 青草药膏, 虎牌膏药, 各种动物皮包, 蛇药等等当地人根本不用, 泰国的土豪也是买奢侈品的. 所以说, 中国人的出国旅游简直就是一部交国际智商税的血泪史…&lt;/p&gt;
+
+&lt;p&gt;hmmm, 说些好的, 泰国还是一个很不错的国家. 曼谷看起来很庄严, 大概是因为有很多政府机关, 和很多的寺庙. Siam Center大概是最繁华的中心, 难以想象的是在购物商场的楼下竟然有一个超级棒的水族馆, 五星推荐! 芭堤雅是个很不一样的城市, 大概也是因为太开放了, 在大街上就已经是男男女女分不清楚了, 也真的有很多欧美大叔来租妻. 到了晚上, 红灯区的街上, 沙滩上到处是拉客的, 漂亮的还不少是人妖…唯一遗憾的是没有来得及去看信不信由你博物馆.&lt;/p&gt;
+
+&lt;p&gt;哎, 最写不动的就是游记了, 想说的东西太多, 可是要写下来的时候却懒得打字了. Whatever, memory is the most valuable thing :)&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 05 Feb 2015 00:12:22 +0800</pubDate>
+        <link>http://royxue.me/blog/explorer/thai-trip</link>
+        <guid isPermaLink="true">http://royxue.me/blog/explorer/thai-trip</guid>
+        
+        <category>Thai</category>
+        
+        
+        <category>blog</category>
+        
+        <category>explorer</category>
+        
+      </item>
     
       <item>
         <title>Blog: Monster Hunter 4G 狩猎日记</title>
@@ -431,29 +459,6 @@ t.execute(&#39;INSERT INTO bla (num) VALUES(2)&#39;)
         <category>blog</category>
         
         <category>theano</category>
-        
-      </item>
-    
-      <item>
-        <title>Blog: C...</title>
-        <description>&lt;p&gt;It seems like the last time I write C language is in the Summer after Grade 1, for the class final project. It’s really a long time that I almost forget all the stuff I learnt.&lt;/p&gt;
-
-&lt;p&gt;Well, I choose a new class, Software Security, it’s mainly based on C, so I think maybe it will be great chance for me to recall the memory of C. Aha&lt;/p&gt;
-
-&lt;p&gt;This time I will mainly use vim + gcc to finish the whole class and projects.&lt;/p&gt;
-
-&lt;p&gt;Aha. Go!&lt;/p&gt;
-</description>
-        <pubDate>Tue, 21 Oct 2014 00:14:03 +0800</pubDate>
-        <link>http://royxue.me/blog/dev/c</link>
-        <guid isPermaLink="true">http://royxue.me/blog/dev/c</guid>
-        
-        <category>en_US</category>
-        
-        
-        <category>blog</category>
-        
-        <category>dev</category>
         
       </item>
     
