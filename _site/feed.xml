@@ -5,9 +5,46 @@
     <description>Lazy Guy</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 06 Feb 2015 23:40:27 +0800</pubDate>
-    <lastBuildDate>Fri, 06 Feb 2015 23:40:27 +0800</lastBuildDate>
+    <pubDate>Sun, 08 Feb 2015 23:29:18 +0800</pubDate>
+    <lastBuildDate>Sun, 08 Feb 2015 23:29:18 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Project: Theano</title>
+        <description>&lt;h4 id=&quot;theano&quot;&gt;Theano&lt;/h4&gt;
+&lt;p&gt;Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. &lt;a href=&quot;http://www.deeplearning.net/software/theano&quot;&gt;http://www.deeplearning.net/software/theano&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 26 Feb 2015 00:00:00 +0800</pubDate>
+        <link>http://royxue.me/project/theano</link>
+        <guid isPermaLink="true">http://royxue.me/project/theano</guid>
+        
+        <category>deep learning</category>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Project: 鲜声</title>
+        <description>&lt;h4 id=&quot;section&quot;&gt;鲜声&lt;/h4&gt;
+&lt;p&gt;鲜声聚合社交媒体上的爆点及热点内容，提供个性化订阅和及时推送服务，主题多样，是一个带有个性趣味的新鲜订阅平台。
+Xiansheng is a light iOS app, a subscription platform with pushing service.&lt;/p&gt;
+
+&lt;h4 id=&quot;contribution&quot;&gt;Contribution&lt;/h4&gt;
+&lt;p&gt;Built server side during my internship at &lt;a href=&quot;http://www.ifanr.com/&quot;&gt;iFanr&lt;/a&gt;, mainly using Django.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 09 Feb 2015 07:00:00 +0800</pubDate>
+        <link>http://royxue.me/project/xiansheng</link>
+        <guid isPermaLink="true">http://royxue.me/project/xiansheng</guid>
+        
+        <category>iOS, App</category>
+        
+        
+        <category>project</category>
+        
+      </item>
     
       <item>
         <title>Blog: Thai Trip</title>
@@ -343,122 +380,6 @@
         <category>dev</category>
         
         <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>Blog: MySQL初体验</title>
-        <description>&lt;h3 id=&quot;mysql&quot;&gt;MySQL初体验&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;hmmmmm&lt;/p&gt;
-
-&lt;p&gt;最近因为研究需要, 开始要用MySQL了. 本来决定下周的Hackathon也用MySQL配合django进行开发. 不过最后还是决定那边先用PostgreSQL.&lt;/p&gt;
-
-&lt;h4 id=&quot;mac-osx-installation&quot;&gt;1. Mac OSX Installation&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;code&amp;gt;brew install mysql
-&amp;lt;/code&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;一行安装完毕, 然后输入”mysql.server start”启动mysql的服务器.
-“mysql -uroot -p”“登入
-使用”show databases” 就可以看到数据库的列表了.&lt;/p&gt;
-
-&lt;h4 id=&quot;using-python-with-mysql&quot;&gt;2. Using Python with MySQL&lt;/h4&gt;
-
-&lt;p&gt;下载 &lt;a href=&quot;http://sourceforge.net/projects/mysql-python/&quot;&gt;MySQLdb&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;修改site.cfg配置文件&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;code&amp;gt;#mysql_config = /usr/local/bin/mysql_config 将#去掉
-&amp;lt;/code&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;在解压目录下运行 “python setup.py build”&lt;/p&gt;
-
-&lt;p&gt;之后 “sudo python setup.py install”, 安装MySQLdb&lt;/p&gt;
-
-&lt;h4 id=&quot;sequel-pro&quot;&gt;3. Sequel Pro&lt;/h4&gt;
-
-&lt;p&gt;Just use&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;code&amp;gt;brew cask install sequel-pro
-&amp;lt;/code&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Sequel-Pro 是数据库管理的软件, 可以直观快捷地查看数据库内容.&lt;/p&gt;
-
-&lt;h4 id=&quot;basic-action&quot;&gt;4. Basic Action&lt;/h4&gt;
-
-&lt;p&gt;Using MySQLdb with Python&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;code&amp;gt;import MySQLdb
-
-conn = MySQLdb.connect(host=&#39;localhost&#39;, user=&#39;root&#39;, passwd=&#39;&#39;, db=&#39;bla&#39;)
-
-t = conn.cursor()
-
-# SELECT
-t.execute(&#39;SELECT * FROM bla&#39;)
-t.fetchone() 
-t.fetchall()
-
-# INSERT
-t.execute(&#39;INSERT INTO bla (num) VALUES(2)&#39;)
-&amp;lt;/code&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;for more: &lt;a href=&quot;http://www.tutorialspoint.com/python/python_database_access.htm&quot;&gt;MySQLdb&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;先去跑scripts去了 T T&lt;/p&gt;
-</description>
-        <pubDate>Thu, 06 Nov 2014 17:58:11 +0800</pubDate>
-        <link>http://royxue.me/blog/dev/mysqle5889de4bd93e9aa8c</link>
-        <guid isPermaLink="true">http://royxue.me/blog/dev/mysqle5889de4bd93e9aa8c</guid>
-        
-        
-        <category>blog</category>
-        
-        <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Blog: Theano Update Log #2226</title>
-        <description>&lt;p&gt;&lt;strong&gt;Theano Update Log #2226&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This week I mainly implement a new faster algorithm for counting the min peak.&lt;/p&gt;
-
-&lt;p&gt;When the node number increase, the recursive way also increases a lot, even we have already done the executable_set part. So what we need to do is to find a more efficient way to reduce the back track times.&lt;/p&gt;
-
-&lt;p&gt;This week what we do is using DONE_SET. DONE_SET: a set store executed nodes DONE_DICT: store the DONE_SET and its memory usage&lt;/p&gt;
-
-&lt;p&gt;The mainly idea is that when we execute a node, we add it to the DONE_SET, then we check if the DONE_SET is in the DONE_DICT or not. Attentions: here the set obejct is not hashable, we cannot use it as dict’s key, so we use frozenset() to transfer the set to frozenset as the frozenset is hashable and can be used as a key.&lt;/p&gt;
-
-&lt;p&gt;If not in DONE_DICT, update the DONE_DICT. If yes, continue to check if the previous DONE_SET memory usage is bigger than the current memory usage. True, then we update the memory usage in DONE_DICT to current memory usage. False, remove the node from DONE_SET and stop this iteration, move to next node in executable_node.&lt;/p&gt;
-
-&lt;p&gt;The algo is definitely faster, but now there remains another question, I ran the logistic_cg for several times, and I got different results. This means that during the computing process we miss some possibility and the real min peak.&lt;/p&gt;
-
-&lt;p&gt;The next step is to think about how to get the accurate result.&lt;/p&gt;
-
-&lt;h1 id=&quot;update-in-1st-nov&quot;&gt;Update in 1st Nov.&lt;/h1&gt;
-
-&lt;p&gt;Previous problem solved. By using the max_mem_count to take place of mem_count.&lt;/p&gt;
-
-&lt;p&gt;Also using a better if in new version, clean up duplicated code, make it more beautiful :)&lt;/p&gt;
-</description>
-        <pubDate>Fri, 31 Oct 2014 11:24:34 +0800</pubDate>
-        <link>http://royxue.me/blog/theano/theano-update-log-2226</link>
-        <guid isPermaLink="true">http://royxue.me/blog/theano/theano-update-log-2226</guid>
-        
-        <category>Theano</category>
-        
-        
-        <category>blog</category>
-        
-        <category>theano</category>
         
       </item>
     
