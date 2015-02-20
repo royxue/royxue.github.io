@@ -1,0 +1,21 @@
+---
+layout: project
+title:  "Alfred Workflows"
+date:   2015-02-20 23:00:00
+author: xljroy
+language: alfred
+categories: 
+- project
+tags: 
+- alfred workflow 
+img: alfred.png
+thumb: alfred.png
+carousel:
+
+website: https://github.com/royxue/Alfred_workflows
+---
+####[Mou](https://github.com/royxue/Alfred_workflows/tree/master/Mou)
+Mou is an Alfred Workflow by which you can use "moo" easily find .md files(only .md files show in search result) on your Mac and open it by Mou.
+
+####[Macdown](https://github.com/royxue/Alfred_workflows/tree/master/Macdown)
+Macdown is an Alfred Workflow by which you can use "mcc" easily find .md files(only .md files show in search result) on your Mac and open it by Macdown.
