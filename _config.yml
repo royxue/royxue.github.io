@@ -2,8 +2,8 @@
 
 # Site settings
 title: Roy Xue is Here :)
-description: "Lazy Guy"
-analytics: UA-58877422-1 
+description: "Roy,Lijun,Xue,Roy Xue,Lijun Xue,薛立君"
+analytics: UA-58877422-1
 baseurl: "" #important: start with /
 url: "http://royxue.me"
 
@@ -13,15 +13,15 @@ permalink: /:categories/:title
 excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
 
 colors:  #in hex code if not noted else
-  primary: "#00b3fe" #"#F70031" 
-  primary_rgb: "0,179,254" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.  
+  primary: "#00b3fe" #"#F70031"
+  primary_rgb: "0,179,254" #"247,0,49" #rgb of the primary. Needed in some places for the transparency effect.
   secondary: "#384452" #"#33004D"
   link: "#428bca"
   link_hover: "#01b2fe"
   footer_heading: "#ffffff"
   footer_content: "#bfc9d3"
-  
-  
+
+
 ### CONTACT SETTINGS ###
 
 # Social networks usernames. Many more available: google-plus, flickr, linkedin, etc). Shown in footer.
@@ -38,27 +38,17 @@ social:
     url: "https://cn.linkedin.com/in/royxue"
   - title: github
     url: "https://github.com/royxue"
-  - title: camera-retro
+  - title: picture-o
     url: "https://500px.com/xljroy"
-    
+
 # Postal address (add as many lines as necessary). Shown in footer and on Contact page.
 address:
-  - lines: 
-    - Email=> xljroy@gmail.com
+  - lines:
+    - Email=> xljroy#gmail.com
     - Wechat=> xljroy
     - Line=> royxue29
-email: xljroy@gmail.com
+email: xljroy#gmail.com
 tel: uknown
 
-
-### GENERAL DATA FOR VARIOUS LOCATIONS ###
-    
-
-# Short text about your company. Shown in footer on every page and also separately on Home and Contact page.
-about: "Kinda lazy guy, lol"
-
-# Testimonial content. Shown on Home and About page. 
-testimonial:
-    message: "Lazy Guy"
-    author: Roy Xue
-    position: Lazy Hacker
+# Short text about yourself. Shown in footer on every page and also separately on Home page.
+about: "Exploring the world :)"

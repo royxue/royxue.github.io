@@ -2,12 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Roy Xue is Here :)</title>
-    <description>Lazy Guy</description>
+    <description>Roy,Lijun,Xue,Roy Xue,Lijun Xue,薛立君</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 09 Mar 2015 11:23:42 +0900</pubDate>
-    <lastBuildDate>Mon, 09 Mar 2015 11:23:42 +0900</lastBuildDate>
+    <pubDate>Thu, 26 Mar 2015 23:57:29 +0900</pubDate>
+    <lastBuildDate>Thu, 26 Mar 2015 23:57:29 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Life: Living in Japan</title>
+        <description>&lt;p&gt;Now it’s my third week in Japan. Life is just too busy to catch up all stuffs, like writing this blog :)&lt;/p&gt;
+
+&lt;p&gt;Whatever, I love this city, this country. Always I feel like that I am like a new delivered baby, so eager to see, to experience the this new world.&lt;/p&gt;
+
+&lt;p&gt;I learnt Rails in previous 2 weeks, finished some web development tasks by Rails. I guess the actual time spending on learning Rails maybe less than one week? Im just not sure about it. But, Python and Ruby, Django and Rails are pretty similar except the grammar difference. The previous Django and Python knowledge helped me a lot on Ruby. Ruby is kind of language you can write like a poem, which means one beautiful line to do something powerful, hmmm, this is what I wanna learn more in the future.&lt;/p&gt;
+
+&lt;p&gt;I guest the most important things on my wish list have been finished, saw kojiharu in the real life is the best moment in Japan till now. It’s a little bit difficult to describe the feeling at that moment. doki doki doki doki. haha.&lt;/p&gt;
+
+&lt;p&gt;Next week, I will start my own project, although till now I have no idea about what to do. Im looking forward to the first step, because there are lots of things to learn, to try, to enjoy!~~~&lt;/p&gt;
+</description>
+        <pubDate>Mon, 16 Mar 2015 18:36:40 +0900</pubDate>
+        <link>http://royxue.me/life/living-in-japan</link>
+        <guid isPermaLink="true">http://royxue.me/life/living-in-japan</guid>
+        
+        
+        <category>life</category>
+        
+      </item>
     
       <item>
         <title>Project: Theano</title>
@@ -271,27 +292,6 @@ Xiansheng is a light iOS app, a subscription platform with pushing service.&lt;/
         <category>blog</category>
         
         <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>Blog: Theano Update log 1120</title>
-        <description>&lt;p&gt;The if/else crash in memory profiler is fixed.&lt;/p&gt;
-
-&lt;p&gt;Another part is add CPU/GPU memory usage calculating support. In previous version, the memory usage is only sum value, in order to make more information avaiable, so we add CPU/GPU separate memory usage information support. This part is quite simple, when we are calculating each variable, check its type first, if it is CudaNdarray or not.&lt;/p&gt;
-
-&lt;p&gt;Also, for the memory usage information, the CPU and GPU will share a list like [CPU, GPU], choosing this way to store the value is to make it flexible when we implement multi GPU later.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 21 Nov 2014 01:05:26 +0900</pubDate>
-        <link>http://royxue.me/blog/theano/theano-update-log-1120</link>
-        <guid isPermaLink="true">http://royxue.me/blog/theano/theano-update-log-1120</guid>
-        
-        <category>Theano</category>
-        
-        
-        <category>blog</category>
-        
-        <category>theano</category>
         
       </item>
     
