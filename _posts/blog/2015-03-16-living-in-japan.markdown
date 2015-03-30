@@ -6,8 +6,10 @@ layout: post
 slug: living-in-japan
 title: Living in Japan
 categories:
-- life
+- blog
+- Life
 tags:
+- travel
 ---
 
 Now it's my third week in Japan. Life is just too busy to catch up all stuffs, like writing this blog :)
