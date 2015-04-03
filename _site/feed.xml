@@ -5,9 +5,66 @@
     <description>Roy,Lijun,Xue,Roy Xue,Lijun Xue,薛立君</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 30 Mar 2015 13:46:03 +0900</pubDate>
-    <lastBuildDate>Mon, 30 Mar 2015 13:46:03 +0900</lastBuildDate>
+    <pubDate>Fri, 03 Apr 2015 13:53:16 +0900</pubDate>
+    <lastBuildDate>Fri, 03 Apr 2015 13:53:16 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Blog: Bookmarks Migration Plan</title>
+        <description>&lt;p&gt;I have been using Chrome bookmarks for a long time, the folder stucture gradually become deep and messy, so I think it’s time to change!&lt;/p&gt;
+
+&lt;p&gt;At first, what I wanna do is to find a designed Mac OS app to manage all bookmarks offline, but unfortuantely I didnt find satisfied one, good design and reasonable price app is hard to find, whatever if you dont mind price, &lt;a href=&quot;fetching.io&quot;&gt;fetching&lt;/a&gt; is a good one. &lt;a href=&quot;raindrop.io&quot;&gt;RainDrop&lt;/a&gt; is also good, but hmmm… it’s just too many bugs inside this Beta version, even I cannot import my bookmarks, but as it will getting better, so I would use it when it can work well in the future.&lt;/p&gt;
+
+&lt;p&gt;Then I turned to online bookmarks service, honestly pinboard is the best choice, but after it’s change to per-year price, it would be a little hard to accept that. Finally, I decide to use &lt;a href=&quot;https://delicious.com&quot;&gt;Delicious&lt;/a&gt;. It’s free but some ads there. &lt;/p&gt;
+
+&lt;p&gt;Also, a good app is needed for better experience, I use Shiori now, it’s light but beatiful, u can set the hot key to easily store and open the bookmarks.(like another Alfred, haha) &lt;br /&gt;
+&lt;img src=&quot;http://royxue.me/assets/img/blog/shiori.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hmmmm, I think maybe Im not going to import Chrome bookmarks into Delicous, but use Delicious as new service for storing bookmarks, Chrome bookmarks only for those website I always use in daily life.&lt;/p&gt;
+
+&lt;p&gt;If u r interested, just follow &lt;a href=&quot;https://delicious.com/royxue&quot;&gt;me&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 03 Apr 2015 11:29:01 +0900</pubDate>
+        <link>http://royxue.me/blog/life/dev/bookmarks-migration-plan</link>
+        <guid isPermaLink="true">http://royxue.me/blog/life/dev/bookmarks-migration-plan</guid>
+        
+        <category>bookmarks</category>
+        
+        <category>Mac OSX</category>
+        
+        
+        <category>blog</category>
+        
+        <category>life</category>
+        
+        <category>dev</category>
+        
+      </item>
+    
+      <item>
+        <title>Dev: Start From Here</title>
+        <description>&lt;p&gt;The title is just a little bit weired, where is here? &lt;/p&gt;
+
+&lt;p&gt;Thanks to Kakazu San give my this oppotunity to do my own project in one month. This Monday, I shared my ideas in company meeting, and finally decide what to do in the following one month.&lt;/p&gt;
+
+&lt;p&gt;The moment I decided the idea make me remind of 4 months ago in the Hackathon. Team always make things easier, but this time I can only do it by myself, which means building back end, front end, and design.&lt;/p&gt;
+
+&lt;p&gt;But it’s a good chance to try something cool! &lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 01 Apr 2015 01:54:11 +0900</pubDate>
+        <link>http://royxue.me/dev/start-from-here</link>
+        <guid isPermaLink="true">http://royxue.me/dev/start-from-here</guid>
+        
+        <category>Japanese</category>
+        
+        <category>Rails</category>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Blog: Living in Japan</title>
@@ -228,74 +285,6 @@ Xiansheng is a light iOS app, a subscription platform with pushing service.&lt;/
         <category>blog</category>
         
         <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>Blog: App ⎡鲜声⎦ 上线</title>
-        <description>&lt;hr /&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://a775.phobos.apple.com/us/r30/Purple3/v4/bf/ad/8a/bfad8a60-ee06-b45a-0257-73997b891f13/AppIcon60x60_U00402x.png&quot; alt=&quot;&quot; /&gt;
-&lt;strong&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/xian-sheng-zui-qing-liang/id950507970?mt=8&quot;&gt;鲜声&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;之前大概总共花了一周多时间完成的应用终于上线了. 也是第一次单独完成App后端开发方面的项目. 整个过程其实还蛮好玩的, 虽然我做的部分用户实际也看不到. 想想也只听过交互很赞, 设计很棒, 但是却极少有人说后台很快, 很稳定什么的…&lt;/p&gt;
-
-&lt;p&gt;工程量其实不是很大, 主要是写好后端处理逻辑, RESTful API, 管理后台, 几个爬虫,和iOS端对接. 管理后台的css和js大概算是纠结的最多的地方了. 因为人不够用, 所以作为后端的我也要写前端, 之前前端接触的比较少, 这一部分纠结的时间还是挺久的. 主要是看了一些Bootstrap和javascript. 感觉一套做完下来, 对于前后端交互和后端的处理有了更深的了解和体会. 加上又写了不少爬虫(绝对不告诉你是干吗用的)(我觉得我Github快可以开爬虫collection了,哈哈). 大致上这个过程属于从1到2这一步, 学到了很多东西, 解决了自己挖的很多坑. 当然也有一些地方, 因为找不到很好的解决逻辑(还有因为不想改数据库), 所以留了一些比较”脏”的代码, 希望以后有机会的话, 能对这些地方优化一下. 至于以后的话, 还是觉得能用Lean Cloud这样的服务来实现最好就用了, 因为我懒呗~&lt;/p&gt;
-
-&lt;p&gt;顺便提一句, 终于切身体会到了万恶的”改需求”, 尤其是在一期的时候推翻原始的设计文档, 改需求改到要动数据库的时候, 确实很烦, 真是想天天挂”再改一个需求试试!”当头像. 不过我还算好的, iOS小哥在提交前夕, 还被要求改了七八遍, 直接导致了提交延期和一些负面情绪…&lt;/p&gt;
-
-&lt;p&gt;再回来说说App, App的定位是轻量级阅读, 那么本身的架构其实不是很复杂, 整体设计也是走了简洁的风格. 有一些设计好的功能一期还没有时间完全实现, 估计要推迟到二三四五期了. 这种App的受欢迎程度大概和技术方面关系不大, 主要还是看运营和内容. 不过说到内容, 我觉得最终呈现出来的和我自己预想的之间还是有很大差距的, 毕竟这也不是我所能决定的.&lt;/p&gt;
-
-&lt;p&gt;最后的最后还是喜欢jiffy这个名字哈哈.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 20 Dec 2014 01:24:28 +0900</pubDate>
-        <link>http://royxue.me/blog/app-e28ea1e9b29ce5a3b0e28ea6-e4b88ae7babf</link>
-        <guid isPermaLink="true">http://royxue.me/blog/app-e28ea1e9b29ce5a3b0e28ea6-e4b88ae7babf</guid>
-        
-        <category>django</category>
-        
-        <category>iOS</category>
-        
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>Blog: Tricks inside Python Loop</title>
-        <description>&lt;p&gt;Jump out from multi For loops in Python&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Writing too many layers of for loops is definitely a bad habit. However, sometimes under specific problem, we have no choices but use this method.&lt;/p&gt;
-
-&lt;p&gt;There is no “goto” method in python, so it will be difficult to deal with multi layers “for” loops.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;code&amp;gt;for i in range(5):
-    for z in range(5):
-        for c in range(5):
-            if z &amp;gt; c:
-                print z, c
-                break
-        else:continue 
-        break
-&amp;lt;/code&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;we can use ‘else’ inside for/while loop, after each loop, it will run ‘else’. But if inside the loop, there is “break”, after this loop, it will skip ‘else’, this time another ‘break’ under else works, so that we can jump out the second layer loop.&lt;/p&gt;
-
-&lt;p&gt;This method is very useful when we cannot avoid using too many loops with if and “goto”.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 05 Dec 2014 01:25:11 +0900</pubDate>
-        <link>http://royxue.me/blog/python/tricks-inside-python-loop</link>
-        <guid isPermaLink="true">http://royxue.me/blog/python/tricks-inside-python-loop</guid>
-        
-        <category>python</category>
-        
-        
-        <category>blog</category>
-        
-        <category>python</category>
         
       </item>
     

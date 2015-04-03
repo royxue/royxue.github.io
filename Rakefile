@@ -23,6 +23,7 @@ task :post do
     slug: #{slug_s}
     title: #{title}
     categories:
+    - blog
     tags:
     ---
 

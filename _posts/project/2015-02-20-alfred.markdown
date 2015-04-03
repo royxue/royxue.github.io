@@ -4,10 +4,10 @@ title:  "Alfred Workflows"
 date:   2015-02-20 23:00:00
 author: xljroy
 language: alfred
-categories: 
+categories:
 - project
-tags: 
-- alfred workflow 
+tags:
+- alfred workflow
 img: alfred.png
 thumb: alfred.png
 carousel:
