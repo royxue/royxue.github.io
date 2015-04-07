@@ -5,21 +5,24 @@
     <description>Roy,Lijun,Xue,Roy Xue,Lijun Xue,薛立君</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 07 Apr 2015 12:05:10 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Apr 2015 12:05:10 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Apr 2015 12:23:47 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Apr 2015 12:23:47 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Blog: Loading Rails Models into FullCalendar</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://fullcalendar.io/&quot;&gt;Fullcalendar&lt;/a&gt; is a powerful javascript calendar. It would be convenient if u wanna build some calendar-based service. &lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;http://fullcalendar.io/&quot;&gt;Fullcalendar&lt;/a&gt; is a powerful javascript calendar. It would be convenient if u wanna build some calendar-based service.&lt;/p&gt;
 
 &lt;p&gt;Using Fullcalendar is not very complex. First, u need to install FullCalendar in your Rails app.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;gem &#39;fullcalendar-rails&#39;
-gem &#39;moment-rails&#39; and add following lines to your js 
+gem &#39;moment-rails&#39;
+&lt;/code&gt;&lt;/pre&gt;
 
-//= require moment
-//= require fullcalendar	 and css files
+&lt;p&gt;and add following lines to your js&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//= require moment
+//= require fullcalendar and css files
 
 *= require fullcalendar
 &lt;/code&gt;&lt;/pre&gt;
@@ -42,8 +45,7 @@ gem &#39;moment-rails&#39; and add following lines to your js
 	    return
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;events: window.location.href + ‘.json’
-FullCalendar uses EventObject to load events data and show on the calendar, EventObject is json format data loaded in js files, so here we need to load our Model data into FullCalendar.&lt;/p&gt;
+&lt;p&gt;FullCalendar uses EventObject to load events data and show on the calendar, EventObject is json format data loaded in js files, so here we need to load our Model data into FullCalendar.&lt;/p&gt;
 
 &lt;p&gt;Here I will how to load events in users views(a little more difficult than load in events views)&lt;/p&gt;
 
@@ -58,21 +60,27 @@ FullCalendar uses EventObject to load events data and show on the calendar, Even
       :description =&amp;gt; self.description,
       :allDay =&amp;gt; self.is_all_day,
  	 }
- 	 end Here the code will tranfer event data in to json format, id, title, start, end, allDay is important, make sure in your model have these datas.
+ 	 end
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here the code will tranfer event data in to json format, id, title, start, end, allDay is important, make sure in your model have these datas.&lt;/p&gt;
 
 &lt;p&gt;Then in controller/users_controller.rb&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;  respond_to do |format|
     format.html
     format.json { render json:@events.to_json }
-  end render the @events objects into json format, so now this json url should be like localhost:3000/users/(:id).json
+  end
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;render the @events objects into json format, so now this json url should be like localhost:3000/users/(:id).json&lt;/p&gt;
 
 &lt;p&gt;The final step is to load json in js&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;events: window.location.href + &#39;.json&#39; Use window.location.href to get current url, plus &quot;.json&quot;, hmmm, it&#39;s a lazy way haha.
+&lt;pre&gt;&lt;code&gt;events: window.location.href + &#39;.json&#39;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Use window.location.href to get current url, plus “.json”, hmmm, it’s a lazy way haha.&lt;/p&gt;
 
 &lt;p&gt;Till now, the FullCalendar would work for you :)&lt;/p&gt;
 </description>

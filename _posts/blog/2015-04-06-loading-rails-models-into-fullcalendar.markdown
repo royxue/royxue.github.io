@@ -15,16 +15,17 @@ tags:
 - fullcalendar
 ---
 
-[Fullcalendar](http://fullcalendar.io/) is a powerful javascript calendar. It would be convenient if u wanna build some calendar-based service. 
+[Fullcalendar](http://fullcalendar.io/) is a powerful javascript calendar. It would be convenient if u wanna build some calendar-based service.
 
 Using Fullcalendar is not very complex. First, u need to install FullCalendar in your Rails app.
 
 	gem 'fullcalendar-rails'
 	gem 'moment-rails'
-and add following lines to your js 
+
+and add following lines to your js
 
 	//= require moment
-	//= require fullcalendar	
+	//= require fullcalendar
 and css files
 
 	*= require fullcalendar
@@ -45,9 +46,7 @@ The basic usage is very easy, put _"<div class="calendar"></dic>"_  in html, and
 			      dayNamesShort: ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"],  
 			    }
 		    return
-	
 
-events: window.location.href + '.json'
 FullCalendar uses EventObject to load events data and show on the calendar, EventObject is json format data loaded in js files, so here we need to load our Model data into FullCalendar.
 
 Here I will how to load events in users views(a little more difficult than load in events views)
@@ -64,6 +63,7 @@ First, in models/event.rb, add
 	      :allDay => self.is_all_day,
 	 	 }
 	 	 end
+
 Here the code will tranfer event data in to json format, id, title, start, end, allDay is important, make sure in your model have these datas.
 
 Then in controller/users_controller.rb
@@ -72,11 +72,13 @@ Then in controller/users_controller.rb
         format.html
         format.json { render json:@events.to_json }
       end
+
 render the @events objects into json format, so now this json url should be like localhost:3000/users/(:id).json
 
 The final step is to load json in js
 
 	events: window.location.href + '.json'
+
 Use window.location.href to get current url, plus ".json", hmmm, it's a lazy way haha.
 
 Till now, the FullCalendar would work for you :)
