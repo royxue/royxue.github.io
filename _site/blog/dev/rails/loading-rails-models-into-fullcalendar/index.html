@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/assets/ico/favicon.ico">
 
-    <title>Roy Xue is Here :) - On The Way</title>
+    <title>Roy Xue is Here :) - Loading Rails Models into FullCalendar</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
@@ -65,7 +65,7 @@
             <div id="blue">
     <div class="container">
         <div class="row">
-            <h3>On The Way</h3>
+            <h3>Loading Rails Models into FullCalendar</h3>
         </div><!-- /row -->
     </div> <!-- /container -->
 </div><!-- /blue -->
@@ -76,88 +76,73 @@
         <div class="col-lg-8">
             <!-- Blog Post  -->
             <!-- <p><img class="img-responsive" src="/assets/img/blog/"></p> -->
-            <a href="/life/on-the-way"><h3 class="ctitle">On The Way</h3></a>
-            <p><csmall>Aug 8, 2013. | By: xljroy</csmall></p>
+            <a href="/blog/dev/rails/loading-rails-models-into-fullcalendar"><h3 class="ctitle">Loading Rails Models into FullCalendar</h3></a>
+            <p><csmall>Apr 6, 2015. | By: xljroy</csmall></p>
 
-            <p>在这个纷乱复杂的世界上</p>
+            <p><a href="http://fullcalendar.io/">Fullcalendar</a> is a powerful javascript calendar. It would be convenient if u wanna build some calendar-based service. </p>
 
-<p>有一种简单直接的状态叫做在路上</p>
+<p>Using Fullcalendar is not very complex. First, u need to install FullCalendar in your Rails app.</p>
 
-<p>一种行走中的态度</p>
+<pre><code>gem 'fullcalendar-rails'
+gem 'moment-rails' and add following lines to your js 
 
-<p>所以大概不是因为这样那样的原因</p>
+//= require moment
+//= require fullcalendar	 and css files
 
-<p>只是因为突然间看到自己曾写下的一句话</p>
+*= require fullcalendar
+</code></pre>
 
-<p>便可以冲动地背上包出发</p>
+<p>The basic usage is very easy, put <em>“&lt;div class="calendar"&gt;&lt;/dic&gt;“</em>  in html, and put following code in to coffee files(or put js version in js)</p>
 
-<p>25个小时的硬座加上9个小时的站票</p>
+<pre><code>$ -&gt;
+  		$(document).ready -&gt;
+		$('#calendar').fullCalendar {
+		      header: {
+		        left: 'prev,next today',
+		        center: 'title',
+		        right: 'month,agendaWeek,agendaDay'
+		      },
+		      monthNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+		      monthNamesShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+		      dayNames: ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"],
+		      dayNamesShort: ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"],  
+		    }
+	    return
+</code></pre>
 
-<p>没有觉得无聊难耐和浮躁</p>
+<p>events: window.location.href + ‘.json’
+FullCalendar uses EventObject to load events data and show on the calendar, EventObject is json format data loaded in js files, so here we need to load our Model data into FullCalendar.</p>
 
-<p>就好比脱离了自己原先所处的世界一般</p>
+<p>Here I will how to load events in users views(a little more difficult than load in events views)</p>
 
-<p>没有那么多烦恼</p>
+<p>First, in models/event.rb, add</p>
 
-<p>不用手机,不连网络,不与外界通信</p>
+<pre><code>  def as_json(options = {})
+	{
+      :id =&gt; self.id,
+      :title =&gt; self.name,
+      :start =&gt; self.start_time,
+      :end =&gt; self.end_time,
+      :description =&gt; self.description,
+      :allDay =&gt; self.is_all_day,
+ 	 }
+ 	 end Here the code will tranfer event data in to json format, id, title, start, end, allDay is important, make sure in your model have these datas.
+</code></pre>
 
-<p>并非是像一座孤岛一般</p>
+<p>Then in controller/users_controller.rb</p>
 
-<p>而是把最真实的自己交还给了自己</p>
+<pre><code>  respond_to do |format|
+    format.html
+    format.json { render json:@events.to_json }
+  end render the @events objects into json format, so now this json url should be like localhost:3000/users/(:id).json
+</code></pre>
 
-<p>不必因为外物抑或是他人喜怒哀乐所有的情绪都因为自己而生</p>
+<p>The final step is to load json in js</p>
 
-<p>不必争不必让不必勾心斗角什么的</p>
+<pre><code>events: window.location.href + '.json' Use window.location.href to get current url, plus ".json", hmmm, it's a lazy way haha.
+</code></pre>
 
-<p>然后</p>
-
-<p>不停的行走</p>
-
-<p>不停的遇见</p>
-
-<p>不停的讲述和倾听着南来北往的那些故事</p>
-
-<p>不停的分别</p>
-
-<p>不停的上了瘾一般想着那些山水自我和月亮</p>
-
-<p>就好像你永远都无法知道未来这个词的意义,但是却仍然愿意千万种假设</p>
-
-<p>旅行的意义是什么?</p>
-
-<p>说实话,我没有想过这个问题</p>
-
-<p>但是 我确实不是自然风光的拥簇</p>
-
-<p>总是些许震撼缺少了一些感动</p>
-
-<p>也许10天,100天,1000天之后我会忘记我曾经看过的风景</p>
-
-<p>只能遗留下一个名字或者代号</p>
-
-<p>但是不会忘记那些</p>
-
-<p>在肯德基睡觉的感觉</p>
-
-<p>在山上被高原反应和发烧组合虐杀的感觉</p>
-
-<p>and so on</p>
-
-<p>也许这就是我的旅行状态吧</p>
-
-<p>也许一旦回到原来的世界</p>
-
-<p>还是会变回之前的自己</p>
-
-<p>但是如果让自己一直在行走的话</p>
-
-<p>依然会有那些流连却不止的风景吧</p>
-
-<p>如果你要问我为什么这么晚才发…</p>
-
-<p>因为拖延症= =</p>
-
-<p><a href="http://photo.blog.sina.com.cn/showpic.html#blogid=7c97d64d0101aa1d&amp;url=http://album.sina.com.cn/pic/7c97d64dgx6BGPXINNrad"><img src="http://s14.sinaimg.cn/mw690/7c97d64dgx6BGPXINNrad&amp;690" alt="On &lt;wbr&gt;The &lt;wbr&gt;Way" /></a></p>
+<p>Till now, the FullCalendar would work for you :)</p>
 
 
             <div class="spacing"></div>
