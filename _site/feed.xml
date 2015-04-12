@@ -5,9 +5,40 @@
     <description>Roy,Lijun,Xue,Roy Xue,Lijun Xue,薛立君</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 08 Apr 2015 18:09:26 +0900</pubDate>
-    <lastBuildDate>Wed, 08 Apr 2015 18:09:26 +0900</lastBuildDate>
+    <pubDate>Sun, 12 Apr 2015 23:23:51 +0900</pubDate>
+    <lastBuildDate>Sun, 12 Apr 2015 23:23:51 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Blog: First Time Icon Design</title>
+        <description>&lt;p&gt;&lt;img src=&quot;http://royxue.me/assets/img/blog/icon_design.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hey, this is my first design work. hmmmm, it’s a kinda simple calendar app icon.&lt;/p&gt;
+
+&lt;p&gt;I have been interested in design for a long time. But just dont have enough time to learn how. So this week I have one free afternoon time to try some design work.&lt;/p&gt;
+
+&lt;p&gt;The tools I use is Sketch 3.0 trial version. hmmm, it’s a powerful tools, much easier than Photoshop, maybe the only thing I need is a better mouse haha.&lt;/p&gt;
+
+&lt;p&gt;During the process, I think the most difficult part should be how to think about a good idea. Thats what a good design needed. At first, I think maybe calendar icon should be easy, cause most of this kind icons looks similar. However, after finish the main framework, it’s very ugly, and there should be something to make it special.&lt;/p&gt;
+
+&lt;p&gt;So I turned to Dribbble to find some ideas, then I made one pretty similar as Fantastical icon, that icon looks pretty good. At the end, I thought this is my first time do design work, why not make a self-design one, so after long time thinking, I decided to make this label icon one.&lt;/p&gt;
+
+&lt;p&gt;Design is complex work, which you should put lots of time on details and design ideas.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 12 Apr 2015 23:02:43 +0900</pubDate>
+        <link>http://royxue.me/blog/design/first-time-icon-design</link>
+        <guid isPermaLink="true">http://royxue.me/blog/design/first-time-icon-design</guid>
+        
+        <category>design</category>
+        
+        <category>icon</category>
+        
+        
+        <category>blog</category>
+        
+        <category>design</category>
+        
+      </item>
     
       <item>
         <title>Blog: Loading Rails Models into FullCalendar</title>
@@ -307,35 +338,6 @@ Xiansheng is a light iOS app, a subscription platform with pushing service.&lt;/
         <category>blog</category>
         
         <category>explorer</category>
-        
-      </item>
-    
-      <item>
-        <title>Blog: Monster Hunter 4G 狩猎日记</title>
-        <description>&lt;p&gt;入手New 3DS LL和Monster Hunter 4G 大概两周多了. 刚刚打到村上位九星, Hunter Rank 5, 推倒了封面怪,好像这是第一次MH系列打了这么久. 顺便今天终于手指打到酸麻感了.&lt;/p&gt;
-
-&lt;p&gt;New 3DS 10月份发售, 果断接着顺便学日语的想法入了日版机器, 打了一段时间发现, 其实就算不会日语也可以打的蛮顺畅, 照现在这个进度看, 怪猎怎么也还要打几百小时, 一时半会也不用买新卡带了.&lt;/p&gt;
-
-&lt;p&gt;MH4出了两把新武器, 操虫棍和盾斧, 也是我狩猎至今的主力武器. 操虫棍属于比较灵活的, 不过虫喂养系统有点略麻烦, 需要计算好数值, 所以我至今都没怎么想过用虫炮流. 我用虫棍主要还是骑乘流, 依靠跳跃骑乘怪物, 然后倒地输出一波, 再骑乘…伤害很高, 至于盾斧嘛, 大招的浪漫, 找准时机, 一刀入魂, hmmm, 就算没打中姿势也是很帅的嘛…我觉得我估计是写不出来什么攻略的啦, 一懒二渣哈哈哈&lt;/p&gt;
-
-&lt;p&gt;大概也是好久没有花这么多时间玩游戏了.&lt;/p&gt;
-
-&lt;p&gt;=- =因为某些奇怪的叫做拖延症的病导致了忘记继续更新这个了…&lt;/p&gt;
-
-&lt;p&gt;额, 现在已经村九星紧急, HR7, 一套封面怪套装了, 可想而知这两天我都干什么去了, 不过鉴于目前的难度来说, 估计还要在这个段位卡上一个月, 倒也是觉得是时候少玩一些了, 毕竟前几天玩的实在是太凶了.&lt;/p&gt;
-
-&lt;p&gt;滚去写代码…&lt;/p&gt;
-</description>
-        <pubDate>Wed, 07 Jan 2015 00:45:25 +0900</pubDate>
-        <link>http://royxue.me/blog/having%20fun/monster-hunter-4g-e78ba9e78c8ee697a5e8aeb0</link>
-        <guid isPermaLink="true">http://royxue.me/blog/having%20fun/monster-hunter-4g-e78ba9e78c8ee697a5e8aeb0</guid>
-        
-        <category>MH4G</category>
-        
-        
-        <category>blog</category>
-        
-        <category>having fun</category>
         
       </item>
     
