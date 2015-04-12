@@ -13,7 +13,7 @@ tags:
 - icon
 ---
 
-![](http://royxue.me/assets/img/blog/icon_design.jpg)
+![](http://royxue.me/assets/img/blog/icon_design.png)
 
 Hey, this is my first design work. hmmmm, it's a kinda simple calendar app icon.
 
