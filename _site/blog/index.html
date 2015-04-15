@@ -79,6 +79,95 @@
 
             
                 <!-- Blog Post -->
+                <!-- <a href="/blog/dev/fun/build-minecraft-server-on-digitalocean">
+                    <img class="img-responsive" src="/assets/img/blog/">
+                </a>  -->
+                <a href="/blog/dev/fun/build-minecraft-server-on-digitalocean"><h3 class="ctitle">Build Minecraft Server on DigitalOcean</h3></a>
+                <p><csmall>Apr 15, 2015. | By: xljroy</csmall></p>
+                <p>Hmmmm, since last time I killed the XXX dragon I havent play Minecraft for a long time.</p>
+
+<p>So this time, I think it would be nice to play multi-players game, I wanna enjoy this game once more with lovely Sarah :)</p>
+
+<p>The first thing is to build a minecraft server. I choose DigitalOcean VPS, just because there are some money left there and the speed is not bad ;)</p>
+
+<p>So the first step is create a droplet in digitalocean, it’s pretty easy, $5/month one should work well for 2 playes(max would be 6 or 7 I think), if more, just choose a more expensive one. Then use ssh to connect your server.</p>
+
+<p>Cause Minecraft is based on Java, so the first thing we must do is install Java in the droplet, because we wont use any GUI related, so we only install default-jre-headless is enough, in which headless means lack of any GUI libraries.</p>
+
+<pre><code>apt-get install default-jre-headless
+</code></pre>
+
+<p>Next create it a folder to store the minecraft .jar file, and also create a group and user to own the minecraft Java process.</p>
+
+<pre><code>mkdir /srv/minecraft  
+addgroup --system minecraft  
+adduser --system --no-create-home --home /srv/minecraft --ingroup minecraft minecraft  
+</code></pre>
+
+<p>Then lets install minecraft</p>
+
+<pre><code>cd /srv/minecraft  
+wget https://s3.amazonaws.com/Minecraft.Download/versions/1.8/minecraft_server.1.8.jar -O minecraft_server.jar  
+</code></pre>
+
+<p>After install the minecraft game, we can start the server by</p>
+
+<pre><code>java -Xms32M -Xmx450M -jar minecraft_server.jar nogui
+</code></pre>
+
+<p>The two parameters mean we start the process with 32M RAM and the max limit would be 450M(cause we only have 512M). However, this is the first time we ran the server, so it wont work well until we agree the EULA(End-User License Agreement), so you stop the server first, and find the eula.txt file under minecraft folder, change the value from false to true.</p>
+
+<p>This time restart the server, it would work well, and some new files would appear like banned-players.json, banned-ips.json, ops.json, and whitelist.json, if you need these functions, just modify it into what you want.</p>
+
+<p>By the way, for a server we cannot just keep minecraft in commend line, we need to create a script make minecraft run as a service, first, create the configuration by running:</p>
+
+<pre><code>vi /etc/init/minecraft.conf  
+</code></pre>
+
+<p>And set the contents</p>
+
+<pre><code># description "start and stop the minecraft-server"
+
+start on runlevel [2345]  
+stop on runlevel [^2345]
+
+console log  
+chdir /srv/minecraft  
+setuid minecraft  
+setgid minecraft
+
+respawn  
+respawn limit 20 5
+
+exec /usr/bin/java -Xms32M -Xmx450M -jar minecraft_server.jar nogui  
+</code></pre>
+
+<p>then lets create a symlink under /etc/init.d by running:</p>
+
+<pre><code>ln -s /etc/init/minecraft.conf /etc/init.d/minecraft  
+</code></pre>
+
+<p>Set the folder owned to minecraft</p>
+
+<pre><code>chown -R minecraft:minecraft /srv/minecraft  
+</code></pre>
+
+<p>Ok, after this step you can easily manage your minecraft server by </p>
+
+<pre><code>service minecraft start  
+</code></pre>
+
+<p>Lalala, till now, all things have been done.</p>
+
+<p>Open your minecraft, connect to IP:25565 to enjoy your game :)</p>
+
+
+                <p><a href="/blog/dev/fun/build-minecraft-server-on-digitalocean">[Read More]</a></p>
+                <div class="hline"></div>
+
+                <div class="spacing"></div>
+            
+                <!-- Blog Post -->
                 <!-- <a href="/blog/design/first-time-icon-design">
                     <img class="img-responsive" src="/assets/img/blog/">
                 </a>  -->
@@ -1474,7 +1563,7 @@ floatX = float32
     
         <p>
             <a href="/category/#dev"><i class="fa fa-angle-right"></i> Dev</a>
-            <span class="badge badge-theme pull-right">12</span>
+            <span class="badge badge-theme pull-right">13</span>
         </p>
     
         <p>
@@ -1507,12 +1596,23 @@ floatX = float32
             <span class="badge badge-theme pull-right">1</span>
         </p>
     
+        <p>
+            <a href="/category/#fun"><i class="fa fa-angle-right"></i> Fun</a>
+            <span class="badge badge-theme pull-right">1</span>
+        </p>
+    
 
     <div class="spacing"></div>
 
     <h4>Recent Posts</h4>
     <div class="hline"></div>
         <ul class="popular-posts">
+             
+                <li>
+                    <!-- <a href="/blog/dev/fun/build-minecraft-server-on-digitalocean"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
+                    <p><a href="/blog/dev/fun/build-minecraft-server-on-digitalocean">Build Minecraft Server on DigitalOcean</a></p>
+                <em>Posted on 15 Apr 2015</em>
+            </li>
              
                 <li>
                     <!-- <a href="/blog/design/first-time-icon-design"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
@@ -1532,12 +1632,6 @@ floatX = float32
                 <em>Posted on 03 Apr 2015</em>
             </li>
              
-                <li>
-                    <!-- <a href="/blog/life/living-in-japan"><img src="/assets/img/blog/thumbs/" alt="Popular Post"></a> -->
-                    <p><a href="/blog/life/living-in-japan">Living in Japan</a></p>
-                <em>Posted on 16 Mar 2015</em>
-            </li>
-             
         </ul>
 
     <div class="spacing"></div>
@@ -1554,7 +1648,7 @@ floatX = float32
         
             <a class="btn btn-theme" href="/category/#hacker" role="button">Hacker (2)</a>	         
         
-            <a class="btn btn-theme" href="/category/#dev" role="button">Dev (12)</a>	         
+            <a class="btn btn-theme" href="/category/#dev" role="button">Dev (13)</a>	         
         
             <a class="btn btn-theme" href="/category/#scrapy" role="button">Scrapy (3)</a>	         
         
@@ -1567,6 +1661,8 @@ floatX = float32
             <a class="btn btn-theme" href="/category/#rails" role="button">Rails (1)</a>	         
         
             <a class="btn btn-theme" href="/category/#design" role="button">Design (1)</a>	         
+        
+            <a class="btn btn-theme" href="/category/#fun" role="button">Fun (1)</a>	         
         
     </p> -->
 </div>

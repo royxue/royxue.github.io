@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/assets/ico/favicon.ico">
 
-    <title>Roy Xue is Here :) - Bookmarks Migration Plan</title>
+    <title>Roy Xue is Here :) - Build Minecraft Server on DigitalOcean</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
@@ -66,7 +66,7 @@
             <div id="blue">
     <div class="container">
         <div class="row">
-            <h3>Bookmarks Migration Plan</h3>
+            <h3>Build Minecraft Server on DigitalOcean</h3>
         </div><!-- /row -->
     </div> <!-- /container -->
 </div><!-- /blue -->
@@ -77,22 +77,85 @@
         <div class="col-lg-8">
             <!-- Blog Post  -->
             <!-- <p><img class="img-responsive" src="/assets/img/blog/"></p> -->
-            <a href="/blog/life/dev/bookmarks-migration-plan"><h3 class="ctitle">Bookmarks Migration Plan</h3></a>
-            <p><csmall>Apr 3, 2015. | By: xljroy</csmall></p>
+            <a href="/blog/dev/fun/build-minecraft-server-on-digitalocean"><h3 class="ctitle">Build Minecraft Server on DigitalOcean</h3></a>
+            <p><csmall>Apr 15, 2015. | By: xljroy</csmall></p>
 
-            <p>I have been using Chrome bookmarks for a long time, the folder stucture gradually become deep and messy, so I think it’s time to change!</p>
+            <p>Hmmmm, since last time I killed the XXX dragon I havent play Minecraft for a long time.</p>
 
-<p>At first, what I wanna do is to find a designed Mac OS app to manage all bookmarks offline, but unfortuantely I didnt find satisfied one, good design and reasonable price app is hard to find, whatever if you dont mind price, <a href="fetching.io">fetching</a> is a good one. <a href="raindrop.io">RainDrop</a> is also good, but hmmm… it’s just too many bugs inside this Beta version, even I cannot import my bookmarks, but as it will getting better, so I would use it when it can work well in the future.</p>
+<p>So this time, I think it would be nice to play multi-players game, I wanna enjoy this game once more with lovely Sarah :)</p>
 
-<p>Then I turned to online bookmarks service, honestly pinboard is the best choice, but after it’s change to per-year price, it would be a little hard to accept that. Finally, I decide to use <a href="https://delicious.com">Delicious</a>. It’s free but some ads there. </p>
+<p>The first thing is to build a minecraft server. I choose DigitalOcean VPS, just because there are some money left there and the speed is not bad ;)</p>
 
-<p>Also, a good app is needed for better experience, I use Shiori now, it’s light but beatiful, u can set the hot key to easily store and open the bookmarks.(like another Alfred, haha) <br />
-<img src="http://royxue.me/assets/img/blog/shiori.jpg" alt="" /></p>
+<p>So the first step is create a droplet in digitalocean, it’s pretty easy, $5/month one should work well for 2 playes(max would be 6 or 7 I think), if more, just choose a more expensive one. Then use ssh to connect your server.</p>
 
-<p>Hmmmm, I think maybe Im not going to import Chrome bookmarks into Delicous, but use Delicious as new service for storing bookmarks, Chrome bookmarks only for those website I always use in daily life.</p>
+<p>Cause Minecraft is based on Java, so the first thing we must do is install Java in the droplet, because we wont use any GUI related, so we only install default-jre-headless is enough, in which headless means lack of any GUI libraries.</p>
 
-<p>If u r interested, just follow <a href="https://delicious.com/royxue">me</a></p>
+<pre><code>apt-get install default-jre-headless
+</code></pre>
 
+<p>Next create it a folder to store the minecraft .jar file, and also create a group and user to own the minecraft Java process.</p>
+
+<pre><code>mkdir /srv/minecraft  
+addgroup --system minecraft  
+adduser --system --no-create-home --home /srv/minecraft --ingroup minecraft minecraft  
+</code></pre>
+
+<p>Then lets install minecraft</p>
+
+<pre><code>cd /srv/minecraft  
+wget https://s3.amazonaws.com/Minecraft.Download/versions/1.8/minecraft_server.1.8.jar -O minecraft_server.jar  
+</code></pre>
+
+<p>After install the minecraft game, we can start the server by</p>
+
+<pre><code>java -Xms32M -Xmx450M -jar minecraft_server.jar nogui
+</code></pre>
+
+<p>The two parameters mean we start the process with 32M RAM and the max limit would be 450M(cause we only have 512M). However, this is the first time we ran the server, so it wont work well until we agree the EULA(End-User License Agreement), so you stop the server first, and find the eula.txt file under minecraft folder, change the value from false to true.</p>
+
+<p>This time restart the server, it would work well, and some new files would appear like banned-players.json, banned-ips.json, ops.json, and whitelist.json, if you need these functions, just modify it into what you want.</p>
+
+<p>By the way, for a server we cannot just keep minecraft in commend line, we need to create a script make minecraft run as a service, first, create the configuration by running:</p>
+
+<pre><code>vi /etc/init/minecraft.conf  
+</code></pre>
+
+<p>And set the contents</p>
+
+<pre><code># description "start and stop the minecraft-server"
+
+start on runlevel [2345]  
+stop on runlevel [^2345]
+
+console log  
+chdir /srv/minecraft  
+setuid minecraft  
+setgid minecraft
+
+respawn  
+respawn limit 20 5
+
+exec /usr/bin/java -Xms32M -Xmx450M -jar minecraft_server.jar nogui  
+</code></pre>
+
+<p>then lets create a symlink under /etc/init.d by running:</p>
+
+<pre><code>ln -s /etc/init/minecraft.conf /etc/init.d/minecraft  
+</code></pre>
+
+<p>Set the folder owned to minecraft</p>
+
+<pre><code>chown -R minecraft:minecraft /srv/minecraft  
+</code></pre>
+
+<p>Ok, after this step you can easily manage your minecraft server by </p>
+
+<pre><code>service minecraft start  
+</code></pre>
+
+<p>Lalala, till now, all things have been done.</p>
+
+<p>Open your minecraft, connect to IP:25565 to enjoy your game :)</p>
 
 
             <div class="spacing"></div>
