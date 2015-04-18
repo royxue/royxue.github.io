@@ -5,9 +5,38 @@
     <description>Roy,Lijun,Xue,Roy Xue,Lijun Xue,薛立君</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 15 Apr 2015 22:46:23 +0900</pubDate>
-    <lastBuildDate>Wed, 15 Apr 2015 22:46:23 +0900</lastBuildDate>
+    <pubDate>Sat, 18 Apr 2015 23:57:36 +0900</pubDate>
+    <lastBuildDate>Sat, 18 Apr 2015 23:57:36 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Blog: 好照片</title>
+        <description>&lt;p&gt;今天出门了一天, 拍了些照片.&lt;/p&gt;
+
+&lt;p&gt;突然很想问自己一个问题, 什么样的照片才是好照片.&lt;/p&gt;
+
+&lt;p&gt;我想，要拍出好看的照片应该是一件不太难的事情, 选好角度调好参数, 实在不行后期再用PS处理一下, 就有了好看的照片. 这一类的照片在500px上比比皆是. 可是仅仅好看就够了吗?&lt;/p&gt;
+
+&lt;p&gt;我想并不是这样, 如果仅仅是好看的话, 看过之后很快就忘记了. 但是我觉得好的照片应该是能够被记住的. &lt;/p&gt;
+
+&lt;p&gt;照片记录了一个瞬间, 可是这一个瞬间却对应着一段回忆. 所以我想大概好的照片应该拥有它背后的故事. 就好像今天, 在浅草寺遇到的老爷爷和狗, 如果只是一张单纯的照片只会觉得狗很可爱, 可是在画面之外的地方, 这只狗已经十四岁了, 和老爷爷一样进入暮年, 才能明白他们对视的时候眼中流露的那些感情. 也许是携手一起度过最后一段人生的珍惜.&lt;/p&gt;
+
+&lt;p&gt;我想这就是我所认为的好照片, 也是我想拍出来的照片.&lt;/p&gt;
+
+&lt;p&gt;我想用照片来讲故事给你听.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 Apr 2015 22:45:35 +0900</pubDate>
+        <link>http://royxue.me/blog/life/good-photo</link>
+        <guid isPermaLink="true">http://royxue.me/blog/life/good-photo</guid>
+        
+        <category>Photography</category>
+        
+        
+        <category>blog</category>
+        
+        <category>life</category>
+        
+      </item>
     
       <item>
         <title>Blog: Build Minecraft Server on DigitalOcean</title>
@@ -356,47 +385,6 @@ gem &#39;moment-rails&#39;
         
         
         <category>project</category>
-        
-      </item>
-    
-      <item>
-        <title>Blog: Chinese New Year</title>
-        <description>&lt;p&gt;hmmmm，又是一年春节，果然只有这个节日对中国人来说才算是一年的始末。&lt;/p&gt;
-
-&lt;p&gt;不知道自己究竟是抱着什么样的心情来过年的。能过年还是要感谢迟到的那份签证，虽然一开始不是这么打算的。不过，可能以后几年都没有办法回来过年了，想想还是挺好的。而且今年年三十晚上可以一家三口一起过啦，老妈没有排到三十的夜班还是蛮好的。大概我对过年的期待也就这些了。&lt;/p&gt;
-
-&lt;p&gt;最近的事情依然很多，而且回家之后变得特别懒，工作效率直线下降。&lt;/p&gt;
-
-&lt;p&gt;theano最近的进度，大体的功能已经完成，只是最近和Fred两个人在纠结一些细节上的东西。这段时间真的学到了很多有用的东西. 自己也越发明白开源的意义和成为开源贡献者的不易. &lt;/p&gt;
-
-&lt;p&gt;开始准备rails，不过发现大概是前一段时间搞了django之后，中毒很深？觉得在看rails的时候，在一些地方思维模式一下子转不过来。总是想在rails里面找和django一样的实现方式。然而两者之间的区别还是蛮大的，估计从现在卡住的这几个坑里挣扎出来之后, 学习速度会快很多. (噗, 在断断续续写这个玩意儿的期间破解了一个坑了)&lt;/p&gt;
-
-&lt;p&gt;还有就是手贱写了一下swift, 果然不会设计弄得太丑, 搞得兴致下降啊啊啊啊. 且行且珍惜吧.&lt;/p&gt;
-
-&lt;p&gt;哦, 对了, 值得一提的是, 这个, 也算是体验了一次从天堂到地狱的心灵过山车, 觉得自己愈发强大了. 不过想想, 毕竟有6个小时的时间冒充了一下全球top9%的小伙伴的人生还是很不错的. hmmmmm, 事实证明我的第六感果然很通灵. 两眼都是泪, 不说了.&lt;/p&gt;
-
-&lt;p&gt;新年愿望?&lt;/p&gt;
-
-&lt;p&gt;hmmm, 戒掉拖延症.&lt;/p&gt;
-
-&lt;p&gt;小嶋陽菜握手会!!!&lt;/p&gt;
-
-&lt;p&gt;还有就是拿到一个自己满意的offer啦~&lt;/p&gt;
-
-&lt;p&gt;BTW: 最近都没写什么正经东西(根本就没写东西…&lt;/p&gt;
-
-&lt;p&gt;所以最近要好好努力~&lt;/p&gt;
-</description>
-        <pubDate>Sat, 21 Feb 2015 00:36:21 +0900</pubDate>
-        <link>http://royxue.me/blog/life/chinese-new-year</link>
-        <guid isPermaLink="true">http://royxue.me/blog/life/chinese-new-year</guid>
-        
-        <category>zh_cn</category>
-        
-        
-        <category>blog</category>
-        
-        <category>life</category>
         
       </item>
     
