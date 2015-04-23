@@ -4,10 +4,10 @@ title:  "Theano"
 date:   2015-02-25 16:00:00
 author: xljroy
 language: python
-categories: 
+categories:
 - project
-tags: 
-- deep learning 
+tags:
+- deep learning
 img: theano.jpg
 thumb: theano.jpg
 carousel:
