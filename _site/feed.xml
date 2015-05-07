@@ -5,13 +5,14 @@
     <description>Roy,Lijun,Xue,Roy Xue,Lijun Xue,薛立君</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 07 May 2015 17:12:59 +0900</pubDate>
-    <lastBuildDate>Thu, 07 May 2015 17:12:59 +0900</lastBuildDate>
+    <pubDate>Thu, 07 May 2015 17:15:10 +0900</pubDate>
+    <lastBuildDate>Thu, 07 May 2015 17:15:10 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Blog: Naive</title>
-        <description>
+        <description>&lt;p&gt;Too Naive&lt;/p&gt;
+
 </description>
         <pubDate>Thu, 07 May 2015 09:30:46 +0900</pubDate>
         <link>http://royxue.me/blog/naive</link>
