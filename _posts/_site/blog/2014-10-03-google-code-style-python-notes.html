@@ -1,0 +1,256 @@
+<p>这两天因为Projects需要, 刷了一遍Google Code Style for Python, hmmm怎么说呢, 第一次认真看这样的文档, 感觉确实有很多需要注意的东西, 目的是为了更加让code更加简洁明了, 所以可能相对忽略了一些语言特性, 和简单却复杂的语句</p>
+
+<ol>
+  <li>
+    <p>Pylint tools</p>
+  </li>
+  <li>
+    <p>Import</p>
+  </li>
+</ol>
+
+<pre><code>* import X
+
+
+* from X import Y
+
+
+* from X import Y as Z
+</code></pre>
+
+<ol>
+  <li>
+    <p>注意的是在import时, 使用full package name. 避免混乱的import或者import同一package两次</p>
+  </li>
+  <li>
+    <p>Exceptions</p>
+  </li>
+</ol>
+
+<pre><code>* 允许使用, 但是必须谨慎
+
+
+* Raise Exception使用: raise Exceptions("Errormsg") or raise Exceptions
+
+
+* Module 里的Base Exception 用Error命名 `def Error(Exception)
+
+
+* try/except block里的代码量要尽可能精简, 避免从无用的语句中raise Exception
+
+
+* 不论是后raise expection 使用finally来执行代码
+
+
+* try/except 中使用as来代替逗号 except Error as error
+</code></pre>
+
+<ol>
+  <li>Global Variables</li>
+</ol>
+
+<pre><code>* 尽量避免使用Global Variables
+</code></pre>
+
+<ol>
+  <li>Nested/Local/Inner Function and Classes</li>
+</ol>
+
+<pre><code>* 在某些情况下, 可以使用
+</code></pre>
+
+<ol>
+  <li>List Comprehensions</li>
+</ol>
+
+<pre><code>* 使用简单直观的list构造方法, 尽量避免使用诸如map(), lambda等方法
+</code></pre>
+
+<ol>
+  <li>Default Iterators and Operators</li>
+</ol>
+
+<pre><code>* 对list,dict 等使用默认的迭代器和操作器
+
+
+* 使代码更简单, 避免extra method calls
+</code></pre>
+
+<ol>
+  <li>Generators</li>
+</ol>
+
+<pre><code>* 需要被使用
+</code></pre>
+
+<ol>
+  <li>Lambda Functions</li>
+</ol>
+
+<pre><code>* 一行可以写完的代码允许使用
+
+
+* 可以被用来定义callbacks or operators for higher-order functions
+
+
+* 缺点是比较不易读
+
+
+* 对于 简单地操作避免使用lambda
+</code></pre>
+
+<ol>
+  <li>Conditional Expressions</li>
+</ol>
+
+<pre><code>* 一行内可以用
+</code></pre>
+
+<ol>
+  <li>Default Argument Values</li>
+</ol>
+
+<pre><code>* 大部分情况可用
+</code></pre>
+
+<ol>
+  <li>Properties</li>
+</ol>
+
+<pre><code>* 只读属性使用装饰器@property
+
+
+* __get_property __set_property
+</code></pre>
+
+<ol>
+  <li>True/False evaluations</li>
+</ol>
+
+<pre><code>* 含蓄的否定判断
+
+
+* 不要用 ==/!= 来比较singletons(e.g. None) 用is/is not
+
+
+* 不用is来判断False
+
+
+* 判断比如list为空 if seq instead of if len(seq)
+</code></pre>
+
+<ol>
+  <li>Deprecated Language Features</li>
+</ol>
+
+<pre><code>* 不要随意使用, 不同的python可能不互相支持
+</code></pre>
+
+<ol>
+  <li>Lexical Scoping</li>
+</ol>
+
+<pre><code>* 可用
+</code></pre>
+
+<ol>
+  <li>Function and Method Decorators</li>
+</ol>
+
+<pre><code>* 有明确优势的时候再用装饰器
+
+
+* @classmethod and @staticmethod 把普通的方法转化为class或者static method
+</code></pre>
+
+<ol>
+  <li>Threading</li>
+</ol>
+
+<pre><code>* Using Queue 在线程之间传输数据
+</code></pre>
+
+<ol>
+  <li>Power Features</li>
+</ol>
+
+<pre><code>* 避免使用这些强力特性
+</code></pre>
+
+<p>Python Style rules:</p>
+
+<ol>
+  <li>
+    <p>不要用分号</p>
+  </li>
+  <li>
+    <p>单行最大长度80个字符, 不要用反斜线换行, url需要的可以可以放在一行</p>
+  </li>
+  <li>
+    <p>谨慎使用()</p>
+  </li>
+  <li>
+    <p>4空格缩进</p>
+  </li>
+  <li>
+    <p>Top level definitions(function/class)空两行, method之间空一行</p>
+  </li>
+  <li>
+    <p>Whitespace</p>
+  </li>
+  <li>
+    <p>注释</p>
+  </li>
+</ol>
+
+<pre><code>* Doc string
+</code></pre>
+
+<ol>
+  <li>Class</li>
+</ol>
+
+<pre><code>* class 没有明确的父类时, 继承object
+</code></pre>
+
+<ol>
+  <li>String</li>
+</ol>
+
+<pre><code>* 格式化输出的两种选择 '{}'.format() 或者 % 一类
+</code></pre>
+
+<ol>
+  <li>Files and Sockets</li>
+</ol>
+
+<pre><code>* 使用完files和sockets之后一定要及时关掉sockets
+</code></pre>
+
+<ol>
+  <li>
+    <p>管理文件时使用_with_语句
+with open(“hello.txt”) as hello_file:
+for line in hello_file:
+print line
+类似file的对象使用contextlib来替代with
+import contextlib
+with contextlib.closing(urllib.urlopen(“http://www.python.org/”)) as front_page:</p>
+  </li>
+  <li>
+    <p>TODO 注释, 表示暂时性的解决方法</p>
+  </li>
+  <li>
+    <p>import应该使用单独的行来import</p>
+  </li>
+  <li>
+    <p>Statement 一行一条语句</p>
+  </li>
+  <li>
+    <p>命名规则…check 网页吧</p>
+  </li>
+  <li>
+    <p>main函数, 尽量每个文件都有main函数, 这样可以保证单元测试的时候文件可导入</p>
+  </li>
+</ol>
+

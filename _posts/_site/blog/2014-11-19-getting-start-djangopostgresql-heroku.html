@@ -1,0 +1,58 @@
+<h3 id="getting-start-with-djangopostgresql-on-heroku">Getting Start with Django/PostgreSQL on Heroku</h3>
+
+<hr />
+
+<p>This weekend I will enjoy my hackathon, what my team decide to do is a XXX application, to finish this, one thing we need is free server to deploy our django project. Finally, I choose the heroku, which is free, powerful, and convenient, based on git.</p>
+
+<p>Although after reading the getting started python, it seems that deploying is really easy to complete, actually, there are traps if your projects are not using sqlite as the demo, however, postgresql is why we use Heroku.</p>
+
+<p>Whatever, let’s start:</p>
+
+<ol>
+  <li>
+    <p>Install the heroku-toolbelt, it’s very convenient to when you are using Heroku, well, dont install heroku-toolbelt by brew, because by this you wont install foreman at the same time.</p>
+  </li>
+  <li>
+    <p>Write a useful requirements.txt, that’s what make sure that your projects can run well on Heroku server, there are some modules you must add in that file:</p>
+  </li>
+</ol>
+
+<pre><code>&lt;code&gt; Django (haha, you should have this)
+ psycopg2
+ dj-database-url==0.3.0
+ dj-static==0.0.6
+ django-toolbelt==0.0.1
+ gunicorn==19.0.0
+ static3==0.5.1
+ wsgiref==0.1.2
+&lt;/code&gt;
+</code></pre>
+
+<ol>
+  <li>for your django settings.</li>
+</ol>
+
+<pre><code>&lt;code&gt; DATABASES['default'] =  dj_database_url.config()
+ # set Database info on Heroku server
+ STATIC_ROOT = 'staticfiles'
+ STATIC_URL = '/static/'
+ STATICFILES_DIRS = (os.path.join(BASE_DIR, '../static'),)
+ #set where to store the static files
+&lt;/code&gt;
+</code></pre>
+
+<p>if you wanna use DEBUG mode in Django, add a config like HEROKU_ENV on Heroku to turn DEBUG on/off at online/offline. Add that like this “heroku set:config HEROKU_ENV=TRUE</p>
+
+<ol>
+  <li>After git push heroku master, dont forget to set your database</li>
+</ol>
+
+<pre><code>&lt;code&gt; heroku run python manage.py syncdb
+ heroku run python manage.py migrate(if with south&amp;tastypie)
+&lt;/code&gt;
+</code></pre>
+
+<ol>
+  <li>Aha, the last step “heroku open”! see your website welcome page!</li>
+</ol>
+

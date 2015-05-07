@@ -1,0 +1,462 @@
+<p>我和我的小伙伴正在努力翻译Scrapy的中文文档~更多请查看<a href="https://github.com/RoyXue/learn_scrapy_in_chinese">https://github.com/RoyXue/learn_scrapy_in_chinese</a></p>
+
+<h1 id="command-line-tool">Command line tool</h1>
+
+<p>新的0.10版本.</p>
+
+<p>Scrapy是通过Scrapy的命令行工具进行控制,在这里我们简称为”Scrapy 工具”,为了从他们的子指令中区分开来,我们将其称为”命令”或者”Scrapy 命令.”</p>
+
+<p>Scrapy 工具提供了一些命令,为了不同的目的,每一条指令都可以接受不同的参数和选项.</p>
+
+<h2 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdscrapye9a1b9e79baee79a84e9bb98e8aea4e7bb93e69e84scrapy">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#scrapy%E9%A1%B9%E7%9B%AE%E7%9A%84%E9%BB%98%E8%AE%A4%E7%BB%93%E6%9E%84)Scrapy项目的默认结构</h2>
+
+<p>在深入研究的命令行工具和它的子命令之前，让我们先来了解一个Scrapy项目的目录结构。</p>
+
+<p>虽然Scrapy可以被我们进行修改,但是所有的Scrapy项目都有相同的默认文件结构,和下面相似:</p>
+
+<pre><code>&lt;code&gt;scrapy.cfg
+myproject/
+    __init__.py
+    items.py
+    pipelines.py
+    settings.py
+spiders/
+    __init__.py
+    spider1.py
+    spider2.py
+    ...
+&lt;/code&gt;
+</code></pre>
+
+<p>scrapy.cfg文件所在的目录是该项目的目录.该文件包含了定义项目设置的python模块.下面是一个例子.</p>
+
+<pre><code>&lt;code&gt;[settings]
+default = myproject.settings
+&lt;/code&gt;
+</code></pre>
+
+<h2 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmde4bdbfe794a8scrapye5b7a5e585b7scrapy">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#%E4%BD%BF%E7%94%A8scrapy%E5%B7%A5%E5%85%B7)使用Scrapy工具</h2>
+
+<p>可以从通过不带参数运行Scrapy工具开始,它会输出一些用法说明和可用的命令：</p>
+
+<pre><code>&lt;code&gt;Scrapy X.Y - no active project
+
+Usage:
+    scrapy &lt;command&gt; [options] [args]
+
+Available commands:
+    crawl         Run a spider
+    fetch         Fetch a URL using the Scrapy downloader
+    [...]
+&lt;/code&gt;
+</code></pre>
+
+<p>如果你是一个Scrapy项目中运行这条指令,第一行会输出当前的活动项目.在上面的情况中,它是从一个项目之外运行的.如果从一个项目里面运行它的话,会输出这样的信息：</p>
+
+<pre><code>&lt;code&gt;Scrapy X.Y - project: myproject
+
+Usage:
+    scrapy &lt;command&gt; [options] [args]
+
+    [...]
+&lt;/code&gt;
+</code></pre>
+
+<h2 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmde5889be5bbbae696b0e9a1b9e79bae">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#%E5%88%9B%E5%BB%BA%E6%96%B0%E9%A1%B9%E7%9B%AE)创建新项目</h2>
+
+<p>通常,利用scrapy工具你会做的第一件事就是创建属于你的Scrapy项目：</p>
+
+<pre><code>&lt;code&gt;scrapy startproject myproject
+&lt;/code&gt;
+</code></pre>
+
+<p>这将会在myproject目录下面建立一个Scrapy项目.</p>
+
+<p>接下来,打开新项目的目录.</p>
+
+<pre><code>&lt;code&gt;cd myproject
+&lt;/code&gt;
+</code></pre>
+
+<p>你将会在这里用Scrapy的命令来管理和控制你的项目.</p>
+
+<h2 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmde9a1b9e79baee68ea7e588b6">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#%E9%A1%B9%E7%9B%AE%E6%8E%A7%E5%88%B6)项目控制</h2>
+
+<p>使用项目里面的Scrapy工具来控制和管理项目.</p>
+
+<p>举个例子,新建一个Spider.</p>
+
+<pre><code>&lt;code&gt;scrapy genspider mydomain mydomain.com
+&lt;/code&gt;
+</code></pre>
+
+<p>有些Scrapy命(爬crawl)必须从Scrapy项目内运行.请参阅下面的命令,了解有关的必须在项目内运行的命令和不必在项目内运行的命令的详细信息.</p>
+
+<p>请记住,当在项目内运行一些命令时,它们可能会产生略有不同的行为.例如,fetch指令将使用Spider被重写的行为(如user_agent属性来重写user_agent)如果被获取的url与某些特定的Spider有关.这是故意的,因为fetch指令的目的是用来检查Spider是如何在下载网页.</p>
+
+<h2 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmde58fafe794a8e79a84e5b7a5e585b7e591bde4bba4">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#%E5%8F%AF%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4)可用的工具命令</h2>
+
+<p>这一部分包含了一份关于可用的内置命令的描述和一些用法示例的列表.记住,你总是可以通过运行下面这条指令来获取有关每个命令的详细信息：</p>
+
+<pre><code>&lt;code&gt;scrapy &lt;command&gt; -h
+&lt;/code&gt;
+</code></pre>
+
+<p>你可以使用下面这条指令,查看所有可用的指令:</p>
+
+<pre><code>&lt;code&gt;scrapy -h
+&lt;/code&gt;
+</code></pre>
+
+<p>Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作的指令(项目特定的指令)，和那些在没有活动的Scrapy项目时依旧可以运行的指令(全局指令),虽然它们在一个项目内部运行时，行为可能稍有不同(因为他们将使用项目重写设置).</p>
+
+<p>全局指令</p>
+
+<pre><code>&lt;code&gt;startproject
+settings
+runspider
+shell
+fetch
+view
+version
+&lt;/code&gt;
+</code></pre>
+
+<p>项目内指令</p>
+
+<pre><code>&lt;code&gt;crawl
+check
+list
+edit
+parse
+genspider
+deploy
+bench
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdstartprojectstartproject">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#startproject)startproject</h4>
+
+<p>语法:scrapy startproject</p>
+
+<p>是否需要项目:否</p>
+
+<p>在project_name的目录下,创建一个名叫project_name的Scrapy项目.</p>
+
+<p>使用范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy startproject myproject
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdgenspidergenspider">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#genspider)genspider</h4>
+
+<p>语法: scrapy genspider [-t template]</p>
+
+<p>是否需要项目: 是</p>
+
+<p>在当前项目中创建一只新Spider.</p>
+
+<p>这仅仅是基于预先定义的模板创建Spider的快捷指令,但肯定不是创建Spider的唯一途径.你可以仅仅创建Spider的源代码文件,而不是使用这一条指令.</p>
+
+<p>使用范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy genspider -l
+Available templates:
+    basic
+    crawl
+    csvfeed
+    xmlfeed
+
+$ scrapy genspider -d basic
+from scrapy.spider import Spider
+
+class $classname(Spider):
+    name = "$name"
+    allowed_domains = ["$domain"]
+    start_urls = (
+        'http://www.$domain/',
+        )
+
+    def parse(self, response):
+        pass
+
+$ scrapy genspider -t basic example example.com
+Created spider 'example' using template 'basic' in module:
+    mybot.spiders.example
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdcrawlcrawl">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#crawl)crawl</h4>
+
+<p>语法: scrapy crawl</p>
+
+<p>是否需要项目: 是</p>
+
+<p>开始用Spider抓取.</p>
+
+<p>使用范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy crawl myspider
+[ ... myspider starts crawling ... ]
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdcheckcheck">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#check)check</h4>
+
+<p>语法: scrapy check [-l]</p>
+
+<p>是否需要项目: 是</p>
+
+<p>开始检查</p>
+
+<p>使用范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy check -l
+first_spider
+ * parse
+ * parse_item
+second_spider
+ * parse
+ * parse_item
+
+$ scrapy check
+[FAILED] first_spider:parse_item
+&gt;&gt;&gt; 'RetailPricex' field is missing
+
+[FAILED] first_spider:parse
+&gt;&gt;&gt; Returned 92 requests, expected 0..4
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdlistlist">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#list)list</h4>
+
+<p>语法: scrapy list</p>
+
+<p>是否需要项目: 是</p>
+
+<p>列出当前项目中所有可用的Spider.输出为每行显示一只Spider.</p>
+
+<p>使用范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy list
+spider1
+spider2
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdeditedit">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#edit)edit</h4>
+
+<p>语法: scrapy edit</p>
+
+<p>是否需要项目: yes</p>
+
+<p>使用EDITOR设置中定义的编辑器编辑所给的Spider.</p>
+
+<p>这一条指令仅仅只是被用作普遍情况下的快捷方式,开发者可以使用任何或者IDE来开发或者debug他的Spiders.</p>
+
+<p>使用范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy edit spider1
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdfetchfetch">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#fetch)fetch</h4>
+
+<p>语法: scrapy fetch</p>
+
+<p>是否需要项目: 否</p>
+
+<p>使用Scrapy下载器下载给定的URL和并且将结果写入标准输出.</p>
+
+<p>关于这条指令的一件很有趣的事情是,它获取的页面怎么蜘蛛会下载它.例如，如果Spider有重写的user_agent属性,它将会使用该属性.</p>
+
+<p>所以这条指令可以用来“看”你的Spider是如何抓取某些页面.</p>
+
+<p>如果在一个项目外使用这一条指令,没有特别的Spider行为将被应用,它将只使用默认的Scrapy下载器设置.</p>
+
+<p>使用范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy fetch --nolog http://www.example.com/some/page.html
+[ ... html content here ... ]
+
+$ scrapy fetch --nolog --headers http://www.example.com/
+{'Accept-Ranges': ['bytes'],
+'Age': ['1263   '],
+'Connection': ['close     '],
+'Content-Length': ['596'],
+'Content-Type': ['text/html; charset=UTF-8'],   'Date': ['Wed, 18 Aug 2010 23:59:46 GMT'],
+'Etag': ['"573c1-254-48c9c87349680"'],
+'Last-Modified': ['Fri, 30 Jul 2010 15:30:18 GMT'],
+'Server': ['Apache/2.2.3 (CentOS)']}
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdviewview">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#view)view</h4>
+
+<p>语法: scrapy view</p>
+
+<p>是否需要项目: 否</p>
+
+<p>在浏览器中用你的Scrapy Spider能够“看到”的方式来打开给定的URL.有时候,Spider看到的页面不同于普通用户看到的页面,所以这可以被用来检查Spider“看到”了什么并确认它是否是你所期望的结果.</p>
+
+<p>使用范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy view http://www.example.com/some/page.html
+[ ... browser starts ... ]
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdshellshell">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#shell)shell</h4>
+
+<p>语法: scrapy shell [url]</p>
+
+<p>是否需要项目: 否</p>
+
+<p>为给定的URL,启动Scrapy shell,或者在不给定URL的情况时,为空.</p>
+
+<p>更多详细信息请查看Scrapy shell.</p>
+
+<p>使用范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy shell http://www.example.com/some/page.html
+[ ... scrapy shell starts ... ]
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdparseparse">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#parse)parse</h4>
+
+<p>语法: scrapy parse [options]</p>
+
+<p>是否需要项目: yes</p>
+
+<p>利用处理它的Spider来获取给定的URL并解析页面,通过与 –callback 选项使用该方法，或在未给出选项的时候解析它.</p>
+
+<p>支持的选项：</p>
+
+<ul>
+  <li>
+    <p>–callback or -c: 用于解析响应的Spider回调方法</p>
+  </li>
+  <li>
+    <p>–rules or -r: 用CrawlSpider规则发现用于解析响应的会回调方法(ie. spider method)</p>
+  </li>
+  <li></li>
+  <li>
+    <p>–noitems: 不显示抓取的内容</p>
+  </li>
+  <li>
+    <p>–nolinks: 不显示提取的链接</p>
+  </li>
+  <li>
+    <p>–depth or -d: 每个请求应该地柜遵循的深度级别.(默认为1)</p>
+  </li>
+  <li>–verbose or -v: 显示每个深度级别的信息</li>
+</ul>
+
+<p>使用范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy parse http://www.example.com/ -c parse_item
+[ ... scrapy log lines crawling example.com spider ... ]
+
+&gt;&gt;&gt; STATUS DEPTH LEVEL 1 &lt;&lt;&lt;
+# Scraped Items  ------------------------------------------------------------
+[{'name': u'Example item',
+'category': u'Furniture',
+'length': u'12 cm'}]
+
+# Requests  -----------------------------------------------------------------
+[]
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdsettingssettings">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#settings)settings</h4>
+
+<p>语法: scrapy settings [options]</p>
+
+<p>是否需要项目: 否</p>
+
+<p>获取Scrapy设置的值</p>
+
+<p>如果在项目里面使用它,会显示该项目的设定值,否则它会显示默认Scrapy的设置值.</p>
+
+<p>用法范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy settings --get BOT_NAME
+scrapybot
+$ scrapy settings --get DOWNLOAD_DELAY
+0
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdrunspiderrunspider">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#runspider)runspider</h4>
+
+<p>语法: scrapy runspider</p>
+
+<p>是否需要项目: 否</p>
+
+<p>在不用创建一个项目的情况下,运行包含在Python文件中的Spider.</p>
+
+<p>Example usage:</p>
+
+<p>用法范例:</p>
+
+<pre><code>&lt;code&gt;$ scrapy runspider myspider.py
+[ ... spider starts crawling ... ]
+&lt;/code&gt;
+</code></pre>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdversionversion">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#version)version</h4>
+
+<p>语法: scrapy version [-v]</p>
+
+<p>是否需要项目: 否</p>
+
+<p>输出Scrapy的版本信息,如果加入-v参数,它还会输出Python,Twisted和Platform的版本信息,这对bug reports是很有用的.</p>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmddeploydeploy">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#deploy)deploy</h4>
+
+<p>新的0.11版本.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>语法: scrapy deploy [ target:project </td>
+      <td>-l</td>
+      <td>-L ]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>是否需要项目: 是</p>
+
+<p>部署项目到Scrapyd服务器.请参阅<a href="http://scrapyd.readthedocs.org/en/latest/#deploying-your-project">Deploying your project</a>.</p>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdbenchbench">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#bench)bench</h4>
+
+<p>New in version 0.17.</p>
+
+<p>新的0.17版本.</p>
+
+<p>语法: scrapy bench</p>
+
+<p>是否需要项目: 否</p>
+
+<p>快速运行基准测试.<a href="http://scrapyd.readthedocs.org/en/latest/#deploying-your-project">Benchmarking</a>.</p>
+
+<h2 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmde887aae5ae9ae4b989e9a1b9e79baee68c87e4bba4">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B9%E7%9B%AE%E6%8C%87%E4%BB%A4)自定义项目指令</h2>
+
+<p>你也可以通过使用COMMANDS_MODULE设置添加自定义的项目指令.请在<a href="https://github.com/scrapy/scrapy/tree/master/scrapy/commands">scrapy/commands</a>中产看命令就如何实施你的指令的例子.</p>
+
+<h4 id="httpsgithubcomroyxuelearnscrapyinchineseblobmaster720-20command20line20toolmdcommandsmodulecommandsmodule">[](https://github.com/RoyXue/learn_scrapy_in_chinese/blob/master/7%20-%20Command%20Line%20Tool.md#commands_module)COMMANDS_MODULE</h4>
+
+<pre><code>&lt;code&gt;Default: '' (empty string)
+&lt;/code&gt;
+</code></pre>
+
+<p>一个用于寻找自定义的Scrapy指令的模块.被用于在你的Scrapy项目中添加自定义的指令.</p>
+
+<p>Example: 范例:</p>
+
+<pre><code>&lt;code&gt;COMMANDS_MODULE = 'mybot.commands'&lt;/code&gt;
+</code></pre>

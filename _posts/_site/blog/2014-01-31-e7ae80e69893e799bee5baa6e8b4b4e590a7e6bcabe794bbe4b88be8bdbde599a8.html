@@ -1,0 +1,45 @@
+<p>之前一段时间做过的懒人应用之一…用来下载贴吧的漫画</p>
+
+<p>不知道该怎么命名版本了,alpha不合适beta不合适,其他的就更不好意思了</p>
+
+<p>简单的入门级爬虫</p>
+
+<pre><code>import urllib
+import re
+
+def openUrl(url):
+    html=urllib.urlopen(url).read()
+return html
+
+def downloadImg(html,i):
+    pat=r'class="BDE_Image" src="(.*?\.jpg)"'
+    imgPat=re.compile(pat)
+    imgUrl=re.findall(imgPat,html)
+    num=0
+    for url in imgUrl:
+        urllib.urlretrieve(url,'%s_%s.jpg' % (i,num))
+        num+=1
+
+urll=raw_input("Input Url to Download Comics:")
+n=int(raw_input("Input Page Number:"))
+for i in range(0,n):
+    addr='%s?pn=%s' % (urll,i)
+    #replace addr with the page that u want download
+    page=openUrl(addr)
+    downloadImg(page,i)
+
+print "Comics Downloaded"
+</code></pre>
+
+<p>主要用了Python爬虫的两个基础包</p>
+
+<p>re - 用来解析页面,提取所要下载图片的链接</p>
+
+<p>urllib - 用来打开网页和下载图片</p>
+
+<p>这里为了避免执行多余的步骤,所以没有提取下一页链接,而是通过页面url执行有选择的翻页.通过查看我们可以知道帖子可以通过在url地址后面附加”?pn=n”来执行跳转到第几页.</p>
+
+<p>使用程序请安装Python 2.7.x环境,输入你想要下载的帖子和下载图片的范围(帖子的页数).然后等着”Comics Downloaded”出发就是成功下载.</p>
+
+<p>欢迎大家用这个来代替不停的右键另存为,也欢迎大家自己修改处更方便的版本!</p>
+

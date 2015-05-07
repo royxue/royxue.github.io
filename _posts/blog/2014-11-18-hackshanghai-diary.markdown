@@ -138,3 +138,7 @@ I should have write something about this, haha.
 
 
 However I dont know how to describe it. To be honest I dont like the XXX Chinese Songs. I prefer the original Japanese songs more. Whatever, the SNH48 show is really interesting. Maybe I will go there next time when I go to Shanghai.
+
+
+
+And I met a girl :)

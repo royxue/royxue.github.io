@@ -1,0 +1,66 @@
+<h2 id="preparation-numpy-gsoc2014-theano">Preparation Numpy #GSoC2014-Theano</h2>
+
+<p>It’s glad to be accepted by Theano in GSoC 2014. My main task is to lower memory usage.</p>
+
+<p>I’ve already introduce myself in theano-dev community and told my mentor I would publish my dev blog here at royxue.me during GSoC2014.On the the hand, I have already uploaded my Foreign Certification Form to melange, and register my Payoneer account. So now I am wating for my fun package from Google.</p>
+
+<p>My first step is to learn more about Numpy, I used it in MCM calculating before, but I just learn to use the basic, so this time I wanna know more about that.</p>
+
+<p>the following note based on</p>
+
+<pre><code>&lt;code&gt;import numpy as np
+&lt;/code&gt;
+</code></pre>
+
+<ol>
+  <li>np.array() and np.asarray() differences is about “copy” parameter</li>
+</ol>
+
+<pre><code>&lt;code&gt; def asarray(a, dtype=None, order=None):
+     return array(a, dtype, copy=False, order=order)
+&lt;/code&gt;
+</code></pre>
+
+<p>and the typr of np.array is np.ndarray, which means n-dimensional array</p>
+
+<ol>
+  <li>
+    <p>basic infos about dtype, and some creation function like ones, zeros, linsapce (empty only give memory but not value)and so on.</p>
+  </li>
+  <li>
+    <p>use dtype to make c-like struct data structure</p>
+  </li>
+  <li>
+    <p>numpy will store data as C as default</p>
+  </li>
+  <li>
+    <p>for memory data structure there are some patameters,eg:</p>
+  </li>
+</ol>
+
+<pre><code>&lt;code&gt; n.flags
+ # C_CONTIGUOUS : True       
+ # F_CONTIGUOUS : False  
+ # OWNDATA : True            
+ # WRITEABLE : True      
+ # ALIGNED : True
+ # UPDATEIFCOPY : False
+&lt;/code&gt;
+</code></pre>
+
+<ol>
+  <li>
+    <p>ufunc basic calculation like add,substract</p>
+  </li>
+  <li>
+    <p>numpy calculating(sin() function) speed compared with math(python), that numpy is about 10 more times quicker than math, cause of its loop based on C.</p>
+  </li>
+  <li>
+    <p>broadcast calculating , numpy uses ogrid() to perform fast broadcast</p>
+  </li>
+  <li>
+    <p>memmap() and memmap.flush(): memmap are useful for reading and/or modifying small segments of a large file with regular layout, without reading the entire file into memory.</p>
+  </li>
+</ol>
+
+<p>cause my task is lower the memory usage, and also about ndarray in theano calculating. So I see maybe learn more about the memmap will be important when solving my tasks. I’ll see if there is similar mechanism in theano, or it’s maybe an break point.</p>

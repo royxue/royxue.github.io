@@ -1,0 +1,65 @@
+<h3 id="mysql">MySQL初体验</h3>
+
+<hr />
+
+<p>hmmmmm</p>
+
+<p>最近因为研究需要, 开始要用MySQL了. 本来决定下周的Hackathon也用MySQL配合django进行开发. 不过最后还是决定那边先用PostgreSQL.</p>
+
+<h4 id="mac-osx-installation">1. Mac OSX Installation</h4>
+
+<pre><code>&lt;code&gt;brew install mysql
+&lt;/code&gt;
+</code></pre>
+
+<p>一行安装完毕, 然后输入”mysql.server start”启动mysql的服务器.
+“mysql -uroot -p”“登入
+使用”show databases” 就可以看到数据库的列表了.</p>
+
+<h4 id="using-python-with-mysql">2. Using Python with MySQL</h4>
+
+<p>下载 <a href="http://sourceforge.net/projects/mysql-python/">MySQLdb</a></p>
+
+<p>修改site.cfg配置文件</p>
+
+<pre><code>&lt;code&gt;#mysql_config = /usr/local/bin/mysql_config 将#去掉
+&lt;/code&gt;
+</code></pre>
+
+<p>在解压目录下运行 “python setup.py build”</p>
+
+<p>之后 “sudo python setup.py install”, 安装MySQLdb</p>
+
+<h4 id="sequel-pro">3. Sequel Pro</h4>
+
+<p>Just use</p>
+
+<pre><code>&lt;code&gt;brew cask install sequel-pro
+&lt;/code&gt;
+</code></pre>
+
+<p>Sequel-Pro 是数据库管理的软件, 可以直观快捷地查看数据库内容.</p>
+
+<h4 id="basic-action">4. Basic Action</h4>
+
+<p>Using MySQLdb with Python</p>
+
+<pre><code>&lt;code&gt;import MySQLdb
+
+conn = MySQLdb.connect(host='localhost', user='root', passwd='', db='bla')
+
+t = conn.cursor()
+
+# SELECT
+t.execute('SELECT * FROM bla')
+t.fetchone() 
+t.fetchall()
+
+# INSERT
+t.execute('INSERT INTO bla (num) VALUES(2)')
+&lt;/code&gt;
+</code></pre>
+
+<p>for more: <a href="http://www.tutorialspoint.com/python/python_database_access.htm">MySQLdb</a></p>
+
+<p>先去跑scripts去了 T T</p>

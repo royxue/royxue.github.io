@@ -5,9 +5,22 @@
     <description>Roy,Lijun,Xue,Roy Xue,Lijun Xue,薛立君</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Apr 2015 17:57:59 +0900</pubDate>
-    <lastBuildDate>Thu, 23 Apr 2015 17:57:59 +0900</lastBuildDate>
+    <pubDate>Thu, 07 May 2015 17:12:59 +0900</pubDate>
+    <lastBuildDate>Thu, 07 May 2015 17:12:59 +0900</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Blog: Naive</title>
+        <description>
+</description>
+        <pubDate>Thu, 07 May 2015 09:30:46 +0900</pubDate>
+        <link>http://royxue.me/blog/naive</link>
+        <guid isPermaLink="true">http://royxue.me/blog/naive</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>Blog: Never Better, Never Worse</title>
@@ -377,23 +390,6 @@ gem &#39;moment-rails&#39;
         <category>blog</category>
         
         <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>Project: Theano</title>
-        <description>&lt;h4 id=&quot;theano&quot;&gt;Theano&lt;/h4&gt;
-&lt;p&gt;Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. &lt;a href=&quot;http://www.deeplearning.net/software/theano&quot;&gt;http://www.deeplearning.net/software/theano&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 26 Feb 2015 01:00:00 +0900</pubDate>
-        <link>http://royxue.me/project/theano</link>
-        <guid isPermaLink="true">http://royxue.me/project/theano</guid>
-        
-        <category>deep learning</category>
-        
-        
-        <category>project</category>
         
       </item>
     

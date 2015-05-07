@@ -1,0 +1,67 @@
+<h1 id="google-maps-sdk-for-ios-release-notes">Google Maps SDK for iOS Release Notes</h1>
+
+<h2 id="version-17---february-2014">Version 1.7 - February 2014</h2>
+
+<p>Download <a href="https://dl.google.com/geosdk/GoogleMaps-iOS-1.7.0.zip">Version 1.7.0</a>.</p>
+
+<p><strong>Features</strong></p>
+
+<ul>
+  <li>
+    <p>Styled polylines: additional color options via <code>GMSPolyline</code>, including gradients and colors for any number of polyline segments. (<a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=4856">Issue 4856</a>)</p>
+
+    <ul>
+      <li>
+        <p>Each polyline may be drawn with many <code>GMSStyleSpan</code> instances, configuring a unique color or gradient over an arbitrary number of segments.</p>
+      </li>
+      <li>
+        <p>Gradient or color may be specified via a <code>GMSStrokeStyle</code>.</p>
+      </li>
+      <li>
+        <p><code>GMSPath</code> provides a helper category to determine distance along a path.</p>
+      </li>
+      <li>
+        <p><code>GMSStyleSpans</code> helper to apply repeated styles along a polyline.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><code>GMSGeocoder</code> now provides structured addresses via <code>GMSAddress</code>, deprecating <code>GMSReverseGeocodeResult</code>.</p>
+  </li>
+  <li>
+    <p>Added mutable version of <code>GMSCameraPosition</code>, <code>GMSMutableCameraPosition</code>.</p>
+  </li>
+  <li>
+    <p>Delegate method for user tapping the My Location button.</p>
+  </li>
+  <li>
+    <p>Added <code>GMSMapPoint</code> for linear interpolation between points in Mercator space on the Earth.</p>
+  </li>
+  <li>
+    <p>My Location dot now shows compass arrow. (<a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5325">Issue 5325</a>)</p>
+  </li>
+  <li>
+    <p>3D building data is newly available for many places on the Earth.</p>
+  </li>
+</ul>
+
+<p><strong>Resolved issues:</strong></p>
+
+<ul>
+  <li>
+    <p><code>GMSPolyline</code> width is much closer to screen width. (<a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5788">Issue 5788</a>, <a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5265">Issue 5265</a>)</p>
+  </li>
+  <li>
+    <p><code>GMSPolyline</code> performance and memory improvements. (<a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=4904">Issue 4904</a>)</p>
+  </li>
+  <li>
+    <p>Reduced memory use of OpenGL textures.</p>
+  </li>
+  <li>
+    <p>Floor picker is positioned correctly when My Location button is disabled. (<a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=5742">Issue 5742</a>)</p>
+  </li>
+  <li>
+    <p><code>cameraForBounds:insets:</code> on <code>GMSMapView</code> now correctly accounts for padding. (<a href="https://code.google.com/p/gmaps-api-issues/issues/detail?id=6080">Issue 6080</a>)</p>
+  </li>
+</ul>
+
