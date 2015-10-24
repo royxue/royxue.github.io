@@ -1,21 +1,18 @@
 <div id="gallerywrap">
     <div class="gallery-centered">
         {% if include.title %}<h3>{{ include.title }}</h3>{% endif %}
-        <div class="recentitems gallery">
-            {% for photo in site.categories['gallery'] limit:include.limit %}
-                <div class="gallery-item graphic-design">
-                    <div class="he-wrap tpl7">
-                    <img src="{{ "/assets/img/gallery/" | prepend: site.baseurl }}{{ photo.img }}" alt="">
-                        <div class="he-view">
-                            <div class="bg a0" data-animate="fadeIn">
-                                <h3 class="a1" data-animate="fadeInDown">{{ photo.title }}</h3>
-                                <h3 class="a1" data-animate="fadeInDown">{{ photo.memo }}</h4>
-                                <a data-rel="prettyPhoto" href="{{ "/assets/img/gallery/" | prepend: site.baseurl }}{{ photo.img }}" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                            </div><!-- he bg -->
-                        </div><!-- he view -->
-                    </div><!-- he wrap -->
-                </div><!-- end col-12 -->
-            {% endfor %}
-        </div><!-- gallery -->
-    </div><!-- gallery container -->
-</div><!--/gallerywrap -->
+        <div id="instafeed">
+
+        </div><!-- portfolio -->
+    </div><!-- portfolio container -->
+</div><!--/Portfoliowrap -->
+
+<script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        userId: 314008447,
+        accessToken: '314008447.ab103e5.e1368d0145fb435db678a7dbc1365023',
+        resolution: 'low_resolution',
+    });
+    userFeed.run();
+</script>
