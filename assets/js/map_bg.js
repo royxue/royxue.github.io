@@ -201,6 +201,8 @@ $(document).ready(function() {
     var marker = new google.maps.Marker({
     position: maker,
     map: map,
+    icon: 'https://raw.githubusercontent.com/royxue/royxue.github.io/master/assets/img/dojocat.png',
+    animation: google.maps.Animation.DROP,
   });
 
 })
