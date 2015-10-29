@@ -91,6 +91,7 @@ a:focus {
 	min-height: 70px;
 	padding-top: 10px;
 	margin-bottom: 0px;
+	background: url(../img/pattern_header.svg);
 }
 
 .navbar-brand {
@@ -410,7 +411,7 @@ a:focus {
 #footerwrap {
 	padding-top: 60px;
 	padding-bottom: 60px;
-	background: {{ site.colors.primary }};
+	background: url(../img/pattern.svg);
 	position: relative;
 	bottom: 0;
 	left: 0;
