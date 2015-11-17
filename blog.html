@@ -10,7 +10,7 @@ permalink: /blog/
         <!-- BLOG POSTS LIST -->
         <div class="col-lg-8">
 
-            {% for post in site.categories['Dev'] %}
+            {% for post in site.categories['blog'] %}
                 <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
                 <p><csmall>{{ post.date | date: "%b %-d, %Y" }}. | By: {{ post.author }}</csmall></p>
                 {{ post.excerpt }}
