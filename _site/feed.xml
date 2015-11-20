@@ -5,32 +5,9 @@
     <description>Roy,Lijun,Xue,Roy Xue,Lijun Xue,薛立君</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 16 Nov 2015 16:29:13 -0800</pubDate>
-    <lastBuildDate>Mon, 16 Nov 2015 16:29:13 -0800</lastBuildDate>
+    <pubDate>Thu, 19 Nov 2015 22:40:12 -0800</pubDate>
+    <lastBuildDate>Thu, 19 Nov 2015 22:40:12 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>Blog: TensorFlow</title>
-        <description>&lt;p&gt;Well, seems since last time I wrote blog has been a long time, wonderful summer holidays and busy quarter.&lt;/p&gt;
-
-&lt;p&gt;Temp&lt;/p&gt;
-</description>
-        <pubDate>Mon, 16 Nov 2015 14:48:36 -0800</pubDate>
-        <link>http://royxue.me/blog/dev/tensorflow</link>
-        <guid isPermaLink="true">http://royxue.me/blog/dev/tensorflow</guid>
-        
-        <category>Machine Learning</category>
-        
-        <category>TensorFlow</category>
-        
-        <category>Google</category>
-        
-        
-        <category>blog</category>
-        
-        <category>dev</category>
-        
-      </item>
     
       <item>
         <title>Blog: Never Better, Never Worse</title>
@@ -400,6 +377,23 @@ gem &#39;moment-rails&#39;
         <category>blog</category>
         
         <category>life</category>
+        
+      </item>
+    
+      <item>
+        <title>Project: Theano</title>
+        <description>&lt;h4 id=&quot;theano&quot;&gt;Theano&lt;/h4&gt;
+&lt;p&gt;Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. &lt;a href=&quot;http://www.deeplearning.net/software/theano&quot;&gt;http://www.deeplearning.net/software/theano&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 25 Feb 2015 08:00:00 -0800</pubDate>
+        <link>http://royxue.me/project/theano</link>
+        <guid isPermaLink="true">http://royxue.me/project/theano</guid>
+        
+        <category>deep learning</category>
+        
+        
+        <category>project</category>
         
       </item>
     
