@@ -5,9 +5,57 @@
     <description>Roy,Lijun,Xue,Roy Xue,Lijun Xue,薛立君</description>
     <link>http://royxue.me/</link>
     <atom:link href="http://royxue.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 19 Nov 2015 22:40:12 -0800</pubDate>
-    <lastBuildDate>Thu, 19 Nov 2015 22:40:12 -0800</lastBuildDate>
+    <pubDate>Sat, 05 Dec 2015 20:39:25 -0800</pubDate>
+    <lastBuildDate>Sat, 05 Dec 2015 20:39:25 -0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Project: PVE</title>
+        <description>&lt;h2 id=&quot;python-virtualenv-manager&quot;&gt;Python Virtualenv Manager&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://gitter.im/royxue/pve?utm_source=badge&amp;amp;utm_medium=badge&amp;amp;utm_campaign=pr-badge&amp;amp;utm_content=badge&quot;&gt;&lt;img src=&quot;https://badges.gitter.im/Join%20Chat.svg&quot; alt=&quot;Join the chat at https://gitter.im/royxue/pve&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;pve.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Prototype made in Facebook Seattle Hackathon, idea inspired by &lt;a href=&quot;https://github.com/tj/n&quot;&gt;n&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Install python virtualenv by pip first.&lt;/p&gt;
+
+&lt;p&gt;One easy way is &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    npm install -g pve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Or use “ln” to create symlink in /usr/local/bin, and chmod 755 to pve file.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt; Usage: pve [COMMAND] [args]
+ 
+ Commands:
+        pve                            Output Virtualenvs Installed
+        pve new &amp;lt;anme&amp;gt;                 Create New Virtualenvs &amp;lt;name&amp;gt;
+        pve &amp;lt;name&amp;gt;                     Activate to Vitualenv &amp;lt;name&amp;gt;
+        pve rm &amp;lt;anme&amp;gt;                  Remove the Given Vitualenv &amp;lt;name&amp;gt;
+        pve -l, list                   List all installed Virtualenvs
+
+ Options:
+        -h, --help      Display help information
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
+&lt;p&gt;The MIT License (MIT)&lt;/p&gt;
+</description>
+        <pubDate>Fri, 04 Dec 2015 04:00:00 -0800</pubDate>
+        <link>http://royxue.me/project/pve</link>
+        <guid isPermaLink="true">http://royxue.me/project/pve</guid>
+        
+        <category>shell python</category>
+        
+        
+        <category>project</category>
+        
+      </item>
     
       <item>
         <title>Blog: Never Better, Never Worse</title>
@@ -377,23 +425,6 @@ gem &#39;moment-rails&#39;
         <category>blog</category>
         
         <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>Project: Theano</title>
-        <description>&lt;h4 id=&quot;theano&quot;&gt;Theano&lt;/h4&gt;
-&lt;p&gt;Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. &lt;a href=&quot;http://www.deeplearning.net/software/theano&quot;&gt;http://www.deeplearning.net/software/theano&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 25 Feb 2015 08:00:00 -0800</pubDate>
-        <link>http://royxue.me/project/theano</link>
-        <guid isPermaLink="true">http://royxue.me/project/theano</guid>
-        
-        <category>deep learning</category>
-        
-        
-        <category>project</category>
         
       </item>
     
