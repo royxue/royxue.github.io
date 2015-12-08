@@ -5,8 +5,8 @@ date: 2014-01-29 03:23:38+00:00
 layout: post
 slug: hello-world-2
 title: Hello , World !
-wordpress_id: 49
 categories:
+- blog
 - Life
 tags:
 - en_US

@@ -5,8 +5,8 @@ date: 2014-01-24 14:07:27+00:00
 layout: post
 slug: '%e4%b8%80%e4%b8%aa%e4%ba%ba%e4%b8%80%e5%8f%a5%e8%af%9d%e4%b8%80%e5%bc%a0%e7%85%a7%e7%89%87'
 title: 一个人,一句话,一张照片
-wordpress_id: 124
 categories:
+- blog
 - Life
 ---
 

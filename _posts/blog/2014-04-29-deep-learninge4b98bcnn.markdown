@@ -8,6 +8,7 @@ title: Deep Learning之CNNs
 wordpress_id: 321
 categories:
 - Machine Learning
+- Dev
 ---
 
 CNN-Convolutional Neural Networks 卷积神经网络.
@@ -97,14 +98,14 @@ CNNs通过加强神经网络中相邻层之间节点的局部连接模式（Loca
 
 
 
-Note: 如下是对于1维信号卷积过程的定义. ![o[n] = f[n]*g[n] = \sum_{u=-\infty}^{\infty} f[u] g[u-n] = \sum_{u=-\infty}^{\infty} f[n-u] g[u]](http://deeplearning.net/tutorial/_images/math/45513e64a977c246dd75b437cc2111649886ab7f.png). 
+Note: 如下是对于1维信号卷积过程的定义. ![o[n] = f[n]*g[n] = \sum_{u=-\infty}^{\infty} f[u] g[u-n] = \sum_{u=-\infty}^{\infty} f[n-u] g[u]](http://deeplearning.net/tutorial/_images/math/45513e64a977c246dd75b437cc2111649886ab7f.png).
 
 也可以拓展到二维使用:
 
 ![o[m,n] = f[m,n]*g[m,n] = \sum_{u=-\infty}^{\infty} \sum_{v=-\infty}^{\infty} f[u,v] g[u-m,v-n]](http://deeplearning.net/tutorial/_images/math/5aa608f746bb0f7f755520e47253dab37a3b0923.png).
 
 
-为了更好地表示数据，隐层由多个特征图构成，{hk,k=1,2,3 ...K}.权值W由4个参数决定（目标特征图的索引、源特征图的索引、源垂直位置的索引、源水平位置的索引）（可以说W是一个4维的Tensor），偏置b为一个向量,向量中的每一个元素对应一个特征图的索引。我们用下图来表示： 
+为了更好地表示数据，隐层由多个特征图构成，{hk,k=1,2,3 ...K}.权值W由4个参数决定（目标特征图的索引、源特征图的索引、源垂直位置的索引、源水平位置的索引）（可以说W是一个4维的Tensor），偏置b为一个向量,向量中的每一个元素对应一个特征图的索引。我们用下图来表示：
 
 
 ![_images/cnn_explained.png](http://deeplearning.net/tutorial/_images/cnn_explained.png)
@@ -144,13 +145,13 @@ ConvOp是Theano中对卷积层的一个实现。它重复了Scipy中scipy.signal
 
 下面代码实现了Figure 1中的卷积层，输入包括了大小为120*160的3个特征图(对应RGB). 我们可以用两个具有9*9的感受野的卷积过滤器。
 
-    
+
     from theano.tensor.nnet import conv
     rng = numpy.random.RandomState(23455)
-    
+
     # instantiate 4D tensor for input
     input = T.tensor4(name='input')
-    
+
     # initialize shared variable for weights.
     w_shp = (2, 3, 9, 9)
     w_bound = numpy.sqrt(3 * 9 * 9)
@@ -160,7 +161,7 @@ ConvOp是Theano中对卷积层的一个实现。它重复了Scipy中scipy.signal
                     high=1.0 / w_bound,
                     size=w_shp),
                 dtype=input.dtype), name ='W')
-    
+
     # initialize shared variable for bias (1D tensor) with random values
     # IMPORTANT: biases are usually initialized to zero. However in this
     # particular application, we simply apply the convolutional layer to
@@ -170,10 +171,10 @@ ConvOp是Theano中对卷积层的一个实现。它重复了Scipy中scipy.signal
     b = theano.shared(numpy.asarray(
                 rng.uniform(low=-.5, high=.5, size=b_shp),
                 dtype=input.dtype), name ='b')
-    
+
     # build symbolic expression that computes the convolution of input with filters in w
     conv_out = conv.conv2d(input, W)
-    
+
     # build symbolic expression to add bias and apply activation function, i.e. produce neural net layer output
     # A few words on ``dimshuffle`` :
     #   ``dimshuffle`` is a powerful tool in reshaping a tensor;
@@ -197,7 +198,7 @@ ConvOp是Theano中对卷积层的一个实现。它重复了Scipy中scipy.signal
     #    dimshuffle(0, 'x', 1) -> AxB to Ax1xB
     #    dimshuffle(1, 'x', 0) -> AxB to Bx1xA
     output = T.nnet.sigmoid(conv_out + b.dimshuffle('x', 0, 'x', 'x'))
-    
+
     # create theano function to compute filtered images
     f = theano.function([input], output)
 
@@ -206,18 +207,18 @@ ConvOp是Theano中对卷积层的一个实现。它重复了Scipy中scipy.signal
 
 
 
-    
+
     import pylab
     from PIL import Image
-    
+
     # open random image of dimensions 639x516
     img = Image.open(open('images/3wolfmoon.jpg'))
     img = numpy.asarray(img, dtype='float64') / 256.
-    
+
     # put image in 4D tensor of shape (1, 3, height, width)
     img_ = img.swapaxes(0, 2).swapaxes(1, 2).reshape(1, 3, 639, 516)
     filtered_img = f(img_)
-    
+
     # plot original image and first and second components of output
     pylab.subplot(1, 3, 1); pylab.axis('off'); pylab.imshow(img)
     pylab.gray();
@@ -247,19 +248,19 @@ CNNs中另一个很重要的概念是最大池化（max-pooling），这是一�
 
 最大池化在Theano中通过theano.tensor.signal.downsample.max_pool_2d实现了。这个函数以一个N维的张量作为输入（N>2），和一个缩放因子用来对这个张量进行最大池化的变换。下面是例程代码：
 
-    
+
     from theano.tensor.signal import downsample
-    
+
     input = T.dtensor4('input')
     maxpool_shape = (2, 2)
     pool_out = downsample.max_pool_2d(input, maxpool_shape, ignore_border=True)
     f = theano.function([input],pool_out)
-    
+
     invals = numpy.random.RandomState(1).rand(3, 2, 5, 5)
     print 'With ignore_border set to True:'
     print 'invals[0, 0, :, :] =\n', invals[0, 0, :, :]
     print 'output[0, 0, :, :] =\n', f(invals)[0, 0, :, :]
-    
+
     pool_out = downsample.max_pool_2d(input, maxpool_shape, ignore_border=False)
     f = theano.function([input],pool_out)
     print 'With ignore_border set to False:'
@@ -269,7 +270,7 @@ CNNs中另一个很重要的概念是最大池化（max-pooling），这是一�
 
 将会生成如下结果
 
-    
+
     With ignore_border set to True:
         invals[0, 0, :, :] =
         [[  4.17022005e-01   7.20324493e-01   1.14374817e-04   3.02332573e-01 1.46755891e-01]
@@ -280,7 +281,7 @@ CNNs中另一个很重要的概念是最大池化（max-pooling），这是一�
         output[0, 0, :, :] =
         [[ 0.72032449  0.39676747]
          [ 0.6852195   0.87811744]]
-    
+
     With ignore_border set to False:
         invals[1, 0, :, :] =
         [[ 0.01936696  0.67883553  0.21162812  0.26554666  0.49157316]
@@ -305,5 +306,3 @@ CNNs中另一个很重要的概念是最大池化（max-pooling），这是一�
 
 
  
-
-

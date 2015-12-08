@@ -8,6 +8,7 @@ title: 'Preparation-Profiling Theano #GSoC2014-Theano'
 wordpress_id: 326
 categories:
 - Theano
+- Dev
 tags:
 - GSoC2014/Python
 ---
@@ -33,7 +34,7 @@ So my aim is to know the output info and see where should be modified. The profi
 
 The output of profile
 
-    
+
     ➜  DeepLearningModel git:(master) ✗ THEANO_FLAGS=profile=true,profile_memory=true  python profile.py
     /Library/Python/2.7/site-packages/theano/gof/vm.py:675: UserWarning: CVM does not support memory profile, using Stack VM.
       'CVM does not support memory profile, using Stack VM.')
@@ -48,19 +49,19 @@ The output of profile
         Theano Optimizer time: 4.169512e-02s
            Theano validate time: 0.000000e+00s
         Theano Linker time (includes C, CUDA code generation/compiling): 4.143310e-02s
-    
+
     Class
     ---
     <% time> <sum %> <apply time> <time per call> <type> <#call> <#apply> <Class name>
       100.0%   100.0%       0.000s       9.06e-06s     C        1        1   <class 'theano.tensor.elemwise.Elemwise'>
        ... (remaining 0 Classes account for   0.00%(0.00s) of the runtime)
-    
+
     Ops
     ---
     <% time> <sum %> <apply time> <time per call> <type> <#call> <#apply> <Op name>
       100.0%   100.0%       0.000s       9.06e-06s     C        1        1   Elemwise{add,no_inplace}
        ... (remaining 0 Ops account for   0.00%(0.00s) of the runtime)
-    
+
     Apply
     ------
     <% time> <sum %> <apply time> <time per call> <#call> <id> <Mflops> <Gflops/s> <Apply name>
@@ -69,7 +70,7 @@ The output of profile
         input 1: dtype=float64, shape=(), strides=c
         output 0: dtype=float64, shape=(), strides=c
        ... (remaining 0 Apply instances account for 0.00%(0.00s) of the runtime)
-    
+
     Memory Profile
     (Sparse variables are ignored)
     ---
@@ -77,14 +78,11 @@ The output of profile
         Max if no gc (allow_gc=False): 0KB
         Max if linker=c|py: 0KB
         Memory saved if gc is enabled (linker=c|py): 0KB
-    
+
         <Sum apply outputs (bytes)> <Apply outputs shape> <created/inplace/view> <Apply node>
-    
+
        ... (remaining 1 Apply account for    8B/8B ((100.00%)) of the Apply with dense outputs sizes)
-    
+
         All Apply nodes have output sizes that take less than 1024B.
         <created/inplace/view> is taken from the Op's declaration.
         Apply nodes marked 'inplace' or 'view' may actually allocate memory, this is not reported here. If you use DebugMode, warnings will be emitted in those cases.
-
-
-

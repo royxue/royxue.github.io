@@ -8,6 +8,7 @@ title: Python Generator
 wordpress_id: 401
 categories:
 - Python
+- Dev
 ---
 
 # Python Generator
@@ -46,11 +47,11 @@ categories:
 
 
 
-    
+
     <code>def fib(n):
         a = 1, b = 1
         while a < n:
-            yield a 
+            yield a
             a,b = b, a+b
     </code>
 
@@ -67,10 +68,10 @@ categories:
 
 
 
-    
+
     <code>def perm(order):
     for i in range(len(order)):
-        v = order[i:i+1] 
+        v = order[i:i+1]
         if len(order) == 1:
             yield v
         else:
@@ -102,7 +103,7 @@ yield和print的不同就在于它每一次都会记录上一次的状态, 这�
 
 
 
-    
+
     <code>def perm(items, n = None):  
         if n is None:  
             n = len(items)  
@@ -113,7 +114,7 @@ yield和print的不同就在于它每一次都会记录上一次的状态, 这�
             else:  
                 rest = items[:i] + items[i+1:]  
                 for p in perm(rest, n-1):  
-                    yield v + p 
+                    yield v + p
     </code>
 
 
@@ -134,9 +135,9 @@ Python2.6 内置了 itertools ... 可以直接用
 
 
 
-    
+
     <code>print list(itertools.permutations([1,2,3,4],2))
-    
+
     [(1, 2), (1, 3), (1, 4), (2, 1), (2, 3), (2, 4), (3, 1), (3, 2), (3, 4), (4, 1), (4, 2), (4, 3)]
     </code>
 

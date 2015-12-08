@@ -8,6 +8,7 @@ title: First Time Icon Design
 categories:
 - blog
 - Design
+- Dev
 tags:
 - design
 - icon

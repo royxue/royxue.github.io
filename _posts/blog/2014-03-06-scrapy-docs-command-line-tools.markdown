@@ -8,6 +8,7 @@ title: Scrapy Docs - Command Line Tools
 wordpress_id: 253
 categories:
 - Scrapy
+- Dev
 ---
 
 我和我的小伙伴正在努力翻译Scrapy的中文文档~更多请查看[https://github.com/RoyXue/learn_scrapy_in_chinese](https://github.com/RoyXue/learn_scrapy_in_chinese)
@@ -32,7 +33,7 @@ Scrapy 工具提供了一些命令,为了不同的目的,每一条指令都可�
 
 虽然Scrapy可以被我们进行修改,但是所有的Scrapy项目都有相同的默认文件结构,和下面相似:
 
-    
+
     <code>scrapy.cfg
     myproject/
         __init__.py
@@ -49,7 +50,7 @@ Scrapy 工具提供了一些命令,为了不同的目的,每一条指令都可�
 
 scrapy.cfg文件所在的目录是该项目的目录.该文件包含了定义项目设置的python模块.下面是一个例子.
 
-    
+
     <code>[settings]
     default = myproject.settings
     </code>
@@ -62,12 +63,12 @@ scrapy.cfg文件所在的目录是该项目的目录.该文件包含了定义项
 
 可以从通过不带参数运行Scrapy工具开始,它会输出一些用法说明和可用的命令：
 
-    
+
     <code>Scrapy X.Y - no active project
-    
+
     Usage:
         scrapy <command> [options] [args]
-    
+
     Available commands:
         crawl         Run a spider
         fetch         Fetch a URL using the Scrapy downloader
@@ -77,12 +78,12 @@ scrapy.cfg文件所在的目录是该项目的目录.该文件包含了定义项
 
 如果你是一个Scrapy项目中运行这条指令,第一行会输出当前的活动项目.在上面的情况中,它是从一个项目之外运行的.如果从一个项目里面运行它的话,会输出这样的信息：
 
-    
+
     <code>Scrapy X.Y - project: myproject
-    
+
     Usage:
         scrapy <command> [options] [args]
-    
+
         [...]
     </code>
 
@@ -94,7 +95,7 @@ scrapy.cfg文件所在的目录是该项目的目录.该文件包含了定义项
 
 通常,利用scrapy工具你会做的第一件事就是创建属于你的Scrapy项目：
 
-    
+
     <code>scrapy startproject myproject
     </code>
 
@@ -103,7 +104,7 @@ scrapy.cfg文件所在的目录是该项目的目录.该文件包含了定义项
 
 接下来,打开新项目的目录.
 
-    
+
     <code>cd myproject
     </code>
 
@@ -118,7 +119,7 @@ scrapy.cfg文件所在的目录是该项目的目录.该文件包含了定义项
 
 举个例子,新建一个Spider.
 
-    
+
     <code>scrapy genspider mydomain mydomain.com
     </code>
 
@@ -133,14 +134,14 @@ scrapy.cfg文件所在的目录是该项目的目录.该文件包含了定义项
 
 这一部分包含了一份关于可用的内置命令的描述和一些用法示例的列表.记住,你总是可以通过运行下面这条指令来获取有关每个命令的详细信息：
 
-    
+
     <code>scrapy <command> -h
     </code>
 
 
 你可以使用下面这条指令,查看所有可用的指令:
 
-    
+
     <code>scrapy -h
     </code>
 
@@ -149,7 +150,7 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 全局指令
 
-    
+
     <code>startproject
     settings
     runspider
@@ -162,7 +163,7 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 项目内指令
 
-    
+
     <code>crawl
     check
     list
@@ -187,7 +188,7 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 使用范例:
 
-    
+
     <code>$ scrapy startproject myproject
     </code>
 
@@ -207,27 +208,27 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 使用范例:
 
-    
+
     <code>$ scrapy genspider -l
     Available templates:
         basic
         crawl
         csvfeed
         xmlfeed
-    
+
     $ scrapy genspider -d basic
     from scrapy.spider import Spider
-    
+
     class $classname(Spider):
         name = "$name"
         allowed_domains = ["$domain"]
         start_urls = (
             'http://www.$domain/',
             )
-    
+
         def parse(self, response):
             pass
-    
+
     $ scrapy genspider -t basic example example.com
     Created spider 'example' using template 'basic' in module:
         mybot.spiders.example
@@ -247,7 +248,7 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 使用范例:
 
-    
+
     <code>$ scrapy crawl myspider
     [ ... myspider starts crawling ... ]
     </code>
@@ -266,7 +267,7 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 使用范例:
 
-    
+
     <code>$ scrapy check -l
     first_spider
      * parse
@@ -274,11 +275,11 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
     second_spider
      * parse
      * parse_item
-    
+
     $ scrapy check
     [FAILED] first_spider:parse_item
     >>> 'RetailPricex' field is missing
-    
+
     [FAILED] first_spider:parse
     >>> Returned 92 requests, expected 0..4
     </code>
@@ -297,7 +298,7 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 使用范例:
 
-    
+
     <code>$ scrapy list
     spider1
     spider2
@@ -319,7 +320,7 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 使用范例:
 
-    
+
     <code>$ scrapy edit spider1
     </code>
 
@@ -343,10 +344,10 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 使用范例:
 
-    
+
     <code>$ scrapy fetch --nolog http://www.example.com/some/page.html
     [ ... html content here ... ]
-    
+
     $ scrapy fetch --nolog --headers http://www.example.com/
     {'Accept-Ranges': ['bytes'],
     'Age': ['1263   '],
@@ -372,7 +373,7 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 使用范例:
 
-    
+
     <code>$ scrapy view http://www.example.com/some/page.html
     [ ... browser starts ... ]
     </code>
@@ -393,7 +394,7 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 使用范例:
 
-    
+
     <code>$ scrapy shell http://www.example.com/some/page.html
     [ ... scrapy shell starts ... ]
     </code>
@@ -414,39 +415,39 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 
 
-	
+
   * --callback or -c: 用于解析响应的Spider回调方法
 
-	
+
   * --rules or -r: 用CrawlSpider规则发现用于解析响应的会回调方法(ie. spider method)
 
-	
-  * 
-	
+
+  *
+
   * --noitems: 不显示抓取的内容
 
-	
+
   * --nolinks: 不显示提取的链接
 
-	
+
   * --depth or -d: 每个请求应该地柜遵循的深度级别.(默认为1)
 
-	
+
   * --verbose or -v: 显示每个深度级别的信息
 
 
 使用范例:
 
-    
+
     <code>$ scrapy parse http://www.example.com/ -c parse_item
     [ ... scrapy log lines crawling example.com spider ... ]
-    
+
     >>> STATUS DEPTH LEVEL 1 <<<
     # Scraped Items  ------------------------------------------------------------
     [{'name': u'Example item',
     'category': u'Furniture',
     'length': u'12 cm'}]
-    
+
     # Requests  -----------------------------------------------------------------
     []
     </code>
@@ -467,7 +468,7 @@ Scrapy中有两种类型的命令，即只能在一个Scrapy项目内部工作�
 
 用法范例:
 
-    
+
     <code>$ scrapy settings --get BOT_NAME
     scrapybot
     $ scrapy settings --get DOWNLOAD_DELAY
@@ -490,7 +491,7 @@ Example usage:
 
 用法范例:
 
-    
+
     <code>$ scrapy runspider myspider.py
     [ ... spider starts crawling ... ]
     </code>
@@ -544,7 +545,7 @@ New in version 0.17.
 
 
 
-    
+
     <code>Default: '' (empty string)
     </code>
 
@@ -553,5 +554,5 @@ New in version 0.17.
 
 Example: 范例:
 
-    
+
     <code>COMMANDS_MODULE = 'mybot.commands'</code>

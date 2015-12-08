@@ -9,6 +9,7 @@ wordpress_id: 508
 categories:
 - blog
 - Theano
+- Dev
 tags:
 - Theano
 ---

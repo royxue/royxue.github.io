@@ -8,6 +8,7 @@ title: MLSS2014 Day 1 Note
 wordpress_id: 426
 categories:
 - Machine Learning
+- Dev
 tags:
 - mlss2014
 ---

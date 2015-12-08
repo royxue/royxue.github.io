@@ -9,6 +9,7 @@ wordpress_id: 531
 categories:
 - blog
 - Python
+- Dev
 tags:
 - python
 ---
@@ -28,14 +29,14 @@ Writing too many layers of for loops is definitely a bad habit. However, sometim
 There is no "goto" method in python, so it will be difficult to deal with multi layers "for" loops.
 
 
-    
+
     <code>for i in range(5):
         for z in range(5):
             for c in range(5):
                 if z > c:
                     print z, c
                     break
-            else:continue 
+            else:continue
             break
     </code>
 

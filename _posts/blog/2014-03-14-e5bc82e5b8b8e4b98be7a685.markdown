@@ -8,6 +8,7 @@ title: 异常之禅
 wordpress_id: 263
 categories:
 - Python
+- Dev
 ---
 
 近来几天总是觉得思绪很乱,去计算机学院开了一次技术分享会之后,更深觉作为电信的学生,和他们之间的差距究竟差在哪里.如果可能单独说只是实现功能,并非那么难.但是,在coding的时候,优化,数据结构等等一系列的选择优化才是更为重要的.
@@ -21,7 +22,7 @@ Python异常之禅:
 
 Python的所有内建异常类(基本看名字就可以理解是处理什么的啦)
 
-    
+
     BaseException
      +-- SystemExit
      +-- KeyboardInterrupt
@@ -78,7 +79,7 @@ Python的所有内建异常类(基本看名字就可以理解是处理什么的�
 
 捕捉异常:使用
 
-    
+
     try:
         执行语句
     except (Exception types),e:(可以捕捉特定的异常,如不带参数,默认捕捉所有异常)

@@ -8,6 +8,7 @@ title: 使用生成器解决八皇后问题#Python
 wordpress_id: 241
 categories:
 - Python
+- Dev
 ---
 
 今天重新又看了一下Python的生成器,也就是带yield的function:
@@ -17,7 +18,7 @@ categories:
 
 然后试着解决一下八皇后问题,主要还是用迭代生成器来解决.
 
-    
+
     # 8 queens    
     def conflict(state,nextX):  
         nextY = len(state)  
@@ -25,7 +26,7 @@ categories:
             if abs(state[i]-nextX) in (0,nextY - i ):  
                 return True  
         return False  
-    
+
     def queens(num=8,state=()):  
         for pos in range(num):  
             if not conflict(state,pos):  
@@ -34,11 +35,11 @@ categories:
                 else:  
                     for result in queens(num,state + (pos,)):  
                         yield (pos,) + result                 
-    
+
     #show all solution  
     for solution in queens(8):  
         print solution    
-    
+
     #count solution   
     print "The number of solutions is :"  
     print len(list(queens(8)))

@@ -5,8 +5,8 @@ date: 2014-01-22 14:06:22+00:00
 layout: post
 slug: '%e6%b0%b8%e8%bf%9c%e7%9a%84%e4%b8%87%e4%ba%8b%e5%b1%8b'
 title: 永远的万事屋
-wordpress_id: 122
 categories:
+- blog
 - Having Fun
 ---
 
@@ -254,6 +254,3 @@ Ah　梦中でぶつけたいんだ 啊 想要不顾一切地横冲直撞
 
 
 その方がいい　それくらいでいい 就那样便好 那般甚好
-
-
-

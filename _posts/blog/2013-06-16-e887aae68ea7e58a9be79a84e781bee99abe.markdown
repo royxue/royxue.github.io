@@ -7,6 +7,7 @@ slug: '%e8%87%aa%e6%8e%a7%e5%8a%9b%e7%9a%84%e7%81%be%e9%9a%be'
 title: 自控力的灾难
 wordpress_id: 84
 categories:
+- blog
 - Life
 ---
 

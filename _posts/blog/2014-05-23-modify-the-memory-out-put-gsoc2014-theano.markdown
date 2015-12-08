@@ -8,11 +8,12 @@ title: 'Modify the memory out put #GSoC2014-Theano'
 wordpress_id: 394
 categories:
 - Theano
+- Dev
 tags:
 - GSoC2014/Python
 ---
 
-## 
+##
 
 
 
@@ -42,7 +43,7 @@ The other .py I will work with is theano/compile/profiling.py. The first task is
 
 
 
-    
+
     <code>current_mem_usage=0
     for node in order:
         for var_mem for node_mem[node]:

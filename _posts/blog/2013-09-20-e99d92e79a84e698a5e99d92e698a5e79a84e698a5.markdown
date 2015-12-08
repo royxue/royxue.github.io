@@ -5,8 +5,8 @@ date: 2013-09-20 13:52:00+00:00
 layout: post
 slug: '%e9%9d%92%e7%9a%84%e6%98%a5%e9%9d%92%e6%98%a5%e7%9a%84%e6%98%a5'
 title: 青的春,青春的春
-wordpress_id: 104
 categories:
+- blog
 - Life
 ---
 

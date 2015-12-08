@@ -7,6 +7,7 @@ slug: '%e6%b2%a1%e6%9c%89%e6%9d%a5%e4%b9%9f%e5%9b%9e%e4%b8%8d%e5%8e%bb%e7%9a%84%
 title: '没有来也回不去的青春 '
 wordpress_id: 82
 categories:
+- blog
 - Life
 ---
 

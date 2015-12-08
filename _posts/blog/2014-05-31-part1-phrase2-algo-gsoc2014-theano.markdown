@@ -8,6 +8,7 @@ title: 'Part1 Phrase2 Algo #GSoC2014-Theano'
 wordpress_id: 405
 categories:
 - Theano
+- Dev
 tags:
 - GSoC2014/Python
 ---
@@ -32,24 +33,24 @@ On the other hand, I wrote the backtrack algorithm in order to find out the mini
 
 
 
-    
+
     <code>mem_dict = []
     current = 0
-    
+
     def count_min_memory_peak(node_list, b = False):
         global mem_dict, current
         '''
         enumerate all valid order
         compute the peak of all order and keep the order with the minimum peak.
         return an order with minimum memory usage
-    
-        :param node_list: A list of node 
-    
+
+        :param node_list: A list of node
+
         regard the node has an attribute called mem with is its memory usage.
         '''
-    
+
         for i in range(len(node_list)):
-            v = node_list[i:i+1] 
+            v = node_list[i:i+1]
             if len(node_list) == 1:
                 yield v
                 current += v[0]
@@ -63,10 +64,10 @@ On the other hand, I wrote the backtrack algorithm in order to find out the mini
         if b:
             mem_dict.append(current)
             current = 0
-    
+
     for i in count_min_memory_peak([1, 2, 3]):
         print i
-    
+
     print mem_dict
     </code>
 

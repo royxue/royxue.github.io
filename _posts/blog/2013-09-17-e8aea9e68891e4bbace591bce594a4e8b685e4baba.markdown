@@ -5,8 +5,8 @@ date: 2013-09-17 13:50:47+00:00
 layout: post
 slug: '%e8%ae%a9%e6%88%91%e4%bb%ac%e5%91%bc%e5%94%a4%e8%b6%85%e4%ba%ba'
 title: '让我们呼唤超人 '
-wordpress_id: 102
 categories:
+- blog
 - Life
 ---
 

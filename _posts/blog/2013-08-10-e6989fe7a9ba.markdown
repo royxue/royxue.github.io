@@ -5,8 +5,8 @@ date: 2013-08-10 13:46:44+00:00
 layout: post
 slug: '%e6%98%9f%e7%a9%ba'
 title: 星空
-wordpress_id: 96
 categories:
+- blog
 - Life
 ---
 

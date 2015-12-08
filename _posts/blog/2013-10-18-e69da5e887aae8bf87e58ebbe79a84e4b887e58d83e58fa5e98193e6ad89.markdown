@@ -5,8 +5,8 @@ date: 2013-10-18 13:54:29+00:00
 layout: post
 slug: '%e6%9d%a5%e8%87%aa%e8%bf%87%e5%8e%bb%e7%9a%84%e4%b8%87%e5%8d%83%e5%8f%a5%e9%81%93%e6%ad%89'
 title: 来自过去的万千句道歉
-wordpress_id: 106
 categories:
+- blog
 - Life
 ---
 

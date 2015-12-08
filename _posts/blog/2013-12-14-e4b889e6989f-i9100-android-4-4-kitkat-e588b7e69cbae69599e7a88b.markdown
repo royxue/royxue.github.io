@@ -5,8 +5,8 @@ date: 2013-12-14 14:55:07+00:00
 layout: post
 slug: '%e4%b8%89%e6%98%9f-i9100-android-4-4-kitkat-%e5%88%b7%e6%9c%ba%e6%95%99%e7%a8%8b'
 title: 三星 i9100 Android 4.4 KitKat 刷机教程
-wordpress_id: 143
 categories:
+- blog
 - Life
 ---
 

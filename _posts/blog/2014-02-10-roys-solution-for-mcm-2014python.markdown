@@ -8,6 +8,7 @@ title: Roy's Solution for MCM 2014#Python
 wordpress_id: 192
 categories:
 - Python
+- Dev
 tags:
 - zh_CN
 ---
@@ -18,24 +19,24 @@ tags:
 
 贴代码之前先说一下,本来一开始看到数!!据!!挖!!掘!!,第一反应是把它丢进Rapiminer或者Weka里面之前分析一下,但是,官网给的资料格式实在是...高级偷懒症患者于是陷入了纠结...最后突然灵光一现想到了Networkx小伙伴(只是比较省事= =)!!!所以这次的代码主要是基于它开发的.Networkx是基于Python的图论和复杂网络Eva建模工具,内置了我们常用的图和复杂网络分析的算法,可以便捷方便的建立基础或复杂网络,并且对网络进行数据分析,仿真建模.不过说实话,功能虽然强大但是速度实在有点慢(我的电脑是i7 + 8G),所以使用前需要修炼好忍耐力.PS:Networkx:[http://networkx.github.io/](http://networkx.github.io/)
 
-    
+
     #coding: utf-8
     #author: Roy Xue
     #verion: beta
-    
+
     import re
     import urllib2
-    import networkx as nx 
+    import networkx as nx
     import matplotlib.pyplot as plt
-    
+
     #Step 1 爬虫爬取题目资料
-    url='https://files.oakland.edu/users/grossman/enp/Erdos1.html' 
+    url='https://files.oakland.edu/users/grossman/enp/Erdos1.html'
     content=urllib2.urlopen(url).read()
     file= open('coau.txt','w')
     file.write(content)
     file.close()
     print 'Step 1 done'
-    
+
     #Step 2 利用正则表达式初步处理题目资料
     file= open('coau.txt','r')
     co= open('cooau.txt','w')
@@ -46,12 +47,12 @@ tags:
     co.close()
     file.close()
     print 'Step 2 done'
-    
+
     #Step 3 绘制网络图
     G = nx.Graph()
     auN=open('coau.txt','r')
     au510=''
-    for i in auN:	
+    for i in auN:
     	i_pat=re.compile(r'(.*?)19')
     	i_pat_2=re.compile(r'\t(.*?)\n')
     	if i :
@@ -68,33 +69,33 @@ tags:
     			G.add_edge(c,a)
     #形成关系网络图
     #无向无权图
-    
+
     for n in G.nodes():
     	if (G.degree(n) == 1):
     		G.remove_node(n)
     		print 'Target Removed'
     #初步处理,取出度为1的作者
-    
+
     nx.draw(G)
     print 'Graph Drawing, plz wait'                          
     plt.savefig("garph.png")
     print 'Graph Saved'          
     plt.show()
     print 'Check Out Ur Graph, Next Step Will Start When Ur Close Graph Windows'  
-    #绘制图像 png格式保存 
-    
+    #绘制图像 png格式保存
+
     #Step 4 对图进行分析
     print G.number_of_nodes()
     #输出图总节点数
     print G.number_of_edges()
     #输出图总边数
-    
+
     print G.degree()
     #输出各个节点的度
     dgreeOut= sorted(G.degree().iteritems(), key=lambda d:d[1], reverse = True)
     print dgreeOut
     #输出排序版度分布表
-    
+
     print nx.average_clustering(G)
     #输出平均聚类系数
     print nx.clustering(G)
@@ -103,15 +104,15 @@ tags:
     clusterOut= sorted(b.iteritems(), key=lambda d:d[1], reverse = True)
     print clusterOut
     #输出排序版聚类系数分布表
-    
+
     print nx.degree_centrality(G)
     #输出度中心性表
     c=nx.degree_centrality(G)
     centralityOut= sorted(c.iteritems(), key=lambda d:d[1], reverse = True)
     print centralityOut
     #输出排序版度中心性表
-    
-    print nx.degree_histogram(G) 
+
+    print nx.degree_histogram(G)
     #输出度分布序列
     degree =  nx.degree_histogram(G)          
     #返回图中所有节点的度分布序列
@@ -121,15 +122,15 @@ tags:
     #将频次转换为频率，这用到Python的一个小技巧：列表内涵
     plt.loglog(x,y,color="blue",linewidth=2)           
     #在双对数坐标轴上绘制度分布曲线  
-    plt.show() 
-    
+    plt.show()
+
     print nx.adjacency_matrix(G,G.nodes())
     a=nx.adjacency_matrix(G,G.nodes())
     for i in a:
     	for q in i:
     		print q
     #输出邻接矩阵.
-    
+
     au=open('coau.txt','r')
     i_pat=re.compile(r'(.*?)19')
     auDict={}

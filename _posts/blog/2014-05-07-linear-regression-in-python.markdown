@@ -8,6 +8,7 @@ title: Linear Regression in Python
 wordpress_id: 339
 categories:
 - Machine Learning
+- Dev
 ---
 
 有些东西看着学, 和自己动手写差距还是蛮大的.
@@ -24,13 +25,13 @@ Linear Regression 线性回归还是比较简单的. 主要是用来预测, 连�
 
 
 
-    
+
     #author: Roy Xue
     #reference: Cousera Machine Learning by Andrew Ng
-    
+
     import numpy as np
     import matplotlib.pyplot as plt
-    
+
     class Linear_Regression(object):
     	def __init__(self,input):
     		self.data = np.loadtxt(input, delimiter=',')
@@ -39,16 +40,16 @@ Linear Regression 线性回归还是比较简单的. 主要是用来预测, 连�
     		self.x = self.data[:, 0].reshape(97, 1)
     		self.x1 = np.concatenate((np.ones((97, 1)), self.x), axis=1)
     		self.y = self.data[:, 1].reshape(97, 1)
-    
+
     	def show_data(self):
     		plt.plot(self.x, self.y,'o', self.x, self.H + self.y, 'r')
     		plt.show()
-    		
+
     	def cost_function(self):
     		self.H = np.dot(self.x1, self.theta) - self.y
     		J = sum(pow(self.H, 2)) / (2. * self.m)
     		return J
-    
+
     	def gradient_descent(self):
     		iteration = 1500
     		alpha = 0.01
@@ -57,13 +58,13 @@ Linear Regression 线性回归还是比较简单的. 主要是用来预测, 连�
     			self.theta[0] = self.theta[0] - (alpha / self.m) * sum(self.H)
     			self.theta[1] = self.theta[1] - (alpha / self.m) * sum(self.H * self.x)			
     		return self.theta		
-    
+
     	def run(self):
     		print "Initial Cost is" + str(self.cost_function())
     		print "The best theta after 1500 iterations" + str(self.gradient_descent())
     		print "The Cost now is" + str(self.cost_function())
     		self.show_data()
-    
+
     line = Linear_Regression(input='ex1data1.txt')
     line.run()
 
@@ -73,7 +74,3 @@ Linear Regression 线性回归还是比较简单的. 主要是用来预测, 连�
 运算结果:
 
 [![Figure_1_and__REPL___python_](http://royxue.me/wp-content/uploads/2014/05/Figure_1_and__REPL___python_-300x298.png)](http://royxue.me/wp-content/uploads/2014/05/Figure_1_and__REPL___python_.png)
-
-
-
-

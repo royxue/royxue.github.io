@@ -8,6 +8,7 @@ title: Midterm is coming#GSoC2014-Theano
 wordpress_id: 418
 categories:
 - Theano
+- Dev
 tags:
 - GSoC2014/Python
 ---

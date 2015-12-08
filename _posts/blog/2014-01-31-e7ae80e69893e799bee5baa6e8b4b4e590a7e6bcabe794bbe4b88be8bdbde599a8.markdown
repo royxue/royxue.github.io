@@ -8,6 +8,7 @@ title: 简易百度贴吧漫画下载器#Python
 wordpress_id: 157
 categories:
 - Python
+- Dev
 ---
 
 之前一段时间做过的懒人应用之一...用来下载贴吧的漫画
@@ -16,14 +17,14 @@ categories:
 
 简单的入门级爬虫
 
-    
+
     import urllib
     import re
-    
+
     def openUrl(url):
         html=urllib.urlopen(url).read()
     return html
-    
+
     def downloadImg(html,i):
         pat=r'class="BDE_Image" src="(.*?\.jpg)"'
         imgPat=re.compile(pat)
@@ -32,7 +33,7 @@ categories:
         for url in imgUrl:
             urllib.urlretrieve(url,'%s_%s.jpg' % (i,num))
             num+=1
-    
+
     urll=raw_input("Input Url to Download Comics:")
     n=int(raw_input("Input Page Number:"))
     for i in range(0,n):
@@ -40,7 +41,7 @@ categories:
         #replace addr with the page that u want download
         page=openUrl(addr)
         downloadImg(page,i)
-    
+
     print "Comics Downloaded"
 
 
@@ -55,5 +56,3 @@ urllib - 用来打开网页和下载图片
 使用程序请安装Python 2.7.x环境,输入你想要下载的帖子和下载图片的范围(帖子的页数).然后等着"Comics Downloaded"出发就是成功下载.
 
 欢迎大家用这个来代替不停的右键另存为,也欢迎大家自己修改处更方便的版本!
-
-

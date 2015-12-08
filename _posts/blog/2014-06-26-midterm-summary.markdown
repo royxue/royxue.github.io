@@ -8,6 +8,7 @@ title: Midterm Summary#GSoC2014-Theano
 wordpress_id: 420
 categories:
 - Theano
+- Dev
 tags:
 - GSoC2014/Python
 ---
@@ -123,10 +124,10 @@ From that time I would start do the step of "Reduce the number of allocation/reu
 
 
 
-	
+
   1. Keep the current order of execution that lower the memory usage. Then modify the storage_map to have multiple node share the same output storage space. Start with only 0d ndarray. That way, we are sure it have the same size.
 
-	
+
   2. Extend it to nd array by checking node that have the same shape with the information that we have in the shape feature that keep track of shape information in the graph.
 
 

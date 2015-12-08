@@ -7,12 +7,14 @@ slug: algorithm-speeding-upgsoc2014-theano
 title: Algorithm Speeding Up#GSoC2014-Theano
 wordpress_id: 449
 categories:
+- blog
 - Theano
+- Dev
 tags:
 - GSoC2014/Python
 ---
 
-## 
+##
 
 
 
@@ -76,9 +78,9 @@ using command python -m cProfile -s cumulative test_profiling.py
 
 
 
-    
+
     <code>Ordered by: cumulative time
-    
+
     ncalls  tottime  percall  cumtime  percall filename:lineno(function)
         1    0.001    0.001    3.579    3.579 test_profiling.py:4(<module>)
         1    0.000    0.000    2.993    2.993 test_profiling.py:13(test_profiling)
@@ -110,7 +112,7 @@ using command python -m cProfile -s cumulative test_profiling.py
 
 
 
-    
+
     <code>ncalls  tottime  percall  cumtime  percall filename:lineno(function)
         1    0.001    0.001    3.272    3.272 test_profiling.py:4(<module>)
         1    0.000    0.000    2.791    2.791 test_profiling.py:13(test_profiling)

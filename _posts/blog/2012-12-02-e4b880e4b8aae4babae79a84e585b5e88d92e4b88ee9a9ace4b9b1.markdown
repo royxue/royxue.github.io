@@ -7,6 +7,7 @@ slug: '%e4%b8%80%e4%b8%aa%e4%ba%ba%e7%9a%84%e5%85%b5%e8%8d%92%e4%b8%8e%e9%a9%ac%
 title: 一个人的兵荒与马乱
 wordpress_id: 112
 categories:
+- blog
 - Life
 ---
 

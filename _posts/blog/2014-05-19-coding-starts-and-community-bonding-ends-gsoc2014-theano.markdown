@@ -8,6 +8,7 @@ title: 'Coding Starts and Community Bonding Ends #GSoC2014-Theano'
 wordpress_id: 386
 categories:
 - Theano
+- Dev
 tags:
 - GSoC2014/Python
 ---

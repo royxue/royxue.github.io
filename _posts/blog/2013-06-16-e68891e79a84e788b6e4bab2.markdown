@@ -7,6 +7,7 @@ slug: '%e6%88%91%e7%9a%84%e7%88%b6%e4%ba%b2'
 title: 我的父亲
 wordpress_id: 88
 categories:
+- blog
 - Life
 ---
 

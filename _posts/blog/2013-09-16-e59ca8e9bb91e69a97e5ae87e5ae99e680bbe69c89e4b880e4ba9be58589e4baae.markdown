@@ -5,9 +5,9 @@ date: 2013-09-16 13:49:30+00:00
 layout: post
 slug: '%e5%9c%a8%e9%bb%91%e6%9a%97%e5%ae%87%e5%ae%99%e6%80%bb%e6%9c%89%e4%b8%80%e4%ba%9b%e5%85%89%e4%ba%ae'
 title: '在黑暗宇宙,总有一些光亮 '
-wordpress_id: 100
 categories:
 - Life
+- blog
 ---
 
 有时候

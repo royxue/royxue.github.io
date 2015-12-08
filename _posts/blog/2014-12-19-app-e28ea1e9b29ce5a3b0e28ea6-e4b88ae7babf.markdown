@@ -8,6 +8,7 @@ title: App ⎡鲜声⎦ 上线
 wordpress_id: 553
 categories:
 - blog
+- Dev
 tags:
 - django
 - iOS

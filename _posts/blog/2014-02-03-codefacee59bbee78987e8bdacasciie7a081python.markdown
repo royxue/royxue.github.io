@@ -8,6 +8,7 @@ title: codeFace图片转ascii码#Python
 wordpress_id: 161
 categories:
 - Python
+- Dev
 ---
 
 首先运行此程序需要安装Python 2.7.x和PIL库
@@ -16,13 +17,13 @@ categories:
 
 先po上代码
 
-    
+
     import sys
     from PIL import Image
-    
+
     HEIGHT =  70
     chars = "   ...',;:clodxkO0KXNWMMM"
-    
+
     def pic2ascii(filename):
         output = ''
         image = Image.open(filename)
@@ -35,7 +36,7 @@ categories:
                 output += chars[(pixs[x,y]/10)-1]
             output += '\n'
         print output
-    
+
     def getsize(image):
         '''Calculate the target picture size
         '''
@@ -46,7 +47,7 @@ categories:
         t_width = int(t_width * 2.3)
         t_size = (t_width ,t_height)
         return t_size
-    
+
     pic2ascii("roy.png")
 
 
@@ -54,19 +55,19 @@ categories:
 
 预设色阶字符,可以自行修改
 
-    
+
     chars = "   ...',;:clodxkO0KXNWMMM"
 
 
 转化后的分辨率可以通过修改Height来实现(设定值越大效果越明显,但是考虑到屏幕显示的问题,一般在70-80左右即可)
 
-    
+
     HEIGHT =  70
 
 
 效果图如下
 
-    
+
     XXXXXXXXXXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXXXXXX
     XXXXXXXXXXXXXXXNNNNNNNNNNNNNNNNNNNNNNNNNNNNMMMMMNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNXXXXX
     XXXXXXXXXXXXXXXNNNNNNNNNNNNNXXMNW0K00X0dOOW    MM MNNNNNNNNNNNNNNNNNNNNNNNNNNNNXNXXXX
@@ -117,6 +118,3 @@ categories:
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXkxddcxkkkNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWW
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMX:KWKOkddxMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.cxMK0OMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-
-
-

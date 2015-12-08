@@ -8,6 +8,7 @@ title: 校园物资管理平台0day
 wordpress_id: 198
 categories:
 - Hacker
+- Dev
 ---
 
 "Hacking For Fun"
@@ -43,5 +44,3 @@ categories:
 至此,成功hack到admin权限了.可以对各个部门的申请进行修改,或者给自己通过申请的物资活动室.不过呢,总而言之,言而总是还是那句话Hacking for fun,不要做损害他人利益的事情.
 
 菜鸟 Hacker Roy Xue
-
-

@@ -9,6 +9,7 @@ wordpress_id: 459
 categories:
 - blog
 - Theano
+- Dev
 tags:
 - GSoC2014/Python
 ---

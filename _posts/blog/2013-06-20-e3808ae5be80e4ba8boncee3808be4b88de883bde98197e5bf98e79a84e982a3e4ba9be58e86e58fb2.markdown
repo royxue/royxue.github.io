@@ -5,8 +5,8 @@ date: 2013-06-20 07:33:59+00:00
 layout: post
 slug: '%e3%80%8a%e5%be%80%e4%ba%8bonce%e3%80%8b%e4%b8%8d%e8%83%bd%e9%81%97%e5%bf%98%e7%9a%84%e9%82%a3%e4%ba%9b%e5%8e%86%e5%8f%b2'
 title: 《往事Once》不能遗忘的那些历史
-wordpress_id: 86
 categories:
+- blog
 - Life
 ---
 

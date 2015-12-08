@@ -5,8 +5,8 @@ date: 2014-01-28 14:02:13+00:00
 layout: post
 slug: lonely-planet-never-alone
 title: Lonely Planet Never Alone
-wordpress_id: 116
 categories:
+- blog
 - Life
 ---
 

@@ -9,6 +9,7 @@ wordpress_id: 474
 categories:
 - blog
 - Theano
+- Dev
 ---
 
 # Theano 中文安装指南
@@ -32,7 +33,7 @@ Theano Wiki: [theano windows installation chinese version](https://github.com/T
 
 
 
-    
+
   1. 安装[MinGW](http://www.mingw.org/wiki/Getting_Started)并升级gcc, 有可能需要更新gcc到4.7.x 或者以上的版本来避免一些编译错误, 如果需要更新可以打开MinGW后使用下列命令更新.
 % mingw-get update
 % mingw-get upgrade gcc
@@ -41,29 +42,29 @@ Theano Wiki: [theano windows installation chinese version](https://github.com/T
 # we also need Fortran for building BLAS
 mingw-get install gcc-fortran
 
-    
+
   2. 安装Python Distribution(Python Distribution是集成了诸多依赖包的Python版本), 若不想安装此部分, 请看步骤三:
 
-    
+
     * 推荐安装[AnacondaCE](http://www.continuum.io/downloads)
 
-    
+
     * 其他选择:[Enthought Python Distribution (EPD)](http://enthought.com/products/epd.php)**/**[Canopy](https://enthought.com/products/canopy/)
 (如果你拥有一定的支付能力可购买Commercial版本或者凭身份获取免费的Academic版本证书)
 
 
 
 
-    
+
   3. 如果没有安装以上Distribution, 请安装如下软件:
 
-    
+
     * 安装[Python](applewebdata://DF5B246A-BB0F-4E13-A039-CD5F3F0EF22C/www.python.org) 2.X 版本
 
-    
+
     * 安装[pip](https://pypi.python.org/pypi/pip), Python的依赖包安装和管理工具.
 
-    
+
     * 使用pip安装Numpy和Scipy
 pip install numpy
 pip install scipy
@@ -82,11 +83,11 @@ pip install scipy
 
 
 
-    
+
   1. 基础发行版本安装:
 pip install theano
 
-    
+
   2. 最新版本安装:(需要[git](http://git-scm.com/download))
 # Use Git Bash Shell
 git clone git://github.com/Theano/Theano.git
@@ -94,7 +95,7 @@ git clone git://github.com/Theano/Theano.git
 Return Theano Directory
 C:\Users\login>echo %PYTHONPATH%
 
-    
+
   3. 然后在你的根目录(e.g., C:\Users<you>), 创建一个叫做.theanorc(或者.theanorc.txt)文件, 并编辑其内容为:
 [blas]
 ldflags =
@@ -114,31 +115,31 @@ cxxflags = -IC:\MinGW\include
 
 
 
-    
+
   1. 安装[Cuda](https://developer.nvidia.com/cuda-downloads):
 
-    
+
     * CUDA 6.5 (32-bit on 32-bit Windows, 64-bit on 64-bit Windows).
 
-    
+
     * 可选: The CUDA GPU Computing SDK (32-bit/64-bit matches your python ).
 
 
 
 
-    
+
   2. 安装Visual Studio(或者Visual C++)
 
-    
+
   3. 根据Nvidia 网站的_CUDA Getting Started Guide_, 利用Visual Studio编译Cuda代码. (如果这一步没有成功, Theano将可能不能编译GPU代码).
 
-    
+
   4. 编辑Theano的配置文件, 添加如下内容:(具体内容应当对应你的Python版本和VS版本做适当修改)
 [nvcc]
 flags=-LC:\Python26\libs
 compiler_bindir=C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin
 
-    
+
   5. 使用Visual Studio命令行工具(在“Visual Studio Tools”文件夹下). 在Python中运行_"import theano.sandbox.cuda"_. 将会编译第一个Cuda文件, 并且没有错误产生.
 简单测试GPU计算: 首先编辑Theano的配置文件:
 [global]
@@ -146,7 +147,7 @@ device = gpu
 floatX = float32
 然后运行theano/misc/check_blas.py测试文件.
 
-    
+
   6. 相关推荐: PyCuda, OpenCL
 
 

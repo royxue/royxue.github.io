@@ -5,8 +5,8 @@ date: 2013-10-28 13:55:54+00:00
 layout: post
 slug: '%e7%a9%bf%e8%b6%8a%e9%9a%a7%e9%81%93%e7%9a%84%e6%80%9d%e8%80%83'
 title: 穿越隧道的思考
-wordpress_id: 108
 categories:
+- blog
 - Life
 ---
 

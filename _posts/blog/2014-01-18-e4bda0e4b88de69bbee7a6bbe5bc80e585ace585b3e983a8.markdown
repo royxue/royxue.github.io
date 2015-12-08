@@ -5,8 +5,8 @@ date: 2014-01-18 14:04:51+00:00
 layout: post
 slug: '%e4%bd%a0%e4%b8%8d%e6%9b%be%e7%a6%bb%e5%bc%80%e5%85%ac%e5%85%b3%e9%83%a8'
 title: '你不曾离开公关部 '
-wordpress_id: 120
 categories:
+- blog
 - Life
 ---
 

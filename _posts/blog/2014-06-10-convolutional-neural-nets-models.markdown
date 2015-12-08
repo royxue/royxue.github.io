@@ -8,6 +8,7 @@ title: Convolutional Neural Nets Models
 wordpress_id: 411
 categories:
 - Machine Learning
+- Dev
 tags:
 - en_US
 ---

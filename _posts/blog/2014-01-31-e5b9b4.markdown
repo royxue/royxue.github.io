@@ -5,8 +5,8 @@ date: 2014-01-31 12:53:10+00:00
 layout: post
 slug: '%e5%b9%b4'
 title: 年.
-wordpress_id: 145
 categories:
+- blog
 - Life
 ---
 
@@ -63,5 +63,3 @@ categories:
 不同于城市里的沥青
 
 [![DSC03218](http://royxue.me/wp-content/uploads/2014/01/DSC03218-300x225.jpg)](http://royxue.me/wp-content/uploads/2014/01/DSC03218.jpg)
-
-

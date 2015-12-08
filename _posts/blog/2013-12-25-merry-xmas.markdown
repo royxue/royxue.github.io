@@ -5,8 +5,8 @@ date: 2013-12-25 14:01:04+00:00
 layout: post
 slug: merry-xmas
 title: Merry Xmas
-wordpress_id: 114
 categories:
+- blog
 - Life
 ---
 
