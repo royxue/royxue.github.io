@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-     var pos = new google.maps.LatLng(47.6579407, -122.3503224);
-     var maker = new google.maps.LatLng(47.655036, -122.302892)
+     var pos = new google.maps.LatLng(37.4135572,-122.072912);
+     var maker = new google.maps.LatLng(37.4135572,-122.072912)
 
      var mapOptions = {
         zoom: 12,
