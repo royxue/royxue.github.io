@@ -26,7 +26,7 @@ body {
 	background: #ffffff;
 	margin: 0;
 	height: 100%;
-	color: {{ site.colors.secondary }};
+	color: #000000;
 	font-family: 'Product Sans', sans-serif;
 	font-weight: 400;
 	}
@@ -43,7 +43,7 @@ p {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 24px;
-	color: {{ site.colors.secondary }};
+	color: #000000;
 	margin-top: 10px;
 }
 
@@ -128,7 +128,7 @@ a:focus {
 }
 
 .dropdown-menu > li > a {
-	color: white;
+	color: #000000;
 	font-weight: 700;
 	font-size: 12px;
 }
@@ -385,12 +385,12 @@ a:focus {
 
 #twrap i {
 	font-size: 50px;
-	color: white;
+	color: #000000;
 	margin-bottom: 25px;
 }
 
 #twrap p {
-	color: white;
+	color: #000000;
 	font-size: 15px;
 	line-height: 30px;
 }
