@@ -94,7 +94,7 @@ $(document).ready(function() {
                 "visibility": "on"
             },
             {
-                "color": "#d3d3d3"
+                "color": "#9e9e9e"
             }
         ]
     },
