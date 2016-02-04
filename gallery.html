@@ -8,8 +8,26 @@ permalink: /gallery/
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 centered">
             <h2>Just For Memory</h2>
-            <br>
             <div class="hline"></div>
         </div>
     </div>
 </div><!--/container -->
+
+<div id="gallerywrap">
+    <div class="gallery-centered">
+        {% if include.title %}<h3>{{ include.title }}</h3>{% endif %}
+        <div id="instafeed">
+
+        </div><!-- portfolio -->
+    </div><!-- portfolio container -->
+</div><!--/Portfoliowrap -->
+
+<script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        userId: 314008447,
+        accessToken: '314008447.ab103e5.e1368d0145fb435db678a7dbc1365023',
+        resolution: 'low_resolution',
+    });
+    userFeed.run();
+</script>

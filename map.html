@@ -8,8 +8,27 @@ permalink: /map/
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 centered">
             <h2>The travel history</h2>
-            <br>
             <div class="hline"></div>
         </div>
     </div>
 </div><!--/container -->
+
+<div id="mapc" style="position: relative; width: 90vw; height: 70vh; margin: 0 auto; margin-bottom: 100px"></div>
+<script>
+    var map = new Datamap({element: document.getElementById('mapc'),
+    projection: 'mercator',
+    fills: {
+        defaultFill: "424242",
+        hasTraveledTo: "F4511E",
+    },
+    data: {
+        USA : {fillKey: "hasTraveledTo"},
+        JPN : {fillKey: "hasTraveledTo"},
+        CHN : {fillKey: "hasTraveledTo"},
+        THA : {fillKey: "hasTraveledTo"},
+        PHL : {fillKey: "hasTraveledTo"},
+        TWN : {fillKey: "hasTraveledTo"},
+        VNM : {fillKey: "hasTraveledTo"},
+    }
+});
+</script>
