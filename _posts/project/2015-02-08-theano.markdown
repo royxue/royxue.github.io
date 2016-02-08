@@ -8,8 +8,8 @@ categories:
 - project
 tags:
 - deep learning
-img: theano.jpg
-thumb: theano.jpg
+img: theano.png
+thumb: theano.png
 carousel:
 
 website: https://github.com/Theano/Theano
