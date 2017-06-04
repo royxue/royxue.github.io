@@ -1,0 +1,20 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #81D8D0;
+}
+
+.center-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.love-image  {
+  width: 40vw;
+  border-radius: 50%;
+}
