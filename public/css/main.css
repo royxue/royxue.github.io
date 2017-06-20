@@ -11,10 +11,64 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  height: 30vw;
+  transform: translate(-50%, -50%);
+  border: 10px solid;
+  border-color: #fff;
+  border-radius: 50%;
 }
 
 .love-image  {
-  width: 40vw;
+  width: 30vw;
   border-radius: 50%;
+}
+
+.section {
+  position: absolute;
+  width: 50%;
+}
+
+.roy {
+  top: 0;
+  left: 0;
+  text-align: left;
+}
+
+.xenia {
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+
+.image-hover {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+}
+
+.roy-hover {
+  top: 0;
+  left: 0;
+  border-top-left-radius: 30vw;
+  border-bottom-left-radius: 30vw;
+}
+
+.xenia-hover {
+  top: 0;
+  right: 0;
+  border-top-right-radius: 30vw;
+  border-bottom-right-radius: 30vw;
+}
+
+.names {
+  position: absolute;
+  left: 50%;
+  bottom: 10vh;
+  transform: translate(-50%, 0);
+}
+
+.names .tags {
+  color: #fff;
+  font-size: 5vh;
+  font-family: Helvetica;
 }
