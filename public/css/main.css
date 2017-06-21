@@ -16,6 +16,11 @@
   border: 10px solid;
   border-color: #fff;
   border-radius: 50%;
+  -moz-transition: all 1s; 
+  -webkit-transition: all 1s;  
+  -ms-transition: all 1s;  
+  -o-transition: all 1s;  
+  transition: all 1s;
 }
 
 .love-image  {
@@ -46,16 +51,28 @@
   position: absolute;
 }
 
-.roy-hover {
+#roy-hover {
   top: 0;
   left: 0;
+}
+
+#roy-cover {
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5); 
   border-top-left-radius: 30vw;
   border-bottom-left-radius: 30vw;
 }
 
-.xenia-hover {
+#xenia-hover {
   top: 0;
   right: 0;
+}
+
+#xenia-cover {
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5); 
   border-top-right-radius: 30vw;
   border-bottom-right-radius: 30vw;
 }
