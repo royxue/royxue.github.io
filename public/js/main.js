@@ -22,8 +22,9 @@ $(document).ready(function(){
 			tar.css('left', '100%');
 			tar.addClass('toggle');
 			$("#roy-cover").fadeOut("fast");
+			$('.info').fadeIn("fast")
+			displayInfo("roy");
 		}
-		
 	});
 
 	$("#xenia-hover").click(function(){
@@ -38,4 +39,17 @@ $(document).ready(function(){
 			$("#xenia-cover").fadeOut("fast");
 		}
 	});
+
+	function displayInfo(person) {
+		animeArgs = {easing: 'easeInOutQuad'}
+		if (person=="roy"){
+			animeArgs.left = '240px';
+			animeArgs.targets = '.basic .info';
+		}
+		anime(animeArgs);
+	}
+
+	function hideInfo(person) {
+
+	}
 })
