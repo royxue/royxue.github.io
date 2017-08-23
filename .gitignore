@@ -19,3 +19,5 @@ tmp/*
 /vendor
 /test/source/file_name.txt
 *.plist
+/.cache
+/node_modules
