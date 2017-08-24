@@ -8,7 +8,6 @@ export default class Header extends React.Component{
       <div
         style={{
           background: 'rebeccapurple',
-          marginBottom: '1.45rem',
         }}
       >
         <div
