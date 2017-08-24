@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl';
 import {history, timeline} from '../data/history';
@@ -6,8 +7,12 @@ import {mapBoxToken} from '../data/constants';
 import {fromJS} from 'immutable';
 
 const token = mapBoxToken;
-
 let animation = null;
+
+const markerMapping = {
+  roy: require('../public/images/code.png'),
+  xenia: require('../public/images/study.png')
+};
 
 export default class TimelineMap extends React.Component {
   constructor(props) {
@@ -17,15 +22,9 @@ export default class TimelineMap extends React.Component {
       mapStyle: defaultMapStyle,
       viewport: {
         width: window.innerWidth,
-        height: 0.9 *window.innerHeight,
-        latitude: 34.019017381755184,
-        longitude: -177.71270941671457,
-        zoom: 3
+        height: 0.9 *window.innerHeight
       },
-      positions: {
-        roy: null,
-        xenia: null
-      },
+      positions: null,
       playing: false
     };
 
@@ -35,22 +34,16 @@ export default class TimelineMap extends React.Component {
   componentWillMount() {
     const ts = timeline[0];
     this._loadData(ts);
-    // this._loadData(ts);
   }
 
   _loadData = (timestamp) => {
     const data = history[timestamp];
-    this.setState({positions: data});
+    const {viewport, positions} = this.state;
+    this.setState({
+      positions: data.positions,
+      viewport: _.assign(viewport, data.viewport)
+    });
   }
-
-  // _loadData = (timestamp) => {
-  //   const data = history[timestamp];
-  //   const mapStyle = defaultMapStyle
-  //                   .setIn(['sources', 'timeline'], fromJS({type: 'geojson', data}))
-  //                   .set('layers', defaultMapStyle.get('layers').push(timelineLayer));
-
-  //   this.setState({mapStyle: mapStyle});
-  // }
 
   _onViewportChange = (viewport) => {
     console.log(viewport);
@@ -59,12 +52,13 @@ export default class TimelineMap extends React.Component {
 
   renderMarkers = () => {
     return (
-      <Marker {...this.state.positions.roy}>
-        <img src={require('../public/images/code.png')} style={{
-          width: '50px'
-        }}/>
-      </Marker>
-    )
+      _.map(this.state.positions, (val, i) => (
+        <Marker key={`marker-${i}`} {...val}>
+          <img src={_.get(markerMapping, val.name)} style={{
+            width: '50px'
+          }}/>
+        </Marker>
+    )));
   }
 
   render() {
