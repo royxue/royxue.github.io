@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Roy Xue <xljroy@gmail.com>",
   "dependencies": {
+    "antd": "^2.12.8",
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-react-helmet": "^1.0.3",
