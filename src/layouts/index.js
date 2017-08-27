@@ -11,18 +11,19 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="Gatsby Default Starter" meta={[
+        <Helmet title="Roy and Xenia" meta={[
           {
             name: 'description',
-            content: 'Sample'
+            content: 'Roy and Xenia website'
           }, {
             name: 'keywords',
-            content: 'sample, something'
-          }
-        ]}/>
+            content: 'love, life'
+          }]}/>
         <Header/>
         <div style={{
-          paddingTop: 0
+          width: '60%',
+          paddingTop: '4rem',
+          margin: '0 auto',
         }}>
           {this.props.children()}
         </div>
