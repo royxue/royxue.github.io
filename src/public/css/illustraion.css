@@ -1,0 +1,19 @@
+.img-row {
+  height: 20vh;
+}
+
+.img-col {
+  height: 100%;
+}
+
+.img-col img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.shelf {
+  width: 50%;
+  top: 0;
+  right: 0;
+}

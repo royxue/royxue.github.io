@@ -1,0 +1,107 @@
+/* Webfont: Lato-Regular */@font-face {
+    font-family: 'LatoWeb';
+    src: url('../fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('../fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Lato-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+html {
+  font-family: 'LatoWeb', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: 'LatoWeb', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.hamburger-btn {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  z-index: 999;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0);
+    width: 60%;
+    align-self: center;
+    padding: 0;
+}
+
+.proj-card {
+  border-radius: 5px;
+}
+
+.proj-desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.proj-card:hover .proj-desc {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.panel{
+}
+.panel.left{
+  justify-content: flex-start;
+}
+.panel.right{
+  justify-content: flex-end;
+}
+
+.row-center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* Flex Setting */
+.flex {
+  display: flex;
+}
+.flex.f1 {
+  flex: 1;
+}
+.flex.frow{
+  flex-direction: row;
+}
+.flex.fcol{
+  flex-direction: column;
+}
+.flex.al-c{
+  align-items: center;
+}
+.flex.jc-start{
+  justify-content: flex-start;
+}
+.flex.jc-end{
+  justify-content: flex-end;
+}
+.flex.jc-center{
+  justify-content: center;
+}
+.flex.jc-sb{
+  justify-content: space-between;
+}
