@@ -2,6 +2,10 @@
   height: 20vh;
 }
 
+.desktop-border {
+  border-top-style: solid;
+}
+
 .img-col {
   height: 100%;
 }
@@ -63,4 +67,8 @@
   left: 10%;
   max-height: 150%;
   max-width: 150%;
+}
+
+.name {
+  font-size: 4rem;
 }

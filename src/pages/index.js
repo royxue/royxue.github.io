@@ -13,7 +13,7 @@ export default class Index extends React.Component {
         <Row className='img-row'>
           <Col className='img-col' span={6}></Col>
           <Col className='img-col' span={12}>
-            Roy and Xenia
+            <h1 className='name'>Roy and Xenia</h1>
           </Col>
           <Col className='img-col' span={6}></Col>
         </Row>
@@ -53,7 +53,7 @@ export default class Index extends React.Component {
             <img id='earphone' className='img-obj' src={require('../public/images/earphone.png')}/>
           </Col>
         </Row>
-        <Row className='img-row'>
+        <Row className='img-row desktop-border'>
         </Row>
       </div>
     );
