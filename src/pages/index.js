@@ -6,7 +6,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <div>
-        <Row className='img-row'>
+        <Row className='img-row' style={{height: '10vh'}}>
           <Col className='img-col' span={12}></Col>
           <Col className='img-col' span={12}></Col>
         </Row>

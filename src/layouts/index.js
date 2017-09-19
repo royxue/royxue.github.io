@@ -10,21 +10,11 @@ import '../public/css/hamburgers.min.css'
 import '../public/css/illustraion.css';
 import '../public/css/index.css';
 
-const { Header, Content, Footer } = Layout;
+import Header from '../components/header'
+
+const { Content, Footer } = Layout;
 
 export default class LayoutTemplate extends React.Component {
-  constructor(){
-    super();
-    this.state = {
-      openMenu: false,
-    }
-  }
-
-  toggleMenu = () => {
-    const { openMenu } = this.state;
-    this.setState({openMenu: !openMenu });
-  }
-
   render() {
     return (
       <div>
@@ -37,11 +27,7 @@ export default class LayoutTemplate extends React.Component {
             content: 'love, life'
           }]}/>
         <Layout style={{ minHeight: '100vh' }}>
-          <div className={cx("hamburger hamburger--spin hamburger-btn", {"is-active": this.state.openMenu})} onClick={this.toggleMenu}>
-            <span className="hamburger-box">
-              <span className="hamburger-inner"></span>
-            </span>
-          </div>
+          <Header />
           <Content>
             {this.props.children()}
           </Content>
