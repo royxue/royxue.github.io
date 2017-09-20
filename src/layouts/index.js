@@ -19,14 +19,24 @@ export default class LayoutTemplate extends React.Component {
   render() {
     return (
       <div>
-        <Helmet title="Roy and Xenia" meta={[
+        <Helmet
+          title="Roy and Xenia"
+          meta={[
           {
             name: 'description',
             content: 'Roy and Xenia website'
           }, {
             name: 'keywords',
             content: 'love, life'
-          }]}/>
+          }]}
+          link={[
+            {
+              rel: 'icon',
+              type: 'image/png',
+              href: require('../public/favicon.png')
+            }
+          ]}
+        />
         <Layout style={{ minHeight: '100vh' }}>
           <Header />
           <Content>

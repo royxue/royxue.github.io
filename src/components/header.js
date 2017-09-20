@@ -24,7 +24,7 @@ export default class Header extends React.Component {
   render() {
     const items = []
     _.map(menu, (val, key) => {
-      const item = (<Link to={val.link} className='menu-item'>{val.title}</Link>)
+      const item = (<Link to={val.link} key={key} className='menu-item'>{val.title}</Link>)
       items.push(item)
     })
 
