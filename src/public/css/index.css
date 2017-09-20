@@ -45,6 +45,7 @@ body {
 
 .menu {
   height: 100%;
+  display: hidden;
 }
 
 .menu-item {

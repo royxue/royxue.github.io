@@ -6,7 +6,8 @@ import Helmet from 'react-helmet';
 import { Layout, Menu }  from 'antd';
 
 import 'antd/dist/antd.css';
-import '../public/css/hamburgers.min.css'
+import '../public/css/hamburgers.min.css';
+import '../public/css/animate.min.css'
 import '../public/css/illustraion.css';
 import '../public/css/index.css';
 

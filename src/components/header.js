@@ -30,7 +30,7 @@ export default class Header extends React.Component {
 
     return (
       <div className='menu-row flex jc-sb'>
-        <div className='menu flex ai-c jc-end f1'>
+        <div className={cx('menu flex ai-c jc-end f1 animated', {'slideInDown': this.state.openMenu, 'slideOutUp': !this.state.openMenu})}>
           {items}
         </div>
         <div className={cx("hamburger hamburger--spin hamburger-btn", {"is-active": this.state.openMenu})} onClick={this.toggleMenu}>
