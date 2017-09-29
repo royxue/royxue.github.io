@@ -4,8 +4,9 @@ import Link from 'gatsby-link';
 
 const menu = [
   {link: '/', title: 'Index'},
-  {link: '/project', title: 'Project'},
-  {link: '/about', title: 'About'}
+  {link: '/', title: 'WIP, Coming soon'}
+  // {link: '/project', title: 'Project'},
+  // {link: '/about', title: 'About'}
 ]
 
 export default class Header extends React.Component {

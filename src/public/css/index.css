@@ -19,6 +19,9 @@ body {
   font-size: 16px;
   margin: 0;
 }
+img {
+  pointer-events: none
+}
 
 .hamburger-btn {
   align-self: center;
