@@ -42,6 +42,11 @@ img {
     padding: 0;
 }
 
+.img-404 {
+   max-width: 100vw;
+   max-height: 90vh;
+}
+
 .menu-row {
   height: 10vh;
 }

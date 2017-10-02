@@ -3,9 +3,8 @@ import React from 'react'
 export default class NotFoundPage extends React.Component {
   render() {
     return (
-      <div>
-        <h1>NOT FOUND</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <div className="flex jc-center">
+        <img className="img-404" src={require('../public/images/404.png')}/>
       </div>
     )
   }
