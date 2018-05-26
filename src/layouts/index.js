@@ -37,7 +37,7 @@ export default class LayoutTemplate extends React.Component {
             }
           ]}
         />
-        <Layout style={{ minHeight: '100vh' }}>
+        <Layout style={{ minHeight: '100vh', backgroundColor: 'white' }}>
           <Header />
           <Content>
             {this.props.children()}

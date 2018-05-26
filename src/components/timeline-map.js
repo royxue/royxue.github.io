@@ -3,7 +3,7 @@ import React from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl';
 import {history, timeline} from '../data/history';
 import {defaultMapStyle, timelineLayer} from './map-style';
-import {mapBoxToken} from '../data/constants';
+import {mapBoxToken} from '../constants/key';
 import {fromJS} from 'immutable';
 
 const token = mapBoxToken;

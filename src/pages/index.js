@@ -6,14 +6,10 @@ export default class Index extends React.Component {
   render() {
     return (
       <div>
-        <Row className='img-row' style={{height: '10vh'}}>
-          <Col className='img-col' span={12}></Col>
-          <Col className='img-col' span={12}></Col>
-        </Row>
-        <Row className='img-row'>
+        <Row className='img-row' style={{height: '35vh'}}>
           <Col className='img-col' span={6}></Col>
           <Col className='img-col' span={12}>
-            <h1 className='name'>Roy and Xenia</h1>
+            <h1 className='name'><span>Roy</span> & <span>Xenia</span></h1>
           </Col>
           <Col className='img-col' span={6}></Col>
         </Row>
@@ -53,7 +49,7 @@ export default class Index extends React.Component {
             <img id='earphone' className='img-obj' src={require('../public/images/earphone.png')}/>
           </Col>
         </Row>
-        <Row className='img-row desktop-border'>
+        <Row className='img-row desktop-border' style={{height: '15vh'}}>
         </Row>
       </div>
     );
