@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "author": "Roy Xue <xljroy@gmail.com>",
   "dependencies": {
-    "gatsby": "^1.9.272",
+    "gatsby": "^1.9.273",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-particles-js": "^2.2.0"
   },
   "keywords": [
     "gatsby"

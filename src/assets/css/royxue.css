@@ -1,0 +1,10 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+.header a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
