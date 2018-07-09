@@ -4,7 +4,7 @@ import Particles from 'react-particles-js'
 const ParticlesBg = () => (
   <Particles
     style={{
-      position: 'absolute',
+      position: 'fixed',
       top: 0,
       width: '100%',
       height: '100%',
@@ -20,7 +20,7 @@ const ParticlesBg = () => (
           }
         },
         color: {
-          value: ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"]
+          value: ["#f44336", "03A9F4", "AB47BC"]
         },
         shape: {
           type: 'circle',
@@ -33,7 +33,7 @@ const ParticlesBg = () => (
           }
         },
         opacity: {
-          value: 1,
+          value: 0.75,
           random: 0
         },
         move: {

@@ -7,7 +7,8 @@ import ParticlesBg from '../components/particles'
 
 import '../assets/css/index.css'
 import '../assets/css/flex.css'
-import '../assets/css/royxue.css'
+import '../assets/css/royxue.less'
+import '../assets/css/animate.min.css'
 
 
 const Layout = ({ children, data }) => (
@@ -19,9 +20,9 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: data.site.siteMetadata.keywords },
       ]}
     />
-    <Header />
+    <Header nav={data.site.siteMetadata.navigation} />
     <ParticlesBg />
-    <div>
+    <div id='container'>
       {children()}
     </div>
   </div>
@@ -38,6 +39,13 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        description
+        keywords
+        navigation {
+          link
+          name
+          color
+        }
       }
     }
   }
