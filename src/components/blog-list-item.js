@@ -6,6 +6,7 @@ class BlogListItem extends React.Component {
   render() {
     const title = this.props.data.meta.title || '无题'
     const date = this.props.data.meta.date || 'No Date'
+    const tag = this.props.data.meta.tag || ''
     const slug = this.props.data.fields.slug
 
     return (
@@ -13,8 +14,8 @@ class BlogListItem extends React.Component {
         <div className="blog-list-title">
           <Link to={slug}>{title}</Link>
         </div>
-        <span className="blog-list-tag" />
-        <span className="blog-list-date">{date}</span>
+        <div className="blog-list-tag">{tag}</div>
+        <div className="blog-list-date">{date}</div>
       </div>
     )
   }

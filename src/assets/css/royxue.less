@@ -1,9 +1,14 @@
 // Variables Definition
 @black: #333333;
+@blue: #03A9F4;
+@red: #f44336;
+@purple: #AB47BC;
+
 @font-face {
   font-family: 'eina';
   src: url('../fonts/eina-03-semibold.ttf');
 }
+
 @font-face {
   font-family: 'matisse';
   src: url('../fonts/MatissePro-EB.otf');
@@ -66,4 +71,27 @@ body {
 .blog-detail {
   background: #FAFAFA;
   padding: 1rem;
+}
+
+.blog-list-item {
+  .blog-list-title {
+    a {
+      color: @black;
+      text-decoration: none;
+    }
+  }
+}
+
+#blog-tags {
+  .blog-tag-item {
+    border-radius: 50px;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: @blue;
+    cursor: pointer;
+  }
+
+  .blog-tag-item.selected {
+    border-color: @red;
+  }
 }
