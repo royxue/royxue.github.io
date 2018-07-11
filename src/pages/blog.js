@@ -27,11 +27,12 @@ class BlogPage extends React.Component {
     tags = _.countBy(tags)
 
     return (
-      <div>
+      <div className='container'>
         <BlogTags
           selected={this.state.selected}
           tags={tags}
         />
+        <div className='divider' />
         <div>
           {posts}
         </div>

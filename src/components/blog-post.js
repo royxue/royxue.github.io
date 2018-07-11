@@ -21,7 +21,7 @@ class BlogPost extends React.Component {
     const { title, date } = post.meta
 
     return (
-      <div className='blog-detail markdown-body'>
+      <div className='blog-detail markdown-body container'>
         <center>
           <h1>{title}</h1>
           <small>{date}</small>

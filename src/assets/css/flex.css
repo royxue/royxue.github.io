@@ -13,3 +13,6 @@
 .flex.middle {
   align-items: center;
 }
+.flex.jcsb {
+  justify-content: space-between;
+}

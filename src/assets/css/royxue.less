@@ -3,6 +3,7 @@
 @blue: #03A9F4;
 @red: #f44336;
 @purple: #AB47BC;
+@grey: #546E7A;
 
 @font-face {
   font-family: 'eina';
@@ -20,7 +21,7 @@ html {
 }
 
 body {
-  font-family: 'eina', sans-serif;
+  font-family: 'eina', 'matisse', sans-serif;
   color: @black;
 }
 
@@ -36,13 +37,13 @@ body {
     color: @black;
     font-size: 1.2rem;
     text-decoration: none;
+    margin-left: 0.25rem;
   }
 
   .link-circle {
     width: 0.75rem;
     height: 0.75rem;
     border-radius: 50px;
-    margin-right: 0.25rem;
   }
 
   .selected {
@@ -52,11 +53,34 @@ body {
   }
 }
 
-#container {
+#index {
+
+  .index-intro {
+    margin-left: 20vh;
+    margin-top: 12.5vh;
+  }
+
+  .index-selfie {
+    max-height: 75vh;
+    right: 0;
+    top: 12.5vh;
+    position: absolute;
+    margin-right: 20vh;
+  }
+}
+
+.container {
   padding-top: 2rem;
   height: calc(~"100vh - 3rem");
   width: 60%;
   margin: auto;
+}
+
+.divider {
+  border-bottom: 0.18rem solid;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-bottom-color: @grey;
 }
 
 #not-found-bg {
@@ -74,21 +98,46 @@ body {
 }
 
 .blog-list-item {
+  margin: 0.75rem 0;
+
   .blog-list-title {
+
     a {
       color: @black;
       text-decoration: none;
+    }
+
+    .blog-list-tag {
+      font-size: 0.8rem;
+      color: rgba(33,33,33,0.8);
     }
   }
 }
 
 #blog-tags {
   .blog-tag-item {
+    max-height: 1.6rem;
+    border: 0.17rem solid;
     border-radius: 50px;
-    border-width: 0.1rem;
-    border-style: solid;
     border-color: @blue;
     cursor: pointer;
+
+    .blog-tag-count {
+      text-align: center;
+      border-radius: 500rem;
+      background: @blue;
+      min-width: 1.33rem;
+      max-height: 1.33rem;
+      padding: 0.33rem;
+      padding-top: 0.4rem;
+      line-height: 0.67rem;
+      font-size: 0.8rem;
+      color: white;
+    }
+
+    .blog-tag-name {
+      margin: 0 0.18rem;
+    }
   }
 
   .blog-tag-item.selected {

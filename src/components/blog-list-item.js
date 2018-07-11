@@ -10,11 +10,10 @@ class BlogListItem extends React.Component {
     const slug = this.props.data.fields.slug
 
     return (
-      <div className="blog-list-item">
+      <div className="blog-list-item flex jcsb">
         <div className="blog-list-title">
-          <Link to={slug}>{title}</Link>
+          <Link to={slug}>{title}<span className='blog-list-tag'>/{tag}</span></Link>
         </div>
-        <div className="blog-list-tag">{tag}</div>
         <div className="blog-list-date">{date}</div>
       </div>
     )

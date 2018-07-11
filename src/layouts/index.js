@@ -22,7 +22,7 @@ const Layout = ({ children, data }) => (
     />
     <Header nav={data.site.siteMetadata.navigation} />
     <ParticlesBg />
-    <div id='container'>
+    <div>
       {children()}
     </div>
   </div>
