@@ -1,0 +1,2 @@
+webpackJsonp([49683490770531],{520:function(t,e){t.exports={data:{allOrga:{edges:[{node:{fields:{slug:"/syntax/"},meta:{title:"Orga with Gatsby",tag:"test",date:"2018-01-01"}}},{node:{fields:{slug:"/readme/"},meta:{title:"README of royxue.me",tag:"coding",date:"2018-07-12"}}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---blog-e9ec6e6586bafed9cd4a.js.map
