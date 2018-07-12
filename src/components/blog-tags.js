@@ -15,7 +15,7 @@ class BlogTags extends React.Component {
     const tagsBlocks = []
     _.forEach(tags, (count, tag) => {
       tagsBlocks.push(
-        <div className={cx('blog-tag-item flex row', {'selected': tag == selected})}>
+        <div key={tag} className={cx('blog-tag-item flex row', {'selected': tag == selected})}>
           <div className='blog-tag-name'>{tag}</div>
           <div className='blog-tag-count'>{count}</div>
         </div>

@@ -18,9 +18,10 @@ class BlogPage extends React.Component {
   }
 
   render() {
-    const data = this.props.data.allOrga.edges
+    var data = this.props.data.allOrga.edges
+    data = _.orderBy(data, ['node.meta.date'], ['desc']);
     const posts = _.map(data, ({node}) => {
-      return <BlogListItem data={node} />
+      return <BlogListItem key={node.meta.title} data={node} />
     })
 
     var tags = _.map(data, 'node.meta.tag')

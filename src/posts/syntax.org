@@ -1,5 +1,5 @@
 #+TITLE: Orga with Gatsby
-#+TAG: Test
+#+TAG: test
 #+DATE: 2018-01-01
 
 * Emphasis (can be in _headline_ too)

@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 class BlogListItem extends React.Component {
 
@@ -12,6 +14,7 @@ class BlogListItem extends React.Component {
     return (
       <div className="blog-list-item flex jcsb">
         <div className="blog-list-title">
+          <FontAwesomeIcon icon={ faChevronRight } className='blog-list-pre' />
           <Link to={slug}>{title}<span className='blog-list-tag'>/{tag}</span></Link>
         </div>
         <div className="blog-list-date">{date}</div>

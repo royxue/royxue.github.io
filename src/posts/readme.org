@@ -1,0 +1,30 @@
+#+TITLE: README of royxue.me
+#+TAG: coding
+#+DATE: 2018-07-12
+
+* Why build this new version?
+
+  It has been a long time since I wanna build a new version of my own website, but it's never easy to make decision on the design. Finally, I decide to make it by myself.
+
+* Tech Stack
+
+- Framework:
+  - gatsby.js
+  - react.js
+- Utilities:
+  - lodash
+  - classnames
+- Styles:
+  - FontAwesome 5
+  - animate.css
+  - github.markdown.css
+  - highlight.js
+  - react-particles-js
+
+* Progress
+** Pages
+- [x] Index
+- [x] Blog
+- [x] Blog Post
+- [ ] About
+- [x] 404
