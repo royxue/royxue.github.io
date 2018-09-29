@@ -118,6 +118,8 @@ body {
   }
 }
 
+// Blogs Tags
+
 #blog-tags {
   .blog-tag-item {
     margin: 0 0.5rem;
@@ -148,4 +150,43 @@ body {
   .blog-tag-item.selected {
     border-color: @red;
   }
+}
+
+// Flip Card
+.flip-card {
+  width: 20rem;
+}
+
+.flip-card:active .flipper{
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 20rem;
+	height: 20rem;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
 }
