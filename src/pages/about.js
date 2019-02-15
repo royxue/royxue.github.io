@@ -11,10 +11,7 @@ class AboutPage extends React.Component {
   render() {
     return (
       <div className="container">
-        <FlipCard
-          front="happy"
-          back="sad"
-        />
+        A Strange Boy!
       </div>
     )
   }
