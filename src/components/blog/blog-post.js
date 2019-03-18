@@ -2,7 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 import hljs from 'highlight.js'
 
-import '../assets/css/github-markdown.css'
+import '../../assets/css/github-markdown.css'
 import 'highlight.js/styles/github.css'
 
 import _ from 'lodash'

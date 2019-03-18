@@ -1,9 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import BlogTags from '../components/blog-tags'
-import BlogListItem from '../components/blog-list-item'
-
+import { BlogListItem, BlogTags } from '../components/blog'
 
 class BlogPage extends React.Component {
   constructor() {
