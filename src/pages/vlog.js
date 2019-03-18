@@ -1,7 +1,7 @@
 import React from 'react'
 
-import VlogDeviceItem from '../components/vlog-device-item'
-import VlogPostItem from '../components/vlog-post-item'
+import VlogDeviceItem from '../components/vlog/vlog-device-item'
+import VlogPostItem from '../components/vlog/vlog-post-item'
 
 const devices = [
   {
@@ -12,7 +12,7 @@ const devices = [
 
 const archive = [
   {
-    id: '009'
+    id: '009',
     name: 'Dubai 001 Longway to Dubai',
     link: 'asd',
     thumbnail: 'some image url',
@@ -27,11 +27,11 @@ class VlogPage extends React.Component {
 
   render() {
     const devices_list = _.map(devices, (device) => {
-      return <VlogDeviceItem data={device}/>
+      return <VlogDeviceItem data={device} key={device.name}/>
     })
 
     const posts_list = _.map(archive, (post) => {
-      return <VlogPostItem data={post}/>
+      return <VlogPostItem data={post} key={post.id}/>
     })
 
     return (
@@ -40,7 +40,7 @@ class VlogPage extends React.Component {
           {devices_list}
         </div>
         <div id="vlog-list">
-          {posts}
+          {posts_list}
         </div>
       </div>
     )
