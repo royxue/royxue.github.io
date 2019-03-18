@@ -1,12 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-link'
+// import Link from 'gatsby-link'
 
 import indexImg from '../assets/imgs/Index.png'
+import nameImg from '../assets/imgs/name.png'
 
 const IndexPage = () => (
   <div id='index'>
     <div className='index-intro'>
-      <h1>Roy Xue</h1>
+      <img src={nameImg} className='index-name'/>
       <h1>ロイ</h1>
     </div>
 

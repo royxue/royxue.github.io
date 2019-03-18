@@ -8,7 +8,16 @@ class Header extends React.Component {
   constructor() {
     super()
     this.state = {
-      selected: 'Index'
+      selected: 'index'
+    }
+  }
+
+  componentDidMount() {
+    const paths = ['blog', 'vlog', 'about']
+    let path = _.last(_.split(window.location.href, '/'))
+    console.log(path)
+    if (_.indexOf(paths, path) >= 0) {
+      this.setState({selected: path})
     }
   }
 

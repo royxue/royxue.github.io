@@ -10,6 +10,7 @@ import '../assets/css/flex.css'
 import '../assets/css/royxue.less'
 import '../assets/css/animate.min.css'
 
+import favicon from '../assets/imgs/icon.png'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -18,6 +19,11 @@ const Layout = ({ children, data }) => (
       meta={[
         { name: 'description', content: data.site.siteMetadata.description },
         { name: 'keywords', content: data.site.siteMetadata.keywords },
+      ]}
+      link={[
+          { rel: 'icon', type: 'image/png', sizes: "16x16", href: `${favicon}` },
+          { rel: 'icon', type: 'image/png', sizes: "32x32", href: `${favicon}` },
+          { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
       ]}
     />
     <Header nav={data.site.siteMetadata.navigation} />

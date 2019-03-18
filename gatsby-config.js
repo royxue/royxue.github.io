@@ -4,9 +4,10 @@ module.exports = {
     description: 'Roy Xue personal website',
     keywords: 'Roy Xue, Lijun Xue',
     navigation: [
-      {link: '/', name: 'Index', color: '#f44336'},
-      {link: '/blog', name: 'Blog', color: '#03A9F4'},
-      {link: '/about', name: 'About', color: '#AB47BC'}
+      {link: '/', name: 'index', color: '#f44336'},
+      {link: '/blog', name: 'blog', color: '#03A9F4'},
+      {link: '/vlog', name: 'vlog', color: '#ff7034'},
+      {link: '/about', name: 'about', color: '#AB47BC'}
     ]
   },
   plugins: [
