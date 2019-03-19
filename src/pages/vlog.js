@@ -27,27 +27,11 @@ class VlogPage extends React.Component {
   }
 
   state = {
-    follow_count: 0
+    follow_count: 1192
   }
 
   componentDidMount() {
     this.loadBilibiliData()
-  }
-
-  loadBilibiliData = () => {
-    axios
-      .get(`https://api.bilibili.com/x/relation/stat?vmid=1601274`, { crossdomain: true })
-      .then(resp => {
-        const {
-          data: { follower: follow_count },
-        } = resp
-        this.setState({
-          follow_count
-        })
-      })
-      .catch(error => {
-        this.setState({ follow_count: "ERROR" })
-      })
   }
 
   render() {
@@ -61,14 +45,24 @@ class VlogPage extends React.Component {
 
     return (
       <div className="container">
-        <div className="faninfo">
-          Fans: {this.state.follow_count}
+        {/* <div className="faninfo">
         </div>
         <div id="device-list">
           {devices_list}
         </div>
         <div id="vlog-list">
           {posts_list}
+        </div> */}
+        <div id="player">
+          <iframe 
+            src="//player.bilibili.com/player.html?aid=44610664&cid=78091714&page=1"
+            allowfullscreen="true"
+            scrolling="no"
+            border="0"
+            frameborder="no"
+            framespacing="0"
+          > 
+          </iframe>
         </div>
       </div>
     )
