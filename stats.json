@@ -1,28 +1,32 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-d025b422e704e8f93ec1.js",
-      "component---src-pages-index-js-d025b422e704e8f93ec1.js.map"
-    ],
-    "component---src-components-blog-post-js": [
-      "component---src-components-blog-post-js-c8f8b0693ceb69038354.js",
-      "component---src-components-blog-post-js-c8f8b0693ceb69038354.js.map"
+      "component---src-pages-index-js-a3fcf27842533c800405.js",
+      "component---src-pages-index-js-a3fcf27842533c800405.js.map"
     ],
     "path---blog": [
-      "path---blog-a41408bd824dcfcb8cad.js",
-      "path---blog-a41408bd824dcfcb8cad.js.map"
+      "path---blog-ed3dc993e8a7da51cd8e.js",
+      "path---blog-ed3dc993e8a7da51cd8e.js.map"
     ],
     "path---": [
-      "path----f0965d7ecd69b3262627.js",
-      "path----f0965d7ecd69b3262627.js.map"
+      "path----d5a7c34d542c9ebe9a66.js",
+      "path----d5a7c34d542c9ebe9a66.js.map"
+    ],
+    "component---src-components-blog-blog-post-js": [
+      "component---src-components-blog-blog-post-js-31f8b2f1bd85f3d56c5b.js",
+      "component---src-components-blog-blog-post-js-31f8b2f1bd85f3d56c5b.js.map"
+    ],
+    "path---vlog": [
+      "path---vlog-a0e39f21c11f6a62c5ab.js",
+      "path---vlog-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---readme": [
       "path---readme-40abe8a3517c35977da7.js",
       "path---readme-40abe8a3517c35977da7.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-9fed024016d866f7ebeb.js",
-      "component---src-layouts-index-js-9fed024016d866f7ebeb.js.map"
+      "component---src-layouts-index-js-6d88d0556e7f28379269.js",
+      "component---src-layouts-index-js-6d88d0556e7f28379269.js.map"
     ],
     "path---heaven-radio": [
       "path---heaven-radio-58f96123751e41bd57e6.js",
@@ -51,13 +55,17 @@
       "path---syntax-64bd812ce2a4ed076f14.js.map"
     ],
     "component---src-pages-blog-js": [
-      "component---src-pages-blog-js-f6105c134e888a243fdd.js",
-      "component---src-pages-blog-js-f6105c134e888a243fdd.js.map"
+      "component---src-pages-blog-js-46cf67d84d1db7d6f90e.js",
+      "component---src-pages-blog-js-46cf67d84d1db7d6f90e.js.map"
+    ],
+    "component---src-pages-vlog-js": [
+      "component---src-pages-vlog-js-eb15e454e8178f6d08b9.js",
+      "component---src-pages-vlog-js-eb15e454e8178f6d08b9.js.map"
     ],
     "app": [
-      "app-25d4c9276301e4cf0f90.js",
+      "app-00e7a809ffecab95ae8a.js",
       "build-js-styles.css",
-      "app-25d4c9276301e4cf0f90.js.map",
+      "app-00e7a809ffecab95ae8a.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
@@ -65,8 +73,8 @@
       "path---404-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-pages-about-js": [
-      "component---src-pages-about-js-320ec2b5be35bbd9b966.js",
-      "component---src-pages-about-js-320ec2b5be35bbd9b966.js.map"
+      "component---src-pages-about-js-58d92b6efc5eeb73ad71.js",
+      "component---src-pages-about-js-58d92b6efc5eeb73ad71.js.map"
     ],
     "path---about": [
       "path---about-a0e39f21c11f6a62c5ab.js",
