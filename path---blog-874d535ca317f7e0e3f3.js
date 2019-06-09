@@ -1,0 +1,2 @@
+webpackJsonp([49683490770531],{558:function(e,t){e.exports={data:{allOrga:{edges:[{node:{fields:{slug:"/heaven_radio/"},meta:{title:"想象ラジオ",tag:"books",date:"2018-08-08"}}},{node:{fields:{slug:"/syntax/"},meta:{title:"Orga with Gatsby",tag:"test",date:"2018-01-01"}}},{node:{fields:{slug:"/readme/"},meta:{title:"README of royxue.me",tag:"coding",date:"2018-07-12"}}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---blog-874d535ca317f7e0e3f3.js.map
