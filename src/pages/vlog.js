@@ -31,7 +31,7 @@ class VlogPage extends React.Component {
   }
 
   componentDidMount() {
-    this.loadBilibiliData()
+    //this.loadBilibiliData()
   }
 
   render() {
@@ -54,14 +54,14 @@ class VlogPage extends React.Component {
           {posts_list}
         </div> */}
         <div id="player">
-          <iframe 
+          <iframe
             src="//player.bilibili.com/player.html?aid=44610664&cid=78091714&page=1"
             allowfullscreen="true"
             scrolling="no"
             border="0"
             frameborder="no"
             framespacing="0"
-          > 
+          >
           </iframe>
         </div>
       </div>

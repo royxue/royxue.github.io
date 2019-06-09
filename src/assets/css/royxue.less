@@ -123,25 +123,9 @@ body {
   .blog-tag-item {
     margin: 0 0.5rem;
     max-height: 1.6rem;
-    border: 0.17rem solid;
-    border-radius: 50px;
-    border-color: @blue;
     cursor: pointer;
 
-    .blog-tag-count {
-      text-align: center;
-      border-radius: 500rem;
-      background: @blue;
-      min-width: 1.33rem;
-      max-height: 1.33rem;
-      padding: 0.33rem;
-      padding-top: 0.4rem;
-      line-height: 0.67rem;
-      font-size: 0.8rem;
-      color: white;
-    }
-
-    .blog-tag-name {
+    .blog-tag-mid {
       margin: 0 0.18rem;
     }
   }
@@ -194,12 +178,36 @@ body {
   position: relative;
   width: 100%;
   padding-bottom: 75%;
-  
+
   iframe {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
+  }
+}
+
+#about-links {
+  margin-top: 0.5rem;
+  a {
+    color: #333333;
+    font-size: 2.5rem;
+    margin: 0 0.5rem;
+  }
+}
+
+#about-block {
+  div {
+    display: flex;
+    margin: 0.5rem 0;
+    align-content: center;
+  }
+
+  img {
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+    border-radius: 50px;
   }
 }
