@@ -55,14 +55,12 @@ class VlogPage extends React.Component {
         </div> */}
         <div id="player">
           <iframe
-            src="//player.bilibili.com/player.html?aid=44610664&cid=78091714&page=1"
-            allowfullscreen="true"
-            scrolling="no"
-            border="0"
-            frameborder="no"
-            framespacing="0"
-          >
-          </iframe>
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/BAvB74UPmr0"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen >
+           </iframe>
         </div>
       </div>
     )

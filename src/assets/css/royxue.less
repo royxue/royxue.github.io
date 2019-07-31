@@ -50,23 +50,43 @@ body {
 
 #index {
 
-  .index-intro {
-    margin-left: 10vw;
-    margin-top: 12.5vh;
-  }
+
 
   .index-name {
     height: 4em;
   }
 
-  .index-selfie {
-    max-width: 50vw;
-    max-height: 75vh;
-    right: 0;
-    top: 12.5vh;
-    position: absolute;
-    margin-right: 10vw;
+  @media screen and (min-device-width: 1024px) {
+    .index-intro {
+      margin-left: 10vw;
+      margin-top: 12.5vh;
+    }
+
+    .index-selfie {
+      max-width: 50vw;
+      max-height: 75vh;
+      right: 0;
+      top: 12.5vh;
+      position: absolute;
+      margin-right: 10vw;
+    }
   }
+
+  @media screen and (max-device-width: 1024px) {
+    .index-intro {
+      margin-left: 20vw;
+      margin-top: 12.5vh;
+    }
+
+    .index-selfie {
+      max-width: 60vw;
+      max-height: 75vh;
+      top: 50vh;
+      left: 20vw;
+      position: absolute;
+    }
+  }
+
 }
 
 .container {
@@ -209,5 +229,10 @@ body {
     height: 4rem;
     margin: 0;
     border-radius: 50px;
+  }
+
+  p {
+    margin-top: auto;
+    margin-left: 2rem;
   }
 }
