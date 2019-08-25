@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import ParticlesBg from '../components/particles'
 
-import '../assets/css/index.css'
 import '../assets/css/flex.css'
 import '../assets/css/royxue.less'
 import '../assets/css/animate.min.css'
@@ -27,7 +26,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header nav={data.site.siteMetadata.navigation} />
-    <ParticlesBg />
+    {/* <ParticlesBg /> */}
     <div>
       {children()}
     </div>

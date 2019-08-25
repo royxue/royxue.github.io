@@ -4,6 +4,7 @@
 @red: #f44336;
 @purple: #AB47BC;
 @grey: #546E7A;
+@white: #c9cacc;
 
 @font-face {
   font-family: 'ytsans';
@@ -17,7 +18,8 @@ html {
 
 body {
   font-family: 'ytsans', sans-serif;
-  color: @black;
+  color: @white;
+  background-color: #1d1d1d;//#232333
 }
 
 #header {
@@ -29,7 +31,7 @@ body {
   }
 
   a {
-    color: @black;
+    color: @white;
     font-size: 1.2rem;
     text-decoration: none;
     margin-left: 0.25rem;
@@ -49,26 +51,32 @@ body {
 }
 
 #index {
+  display: flex;
 
 
-
-  .index-name {
-    height: 4em;
-  }
 
   @media screen and (min-device-width: 1024px) {
     .index-intro {
-      margin-left: 10vw;
-      margin-top: 12.5vh;
+      margin-left: 20vw;
+      margin-top: 15vh;
+    }
+
+    #name-en {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    #name-jp {
+      font-size: 2rem;
+      margin: 0;
     }
 
     .index-selfie {
       max-width: 50vw;
       max-height: 75vh;
-      right: 0;
       top: 12.5vh;
+      right: 20vw;
       position: absolute;
-      margin-right: 10vw;
     }
   }
 
@@ -78,10 +86,20 @@ body {
       margin-top: 12.5vh;
     }
 
+    #name-en {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    #name-jp {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
     .index-selfie {
       max-width: 60vw;
       max-height: 75vh;
-      top: 50vh;
+      top: 35vh;
       left: 20vw;
       position: absolute;
     }
@@ -113,7 +131,7 @@ body {
 }
 
 .blog-detail {
-  background: #FAFAFA;
+  background: #1d1d1d;
   padding: 1rem;
 }
 
@@ -126,13 +144,13 @@ body {
     }
 
     a {
-      color: @black;
+      color: @white;
       text-decoration: none;
     }
 
     .blog-list-tag {
       font-size: 0.8rem;
-      color: rgba(33,33,33,0.8);
+      color: @white;
     }
   }
 }
@@ -208,10 +226,17 @@ body {
   }
 }
 
+.about-identity {
+  svg {
+    font-size: 3rem;
+    margin: 0 2.5rem 0 0.5rem;
+  }
+}
+
 #about-links {
   margin-top: 0.5rem;
   a {
-    color: #333333;
+    color: @white;
     font-size: 2.5rem;
     margin: 0 0.5rem;
   }

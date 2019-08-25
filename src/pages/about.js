@@ -2,12 +2,14 @@ import React from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import teslaImg from '../assets/imgs/tesla.png'
 import cmuImg from '../assets/imgs/cmu.png'
 import djiImg from '../assets/imgs/dji.png'
 
 library.add(fab)
+library.add(fas)
 
 class AboutPage extends React.Component {
   constructor() {
@@ -19,10 +21,12 @@ class AboutPage extends React.Component {
       <div className="container">
         <h2>Roy Xue</h2>
         <div className="divider"/>
-        <div className>
-          > software engineer.
+        <div className='about-identity'>
+          <FontAwesomeIcon icon={['fas', 'keyboard']} />
+          Software Engineer
           <br />
-          > amateur vlogger.
+          <FontAwesomeIcon icon={['fas', 'camera-retro']} />
+          Vlogger
         </div>
 
         <div id="about-block">
