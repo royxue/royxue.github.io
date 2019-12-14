@@ -5,7 +5,7 @@ module.exports = {
     keywords: 'Roy Xue, Lijun Xue',
     navigation: [
       {link: '/', name: 'index', color: '#f44336'},
-      {link: '/blog', name: 'blog', color: '#03A9F4'},
+      // {link: '/blog', name: 'blog', color: '#03A9F4'},
       {link: '/vlog', name: 'vlog', color: '#ff7034'},
       {link: '/about', name: 'about', color: '#AB47BC'}
     ]

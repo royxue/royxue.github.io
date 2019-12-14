@@ -21,13 +21,6 @@ class AboutPage extends React.Component {
       <div className="container">
         <h2>Roy Xue</h2>
         <div className="divider"/>
-        <div className='about-identity'>
-          <FontAwesomeIcon icon={['fas', 'keyboard']} />
-          Software Engineer
-          <br />
-          <FontAwesomeIcon icon={['fas', 'camera-retro']} />
-          Vlogger
-        </div>
 
         <div id="about-block">
           <div>
