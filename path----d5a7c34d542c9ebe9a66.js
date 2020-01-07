@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{113:function(o,e){o.exports={data:{site:{siteMetadata:{title:"Roy Xue",description:"Roy Xue personal website",keywords:"Roy Xue, Lijun Xue",navigation:[{link:"/",name:"index",color:"#f44336"},{link:"/blog",name:"blog",color:"#03A9F4"},{link:"/vlog",name:"vlog",color:"#ff7034"},{link:"/about",name:"about",color:"#AB47BC"}]}}},layoutContext:{}}}});
+//# sourceMappingURL=path----d5a7c34d542c9ebe9a66.js.map
